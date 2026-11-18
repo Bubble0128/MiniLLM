@@ -1,6 +1,11 @@
 # MiniLLM
 For MATH_X405 final report and presentation
 
+**English submission version:** [Open in Colab](https://colab.research.google.com/github/Bubble0128/MiniLLM/blob/main/MiniLLM_Submission.ipynb) · [Notebook](MiniLLM_Submission.ipynb) · [Report draft](Report_English.md)
+
+英文版保留提交所需的代码、实验展示和导出功能；报告中的结果与讨论需在训练后填写。
+下方为原中文版学习入口。
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Bubble0128/MiniLLM/blob/main/MiniLLM_Colab.ipynb)
 
 基于 [angelos-p/llm-from-scratch](https://github.com/angelos-p/llm-from-scratch) 教程实现的
