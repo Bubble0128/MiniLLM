@@ -1,0 +1,427 @@
+prompt='To be, or not to be, that is the question:' temperature=1.2 top_p=1.0 top_k=10 new_characters=400 unk_banned=True
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+And, as she is my father, I would say,
+I will be my brother as mine enemy
+In your own honour!
+
+ISABELLA:
+O good Isabel. Thou art thou not much as I
+Have not yet a man that hath done for this hand:
+If it, I am a gentleman, I would, I say,
+If any man were a pretty thing: as, I warrant thee;
+For I had rather take my love for my good soul.
+Thou wast not. Come on, play! I
+pray, come thee, go,
+In my go
+
+===== seed 2 =====
+To be, or not to be, that is the question:
+but she cannot, I know, I will.
+But, Tranio! I will I will not hear thee much at me
+To be a better.
+
+FRIAR LAURENCE:
+Nay, but not,--
+
+BALTHASAR:
+What, I do beseech you,
+And you.
+
+CLAUDIO:
+Nay, good lady, I am not so: I know, I do, I beseech you,
+That I shall find you out of your own.
+
+FRIAR LAURENCE:
+My heart is a little thing that hath done
+To have a husband to be so brief:
+My lord, I am sure, y
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+I have not been not: but yet it is not so, I.
+
+PETRUCHIO:
+Nay, I am glad as I am I born in a
+man for this; but, a very good thing.
+
+Clown:
+O, sir,, it shall be any thing to
+redeem it as I would be the wall and it so
+big as you as it appears as to be a good
+house, a man?
+
+AUTOLYCUS:
+I am, I will give you the king and a king; for I, and
+your worship as I am not born in her mind.
+
+Clown:
+What, what 
+
+===== seed 4 =====
+To be, or not to be, that is the question:--
+
+KING EDWARD IV:
+No, my lord. I will be satisfied to your love.
+Why, now I: is it so long, if it is it.
+
+GLOUCESTER:
+But now your lordship, my lord: I had not so much;
+You do not what is my brother is a subject.
+
+LADY GREY:
+My lord, you have been my friend, if you do not leave me.
+
+GLOUCESTER:
+I, you have not told you. I am I born, as if you guess,
+You were a king: my sister should die.
+
+GLOUCE
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+The heavens be in the high'st mouth; and the other
+of a most ignorant, a man and a soldier as if it be so.
+Come, you have been? I have you heard me
+remembered, I am not for your worship of the duke.
+
+ESCALUS:
+I do beseech you? sir, sir.
+
+ELBOW:
+Marry, what I pray you? can you.
+
+ESCALUS:
+You.
+
+ESCALUS:
+Why you know what, I will tell him now, sir?
+
+ELBOW:
+
+ELBOW:
+I will I do not a bawd,-bawd; but I
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+I pray the truth, my good lord.
+
+LADY ANNE:
+No, I will be not to you.
+What say ye, sir; and I do not.
+
+DORSET:
+If you were of the king I do? will you will;
+And you do it. I do, and do, good morrow;
+I do not, to give thee leave to my bed.
+Why, what will you to, and give me leave
+A husband of my heart?
+
+GLOUCESTER:
+A gentleman, I pray, sir, that you, are well
+Than, being, as he is a man, that would
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+And, I will not, sir, by. I will not to-day, to-morrow!
+
+TRANIO:
+O, my master, the very Paris, the rest!
+
+LUCENTIO:
+I would have said to have it, nor
+you; it was not so.
+
+KATHARINA:
+My lords, I know.
+
+MOPSA:
+I pray you, I will knock the house of your
+sights: the king of your highness are not; and not the
+very well is the worst: I have no doubt, my lord.
+I have done to have, sir, I will.
+
+AUTOLYCU
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+I pray--
+
+Nurse:
+No, good lord, good sir: the gentleman!
+
+JULIET:
+Ay, good-morrow shall not meddle.
+Romeo, go! Romeo, come, nurse.
+
+ROMEO:
+I would the county is so rich, I do not;
+I'll tell thee to see thee to her: I'll go.
+
+JULIET:Nurse, and tell thee well, thou dost not.
+
+Nurse:
+Marry, I will be not satisfied; and if thou love to see thee; I am
+good, here's some honest, a gentleman for I would 
+
+===== seed 9 =====
+To be, or not to be, that is the question: but that
+will make it, if it were.
+
+AUTOLYCUS:
+No, then, no, you will not be a courtier.
+
+DORCAS:
+Pray you?
+
+Clown:
+Why are you, sir; for your good fellow: you shall go with
+me?
+
+MOPSA:
+Sir, sir.
+
+MOPSA:
+What, then?
+
+MOPSA:
+A bawd, sir; I will not stay. The pox o' faith.
+
+Clown:
+What, ho! a pox you, sir, Pompey, a bawd, sir; you
+will not be a bawd. Froth a
+gentleman. What, ho! a bawd? why, sir?
+
+
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+I have been the way to say; or so.
+
+ESCALUS:
+What would you, sir?
+
+POMPHEY:
+No; I will tell your highness.
+
+LUCIO:
+Ay; you do me what raiment you have been. I think not
+now. I would your worship were not to your pate.
+
+ELBOW:
+Why, what is you?
+
+DUKE VINCENTIO:
+He has a woman; for your honour! He
+is a very bawd.
+
+DUKE VINCENTIO:
+What a bawd, sir?
+
+LUCIO:
+Marry, sir, sir?
+
+Provost:
+You say a bawd, 
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+but it is nothing else,
+That is no more than a little,
+To be the most charter, but his child.
+
+JULIET:
+I have a lord.
+
+JULIET:
+O, I will not be gone, sir, that is not my life,
+If it shall be it not so.
+
+JULIET:
+I pray it, sir, and you know you, sir.
+
+ESCALUS:
+I thank. Fare you now, Pompey; I am not gone.
+
+DUKE OF YORK:
+Well, I have forgot my lord, and do you
+Do not so-- to-day: you know, I am: go
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+I will not swear to be ruled--
+
+GLOUCESTER:
+My lords, my lord.
+
+KING EDWARD IV:
+What, hast thou not, that thou hast been king?
+
+GLOUCESTER:
+No, madam.
+
+LADY ANNE:
+But you shall; I will go, and not to-day.
+
+GLOUCESTER:
+And that,--
+
+LADY ANNE:
+No, my mother:
+What will you do, my lord.
+
+GLOUCESTER:
+The better, I am a little more?
+
+LADY ANNE:
+
+LADY ANNE:
+What is it?
+
+LADY ANNE:
+A word of you, if it b
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+The king is not yet gone, that our general is,
+Which shall be the object; for we have no power
+From your highness, to have your voices to you:
+Your brother you are gone: the queen is your
+good sister, your honour; and your mother
+is not to make some private dealing.
+
+LEONTES:
+O sir, I will give them leave you well to
+church of a man. You will not go
+To the Roman duke; if your brother be so blest
+
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+but I would not be, I would love, sir, but 'tis true.
+
+PETRUCHIO:
+A letter that I would not call you for your grace,
+And with you as it.
+
+GREMIO:
+Sir, I know, then the devil are not now
+I, but in all your good time for it in love: it is true;
+but it is no more, and, and your love is too.
+
+TRANIO:
+And you may, sir as you may do you leave,
+Though you do your pleasure, sir, and you shall not do.
+
+PE
+
+===== seed 15 =====
+To be, or not to be, that is the question: he is
+the rarest of your dwelling, but not in his life for
+your voices; and with some report a very
+strange; the common man, a very little less.
+
+Clown:
+Nay, I pray, and think I am sure in
+any of the man that I was a better.
+
+Clown:
+Why, sir, I say you say no man is born with
+occasion! what I was a friend to say I say
+I will bring the world to the king.
+
+AUTOLYCUS:
+I will.
+
+AUTOLYCUS:
+You are sir
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+The very statue is no more, that it is.
+The gods give us, the queen will die.
+
+QUEEN ELIZABETH:
+I, to make your grace to you; I'll
+Hear me a widow;--and let me tell you!
+You may not, as I am sure as you
+As your mother, I have deserved--
+Your brother your husband, and your highness,
+I think you will not be your good service.
+
+QUEEN ELIZABETH:
+No, I have seen, you should do me good.
+Farewell. I am 
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+you have made me good and my lord,--
+I will tell it! why you, sir?
+
+DUKE:
+Why, my lord; I am too,
+You do it in the law that is-as it was done
+To be tempted with your.
+
+FLORIZEL:
+Why, I beseech your highness
+Will you hear, as I will be as it
+Will it be your honour of the king,--
+
+Roman:
+You should not be so good sir, but if
+I do know you, as you may be a pedlar:
+And you may be so. I am, and, as he
+
+===== seed 18 =====
+To be, or not to be, that is the question:
+The heavens is; yet the king.
+
+First Servant:
+I am not. Fare it to be so, sir,
+I will tell you what news? is the queen for a matter?
+
+DUKE VINCENTIO:
+The provost are the provost, a lord. Come, I say, you well to
+tell him in this house.
+
+CLAUDIO:
+Ay, I do beseech: if you, the duke
+be any of your brother. I am well not well; you do
+you know you are, sir, that the duke may be found
+to the house. I w
+
+===== seed 19 =====
+To be, or not to be, that is the question:
+I have heard you know it you, and it shall; it shall
+not please you.
+
+First Lord:
+Ay,
+If they be the first of, the duke shall bear the king with the duke:
+
+First Citizen:
+You had rather had not been the way in your house as the
+ship are, but to be it.
+
+First Citizen:
+If, it be any more to-morrow. If any were of
+your mother, and it is not, if I
+had been too hot, I warrant the king
+were your voices
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I am too much, I know ye;
+The better part to me in the time and crows,
+That is not, which I am to the purpose
+For what they are to know. Therefore come hither:
+You have made it a gentleman.
+
+DUKE VINCENTIO:
+You are no: I know, I pray, sir, and you may not,
+I know the world is no better,
+Pronounce me to me the better, and to the queen with
+The provost. I know, I would be found,
+And, the duke hath 

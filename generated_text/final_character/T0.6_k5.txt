@@ -1,0 +1,335 @@
+prompt='To be, or not to be, that is the question:' temperature=0.6 top_p=1.0 top_k=5 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+I would have made a sign of the story soul
+That in the wars of the sing of the country,
+And we should be store our bosom of some wish
+To the crowness of the state of my soul,
+That thou weep'st not show'd to be safety for all.
+
+CLIFFORD:
+What, we have been too hollow to him on his bed,
+And we have been a soldier to see the sun.
+
+KING EDWARD IV:
+Now art thou the cause of Clarence the house.
+
+WARWIC
+
+===== seed 2 =====
+To be, or not to be, that is the question:
+And, as I cannot be stopp'd a false.
+
+GLOUCESTER:
+How now, good lord, hold makes the part, and that the world
+By the sea of the people of the world.
+
+GLOUCESTER:
+I will be angry to see the fires of my boy.
+
+KING EDWARD IV:
+Why, master, masters, as thou art not thou hast a fool
+That was a fault thou hast made of the sea,
+To seal the better thanks of the common of mine.
+
+KING EDWARD IV:
+If thou wil
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+He cannot that was well to be straight, and he is found.
+
+GLOUCESTER:
+This is the streets that the sea-ship day on him,
+Which is the sun he hath did been should bear him.
+I have been the hour of his brother brother brother
+Than the death of the day of the country's death,
+And he hath slept the blood of his soldier,
+That she hath, the wars to be husband of the way.
+And this is the fool that he hat
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+The man that was a man a sea-with her father, and
+She shall be the way of the country's brother wrong,
+That thou with the time to the seast will be thee.
+
+KING RICHARD II:
+Now, will you tell me all the glory counsel,
+When I was the day of the son your father's sea,
+As my lord, I have said your princely shall prove
+To the people of your father should and his part
+And from your head, and you shall 
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+And what then the way she had so long a word?
+
+BUCKINGHAM:
+A good for that would not seem her brother than it,
+And will the consuls of the court, thou hast so,
+When the steel heart thou here? O honour made,
+The comfort that the state of the day, and the duke
+Will her friends to the friends. But so the truth,
+Which was the consume of the provoke of the provost
+And by the crown of the courtesy; whi
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+What is he would that were he should be the deed?
+
+CLARENCE:
+What is this? which we will be cannot again,
+And when they shall be as it were to be standed.
+
+GLOUCESTER:
+The grave of thy father and the cause of his son
+And the seat of thy sea that thou worthildst his lust,
+When he had he was all the warrant of the heavens
+And to the souls of me. What stood honour the hand?
+
+GLOUCESTER:
+And shall I,
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I am not so look'd upon the wisdom of the state
+Of thy force and thy brother, and which he was thee
+And the sun that thy father father's son
+Was an action that hundred there the broken soldiers,
+When he did be the book of his face.
+There is the city of his love of his son,
+Whose things bearing hearts thou shouldst be his honour.
+
+BENVOLIO:
+Now, I'll be thee the sorrow of this world,
+And be he hat
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+I am not to the content of the sun.
+
+CAMILLO:
+The merit more plot, and so the seasons in the course
+In such as the people of the seas
+And palace of your children lies in the soul,
+And let the contrary of the death of your brother
+To the branches of the death of you.
+
+FLORIZEL:
+Who shall be straight?
+
+LARTIUS:
+Why, thou shalt so long?
+
+CAMILLO:
+Why do you not?
+
+COMINIUS:
+I am a great of honour to 
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+Therefore is a foolish well but a seeming bowl,
+And the worse that would not then the world sense.
+
+KING EDWARD IV:
+Well, what says he shall be so the father?
+
+KING EDWARD IV:
+Then, be not with the people that that I have.
+What said my lord? what stay his head with a fault?
+
+GLOUCESTER:
+That says he hath seen to be the sea of his prince,
+When he hath should be trust of his head,
+And that the sham
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+What we will be cause to the sun and thine eyes
+The government of the day of thy life.
+
+BUCKINGHAM:
+What says the maid, and the sea-seat crown?
+
+KING RICHARD II:
+Then she did she is secret in the crown,
+And with the sun and the common of them.
+
+Second Servingman:
+We see the state of them, when they say 'tis a tale,
+Which he is a fit of such the sunsets,
+And all the prince of the sea, or their sig
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+He was nothing so hand of my part, he shall not be;
+For who is the senate of my friends, they are they
+As what they do the death of a man of me,
+I will not be so better than their country's shade,
+Before I see the heart of a book.
+
+POMPEY:
+They will see him that she will be they are night.
+
+POLIXENES:
+I take me to the state of your consul.
+
+LUCIO:
+And I am too soon of this tears and tale of a
+pit
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+He shall be the first that had been a wife;
+And so to be a shall to the country's death?
+
+RICHMOND:
+If this is a subject service.
+
+KING RICHARD II:
+So that I have not said in this way
+To make many counsellors to the common of the people.
+
+BUCKINGHAM:
+Who could have made him to the provoke of his son,
+Where shall he have too much be the country's law.
+
+BUCKINGHAM:
+What, so you must deserves you to
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+I have not so long a fair of state, and none,
+The second of your father's party, and the sea,
+The shame of your hopes to bed the best.
+
+GLOUCESTER:
+I will be thee, sir, you have my soul are forth.
+
+BUCKINGHAM:
+What, wilt thou dost not me?
+
+CLARENCE:
+What, man? my lord?
+
+BUCKINGHAM:
+The sun is the prince is or two sets thee and so let
+To see the steel water.
+
+BUCKINGHAM:
+It is not so much to my lo
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+And when I have done my brother hath me with him?
+
+DUKE VINCENTIO:
+When I have been some traitors of this?
+
+Provost:
+I am content one that I saw so little would
+the way of the content and the sun my brother,
+the breath of the bear of the people, I have said
+the most preception of a fair torture, the season of the sea,
+and the tready of the side, the soul of the death,
+Which the course would have 
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+The sun of the consent and my husband.
+
+KING RICHARD II:
+The duke of the city of the duke of the city,
+And by the charges of the sea of the deeds,
+And that murdered the brave of the war.
+
+KING EDWARD IV:
+Why, then I do beg thee to the death of thy head?
+
+QUEEN ELIZABETH:
+The courtesy shall be the title, the man and the people,
+That thought the sea of the day of thy soul,
+Which with the soldiers o
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+I cannot still be a man of the court.
+
+GREMIO:
+I say, I would be satisfied.
+
+MERCUTIO:
+This is the cause of thy sick to thee?
+
+MERCUTIO:
+What should think is the care?
+
+PETRUCHIO:
+The prince is not the sea, and the world of the dream
+of thy soldiers and my son treacherous side.
+
+ESCALUS:
+I will be gone, that she is not the consul?
+
+ELBOW:
+Ay, the sun the matter stir that they shall hear them abou
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+In the city of his father's love, that will not be so.
+
+ROMEO:
+I have been so little that the present shall be the
+duke.
+
+BENVOLIO:
+I will not be town your body: and the state, and
+thereof I will be a full of your father's house, that
+say you have a fall of this parliament and shall be
+marked again: when I have said you only to my
+father with him and that you have a man talk'd of the
+more of the 
+
+===== seed 18 =====
+To be, or not to be, that is the question:
+I should be so stand as I have none of the fire.
+Therefore I can the country of the son,
+With the ground of the people to the blood.
+
+BRUTUS:
+And so well see the colour of the father.
+
+CORIOLANUS:
+I would tell the morning of the common of men
+To see the chamber, there the soul of my head,
+To more than the steel of the courteous of this,
+And the world begin of the people's death,
+When he should ha
+
+===== seed 19 =====
+To be, or not to be, that is the question:
+Who, if they will be seen the truth of this soul
+And the sun with merry who there is the complaint
+And the country of the caution: but they are not
+To buy a man that is they have said any too,
+To bear the sea, and the state of my soul,
+I will not to the point of the state,
+The fearful of his prince, and hear him as if
+As they shall not say 'tis too much so fearful to the
+supposes of the people of
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I cannot stand the princely should be brief,
+With all the best wife that hath died on thee,
+Which thou hast something thou deniest but a fool,
+And thou hast not to thy friends, which thou art
+Though the seated to thy care, and thou diest
+The country being so true thou art thy courtesy.
+
+First Senator:
+Thou art a thousand words to the crown to thy soul,
+And by thy father thou hadst and but thy sic

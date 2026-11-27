@@ -1,0 +1,471 @@
+prompt='To be, or not to be, that is the question:' temperature=0.6 top_p=1.0 top_k=5 new_characters=400 unk_banned=True
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+I would not, if I do love you, I am not born.
+I will not, if I had rather say you do.
+I am not the king and myself to be king;
+But so I am not so well, and so much.
+
+DUKE OF YORK:
+I will not not be a king to be so.
+
+DUCHESS OF YORK:
+I am no more than I am not so too.
+
+QUEEN ELIZABETH:
+No; I will not be a word to be so.
+
+QUEEN ELIZABETH:
+I pray, I will not be a king.
+
+QUEEN ELIZABETH:
+My lord, I w
+
+===== seed 2 =====
+To be, or not to be, that is the question:
+I have not heard the man of it.
+
+DUKE VINCENTIO:
+I am a courtier, I warrant it not.
+
+DUKE VINCENTIO:
+I am a man to be a man to be so.
+
+DUKE VINCENTIO:
+I would not do it well as lief be a maid to be
+remembered. What is it that you?
+
+LUCIO:
+No.
+
+LUCIO:
+You have done you not a suitor of it.
+
+LUCIO:
+I am glad you a gentleman to have it.
+What, sir? I will not be a tapster to do you.
+
+LUCIO:
+I will be 
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+I have not been the king of my love,
+To be my brother. My lord, I will not be gone.
+
+BUCKINGHAM:
+I will not be revenged to my heart:
+I will not be so good to the king.
+
+BUCKINGHAM:
+I do beseech you, I do not.
+
+GLOUCESTER:
+I am sorry, I will not be satisfied.
+
+BUCKINGHAM:
+I will not be revenged to be it.
+
+BUCKINGHAM:
+
+GLOUCESTER:
+I am not so much of you.
+
+GLOUCESTER:
+No, my lord, I will not be sat
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+I would not be the king, and my lord is a king.
+
+BUCKINGHAM:
+My lord, I will not be a king.
+
+BUCKINGHAM:
+Then you will not be a subject, I am not a king.
+
+KING EDWARD IV:
+And I will not be the king as I.
+
+LADY GREY:
+I am I not a king, but I am.
+
+GLOUCESTER:
+Why, I would I had rather have I not been too.
+But now, I will be a king, if I will be king.
+
+KING EDWARD IV:
+Why, then I do not stay you wel
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+The heavens be the other for this world.
+
+DUKE VINCENTIO:
+What is your honour of your honour?
+
+ISABELLA:
+I know it is not to be wary.
+
+DUKE VINCENTIO:
+What is it your honour? I will not speak to him; but
+the duke is a little better than you is the duke.
+
+LUCIO:
+No, sir.
+
+DUKE VINCENTIO:
+My lord, I will be a little man to be a
+gentleman of you: and the duke is the duke to be
+good Pompey.
+
+DUKE VIN
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+I pray you, sir, you will not be so much of me.
+
+HORTENSIO:
+I will you be a suitor, sir, I will be a gentleman.
+
+GREMIO:
+I will not be a gentleman of you will be hanged;
+but I do it not be hanged in a case.
+
+HORTENSIO:
+I am a gentleman of a gentleman, sir, I will not a gentleman to be
+remembered: I will not be a courtier of a man as lief be a gentleman
+as I would be a tinker to be a gentleman.
+
+G
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I would not be the king of you, as you
+will be the king and not to be so much at the world.
+
+DUKE VINCENTIO:
+I will not be hanged to be so; I know not so, I am not
+the duke of your own dealing to give it.
+
+DUKE VINCENTIO:
+You have a cause of your honour. What is you a tapster?
+
+LUCIO:
+I would you be your brother of your honour, Pompey.
+
+DUKE VINCENTIO:
+I will not tell you, sir.
+
+DUKE VINCENTIO:
+I
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+I pray you, my lord, and I will not stay.
+
+LADY ANNE:
+I will, as you will not be so so much.
+
+LADY ANNE:
+Why, then, I will not stay to you.
+
+LADY ANNE:
+I pray, I will not be revenged to you.
+
+LADY CAPULET:
+What, do you not, you love?
+
+LADY CAPULET:
+I will go for your grace and you to her.
+
+LADY CAPULET:
+Madam, I pray you, you will.
+
+JULIET:
+I will not go, sir, sir.
+
+JULIET:
+Why, I do not what you
+
+===== seed 9 =====
+To be, or not to be, that is the question: but it
+is the better, the duke of the duke.
+
+LUCIO:
+I know not, sir, sir, sir, I am not a gentleman of a
+pretty fellow.
+
+POMPEY:
+I will, sir; but I am a bawd.
+
+POMPEY:
+I would not be a bawd, sir.
+
+POMPEY:
+Well, sir, sir; I will not detest you a very very maid.
+
+ESCALUS:
+I pray, sir, sir, sir.
+
+POMPEY:
+I do beseech you, and I pray you, sir, Pompey.
+
+ESCALUS:
+Well, Pompey, sir.
+
+POMPEY:
+Sir, I pray
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+I have been the better thing to be so long.
+
+DUKE VINCENTIO:
+O God save the duke that hath been so much.
+
+DUKE VINCENTIO:
+O, I am glad of you, I would have you had, sir, you have been
+sworn it to the duke: it is it not your
+mistress is no more than it is a little thing; for your honour is a
+man of you, but I am a little warrant, sir, a gentleman,
+that I know it not, that you are no other of you
+r
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+If you do not think, I do not confess, as I will,
+As I do confess I am sure, and I do,
+I am a gentleman of you: I will not be content
+To you have a little thing to the king.
+
+KING RICHARD II:
+Why, then, I am not a man in a man.
+I will not be satisfied to be a king;
+For I will be a king; for I will not die.
+I have no man to the queen, I will not be a king.
+What, is the king? or is he is a king?
+
+D
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+I will not be a little thing to be done.
+
+KING RICHARD II:
+Why, then, I will, as I be a king;
+But I will not be a king, as I should not.
+
+DUKE OF YORK:
+I am not, I would not be satisfied.
+
+DUKE OF YORK:
+Why, then I am too too much to be so.
+
+DUKE OF YORK:
+Then shall I not be a king?
+
+DUKE OF YORK:
+No, my lord, I am a word for my life.
+
+DUKE OF YORK:
+Then I will not be so so.
+
+DUKE OF AUMERLE:
+My 
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+The king is not so weak, and his son,
+And so much better than his life be so.
+
+GLOUCESTER:
+Then so, by the Duke of Norfolk,
+And the Lord Aumerle and Lancaster.
+
+GLOUCESTER:
+
+KING EDWARD IV:
+What news, what news?
+
+GLOUCESTER:
+What news?
+
+GLOUCESTER:
+The king is dead, Lord of York, and his son is fled.
+
+GLOUCESTER:
+The Earl of Wiltshire, and the Duke of Warwick.
+
+KING EDWARD IV:
+Now, what news? and
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+I would the duke were a king to be king,
+And yet I am too, I will not die.
+
+GLOUCESTER:
+I will not be satisfied, I will be so long.
+
+QUEEN ELIZABETH:
+And I do not so, I do not repent.
+
+CLARENCE:
+But you shall not so I do it good to your grace.
+
+GLOUCESTER:
+And I will give you to the king to you.
+
+GLOUCESTER:
+My lord, I fear you to do it.
+
+GLOUCESTER:
+I will not be a king.
+
+KING EDWARD IV:
+My lord
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+The king is not gone to the king,
+And yet we may be a king and a king.
+What says he is the king and his son?
+
+DUKE OF YORK:
+Why, then I am a king to do him.
+
+KING HENRY VI:
+I am the king, I fear to the crown.
+I will I not be satisfied.
+
+DUKE OF YORK:
+I am not a king to the duke.
+
+KING RICHARD II:
+What is the king?
+
+DUKE OF AUMERLE:
+My lord, I, my lord, I will not be king.
+
+DUCHESS OF YORK:
+My lor
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+I am glad for the king, that I am not so.
+
+GREMIO:
+I am not the king that I was so, but I will not swear.
+
+PETRUCHIO:
+I am not, I am not so much more of them.
+
+TRANIO:
+I will not be ruled to be a man; I will be a better.
+
+GREMIO:
+Ay, sir, if it be any thing in the Tower.
+
+TRANIO:
+No, sir, I will not be hanged in this; if it be a
+man would be any thing in a man of a goose.
+
+GREMIO:
+I am not a gent
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+I am not a man of my love and a man;
+I would I have not a little more of my life,
+I will be content to you and give me.
+
+DUKE VINCENTIO:
+I am a word to be a word.
+
+LUCIO:
+I pray you, sir, sir.
+
+DUKE VINCENTIO:
+
+DUKE VINCENTIO:
+I would not do it so much of it.
+
+LUCIO:
+I would you do, sir.
+
+DUKE VINCENTIO:
+I pray you, I will not give you me leave you well.
+
+DUKE VINCENTIO:
+I will you do you to you,
+
+===== seed 18 =====
+To be, or not to be, that is the question:
+I would not have been too much more.
+
+LEONTES:
+O, good my good lord, I will not be,
+But you have not been so much as I am so.
+
+LEONTES:
+My lord, I will confess you, sir.
+
+LEONTES:
+I do beseech you, sir, and I will not go.
+I pray you, you do not leave to my heart.
+
+SLY:
+I will not, sir.
+
+PETRUCHIO:
+My lord, I will not be so brief.
+
+PETRUCHIO:
+I will not be satisfied.
+
+HORTENSIO:
+My lord, I do bese
+
+===== seed 19 =====
+To be, or not to be, that is the question:
+I have heard you know it is not a man, but a man.
+
+PETRUCHIO:
+I pray you, sir.
+
+HORTENSIO:
+A letter of a gentleman, a bawd, a gentleman of a
+man is a man; a man is a very very a man of a man.
+
+GREMIO:
+I would not have been a man for a very a man of a
+man that was a man of a man of a man.
+
+GREMIO:
+I would you have been a gentleman for a maid,
+as a man as you would, as I say as you are.
+
+TRANIO:
+I 
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I am too much of you.
+
+LUCIO:
+What news?
+
+DUKE VINCENTIO:
+I would you had been as I had lief be a man to be a
+good man; but I am no more of a man, a man that I have heard it
+not a man. I would not be the duke, I am a man as I would
+be a tall of a man of it would not have a man's man of it.
+
+LUCIO:
+Well, sir, I am a man that I would have been a man of
+you had been to be a husband.
+
+LUCIO:
+I would 

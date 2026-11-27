@@ -1,0 +1,361 @@
+prompt='To be, or not to be, that is the question:' temperature=1.2 top_p=1.0 top_k=10 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+Saw 'tis as not a pleasant sea,
+Havious done true a breed and deeming frience;
+I am no gentlemes down, too put our doublet.
+
+RICHMOND:
+To dever of such a drest-gall sake butcherities,
+When fain three--should pass, what do at he
+some that wild.
+
+KING RICHARD II:
+How comfortudes he weeping breath. Thou art along thyself?
+
+ROMER:
+Now, get you might with hangm is near?
+
+MENENIUS:
+Now will he signify 
+
+===== seed 2 =====
+To be, or not to be, that is the question: the
+cloyen sens, at his sprivious death, no
+hollow, mother, thou shall not be here. Thank, when? and
+cheer blast,--thinks? follows as, the sieged satisfy,
+and thou we have lived told at thousand muddy.
+
+Third Citizen:
+Brother on thy father looks are friends? O, the hyself,
+that bite as o'erways the had death; how leint,
+because to be her send, behold, and leign,
+Them, tread-hearship to buding thu
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+And yea nets to the day, that'st have wings, the
+din wise in his the ladies.
+
+Second Servant:
+Heart there, an it now me, whach sats,
+And dear it's break in bore and his tent,
+I' me stand, how not abroad,
+He's proclaim upon these butt, this accords
+From him, too? O, were fight, alone,
+To creep hild birth in the counsel wherein?
+
+DUKE OF EAVLAND:
+Tush, we do not a voice in this late.
+
+DUKE OF YORK:
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+For wise, and to do Isabel: taste he in think of you:
+The will hear his sweet bear hims. Who's, wrong's false?
+
+PETRUCHIO:
+And that, for stocks together by hold,
+Onclin in a wretch; strange; noblest should,
+Therefore to hill think traitor tears?
+By whoe? and stone atstay hand him fall?
+
+KING LEWIS XI:
+Northurness and an our face, sir sinces again;
+Say, and die upon my sir, those compassion on,
+Th
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+A dozes tears to sorth from opproach.
+
+SORGE:
+By truth, the liventure did ignorible.
+The rives, then was because a winto held
+his sick object by, thou mights as yet; blessed me obey in mine,
+And with mean and secret moaning to bed?
+Weeps, my lords! Is thou more sorrow'd and
+As mostify thrileny coldly discolanchange by his
+Hakefacted thy looks herself, foolish haste, so hurt
+Being of their will or
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+What is madest so, and image! will the prefer title,
+A gracious craft titory in my tears.
+A can traitor cut obey' awailory; let's shine here,
+I cure not assality indeem to things are with the worse.
+Bear to make wife
+And folk friends over.
+
+KING RICHARD II:
+Why wisdom the tronges woman what too,
+Which tire insorth to me?
+
+GLOUCESTEU:
+
+CLARENTIO:
+Thou shalt in dragon be.
+
+GLOUCESTER:
+Thou happing,
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+Being thou sworns, the presed sights of them bleedes
+Are they torous both brave ships of counse!
+And tears therefore, he is impreaches
+With partrigows.
+
+AUFIDIUS:
+O thou art assisted.
+
+BENVE VINI:
+Menenenius, thou art as thou art thy
+And soletimes much these hands.
+
+Messeemencer:
+My longeance, I are no gentle--
+I'll part that too thou cand towarr's honest?
+
+WESBY:
+That, trai a morsoman of my lord
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+It to wear the boon of laugh adieUhard, by that I desires the wood
+hould down where fiver you of him.
+
+CARDITA:
+No, brother, my lord;
+And having his brother, who cross thou woman,
+And have strain'd, like so but him own
+Emen his poison soon.
+
+ISABELLA:
+O horse! sir,
+To wheeps have I hither warrant mine.
+This is his neck sword hopping makes him
+Finger to his thought wilful lives want full of yet:
+A
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+These authorible when my shadows she did:
+And tell servant so. For I have seen thou hadst not forget.
+
+First Citizen:
+If enough, tread am I the liginy of such place.
+
+LADY GREY:
+Sound when with the whole, by hithal:
+Such former in at Antige such estartibly
+As missues found. I will bait
+In attended the rancient; therein one have men;
+What a city's lights for mouths bine of the
+sceptable, here's th
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+What? madam: becaused my sours louds with are thee.
+Througher body bred by his follied.
+Best this weighteous, that his physic behalf one
+To list-patress.
+
+Farry:
+There is blineament indeed;
+Heaver'd in yet; and most in parliament ather,
+Or be satisfied soon, dost and dinection
+Whom he takes thriftless thou made as treason,
+Were this son: take it of her, and at a women.
+This night, become, no so? 
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+Stand young brought not?
+
+First Citizen:
+It she doubt to him this fardel's commends?
+While the nught blest hath presenced,
+Here consul, looks for with his light, be
+that the their couns and shall body, by as hoa
+Take a serrable.
+Which to my trokess as seeming, sir, stir, as they
+advinity to heir all sayiteness; he time,
+To the peduced of ancient partison
+And incrown into thee.
+
+DUKE VINCENTIO:
+I 
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+How ne'er makes wine enforcement; so mugine
+I talk of a many dayings' hand, and
+Hath brain'd these flat and drinknowled farewardibled,
+Butcher to the sixtress of thee shoupherd.
+If am deadly, says, for bride, thou cry madam:
+And, thou wast bedam? I lay he is in't
+By heel traitor's nature?
+Curse that I besides a ship of hell.
+All fresher our delivery borship,
+And meanish our mine own denies,
+Which
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+'Good forreck hither?' whet's here? What-, melly, he chame, ha!
+It is day; hear met, the beget, be hurt of his.
+
+Lords:
+How! thou have to lose thy hearth, helt me with so
+Which, what's choeful hiss'd soundly arms his well,
+A lented throne, a should-former do lamentage
+Tie a brother-mail taphopp'd actor his wrink;
+That we shall setire hope together with this.
+Boy slily them to him.
+
+GARIS:
+On thou
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+And we do I mine's drinking it mine own wheel'kest now.
+
+Second Conscended his wine:
+Ah, no; but he hope-ti dress,--
+Or buckingdom of his new offer'd me.--
+
+BONARDEN:
+And we'll steal anod ounce slugghen first dear me.
+
+DUKE VINCENTIO:
+I did you, my lest; stop, young's hate,
+I'll hair-day: her corn my liver did he me,
+Will you deep with and brine-housewery,
+That dogs for show, he have slow'd had l
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+Some is no behind: neither she, if thrisging bross,--
+Thou saystand'st my sword win helcomes thee away:
+Bold heavy in a milks to't.
+
+LEONTES:
+I'll broothen:
+Here as the grace, and by are and thore
+When whet's his best above?
+What's he that home?
+What do'er heel-maid not?
+
+SICINIUS:
+Had not against stripion.
+How you, sir, they was not foxthing?
+Say say you have: bears a thousand art words
+His love
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+O, let the mowl in my lorsoon of a booty desire,
+To brink this in his day.
+
+ROMEO:
+God weakness.
+
+JULIET:
+In my life in, and holded,
+Or a drust it but intrupe butterfly.
+This is not no little to look'd;
+Hear milk block-walk'd on thee, a fearfuller'd
+Fools.
+Art treat-bline, freely or thoughts, looks as surmician;
+To be sting in the mock in deep in smile
+Belowing scarms my clumbs with suit,
+Two, as
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+To leal in by the house; a send thousand cures the shrubs friend.
+As my read ill blood as thee for wars.
+What am I drunkin we shall not stay awhile,
+I do return from the land-seal downright,
+While who duty eside but bleels to back faith:
+This none as arms to like me:
+Beholdld,'?
+
+Page:
+Why, weeping: would will heal that do'th,
+For well in the bollowing and soon wailors: take
+heavens tears our and
+
+===== seed 18 =====
+To be, or not to be, that is the question: I spoke
+wrath, sir.
+
+ARTIA:
+And shall be well, that I was indeeds.
+
+CRIVENHBIS:
+Ha!
+Dond till the wroit comfrit-pen to you
+We havf her do to the prison, then, it is not
+He have have should esteemer a servare at offered,
+The sturn tyrew-enement.
+
+GEOOENTES:
+O plepion
+O time: I what can thee: you are
+To death.
+
+CLEOMENO:
+Not best but him!
+Howe show with swales all speedly.
+
+GLOUCESTER:
+Sweet so, he
+
+===== seed 19 =====
+To be, or not to be, that is the question: who
+hom--lies yet borness thanks his sword soul
+That with a twore beggar forgar brook war.
+
+LADY ANNE:
+Too hour!
+
+LORD RORD WIOLK:
+As he shall not forget.
+
+LEONTES:
+Am I counted.
+
+LEONTES:
+Now will no other well:
+And, ho, to more and the royaliken of my robes!
+
+Servant:
+O, noble other arms: ho!
+
+Provost:
+O God, yea, and that drew'st thy brown'd own.
+
+KING RICHARD III:
+My replect'd brow thee delay
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I, mird, my master is no service of yours,--
+Wince, by shall no call buy you.
+
+LARTIUS:
+We'rave make to-morrow; sir, I am confess
+Hidew honour her fronce two what happiness' blood
+To help atto my heaven shall wash his sin,
+And thrust crown too loving at.
+Thou steals with'ty her true thy hours,
+If yielded by hence from him?
+
+KING RICHARD II:
+And yet shall be reverenced, he, men,
+I done but number'

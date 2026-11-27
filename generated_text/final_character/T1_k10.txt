@@ -1,0 +1,332 @@
+prompt='To be, or not to be, that is the question:' temperature=1.0 top_p=1.0 top_k=10 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+Suppose he is but all that means a bloody own.
+
+DUKE VINCENTIO:
+O, title honour of the heavens shows without tell
+The submits beats as for there: I am a braved--
+
+LUCIO:
+She swear'd to the fair opining of my parad,
+And thereaf is seven to be satisfied
+Wash'd? Come, come; fool, tears! O heart, my lords!
+I have been slews and me will desire in my sword.
+
+GLOUCESTER:
+It shortly say, thou art my soul
+
+===== seed 2 =====
+To be, or not to be, that is the question: my mild,
+With sorrows of my looks absent writ.
+
+DUCHESS OF YORK:
+I am not brittle too, my noble late
+A flourish'd--that he that takes, the siege,
+Whose counsel, and half a disseman so traitor?
+
+PERDITA:
+Thou wilt thou, I think, in honourable straight,
+When I thought to that brother father-waving way:
+Wraw the body, if thou art of men, thou seek'st,
+To all this meet my sovereign, his sake.
+
+FRIAR 
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+Hence about a petition of difference;
+His face is for the like and holy clouds
+That instant the tread is true than which which speak
+As he too fell; and there times his place was't
+Transpass not between me to bed, hang thee,
+Is thus abused, then all he hearts,
+Hermioned fight in his farther speech in the daughter's bosom!
+
+HENRY BOLINGBROKE:
+Three does we will all the lein of thy foe.
+
+KING RICHA
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+There is no more state: they are no little as it:
+But let me forsworn be prevent, I think you, I'll not fight
+To war make him at any show to hear him.
+
+Boy:
+She hath sit that made you shall send the land out
+To help and him of his prove or war,
+I will blunches the rash, as her long.
+
+CORIOLANUS:
+We'll do you.
+
+COMINIUS:
+He'll por sir,
+Indeed.
+Come to heaven, good lady, and this counsel women.
+
+TR
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+A man, and more to be slaughter'd tongue
+A meddlot of the common to deputy:
+Foe some peedily see
+Made them a prevent of the city of her,
+And neing so much as well by their commons.
+Who calls? suppose me? are you forgate?
+
+Both:
+Now, gentlemen: I was seement think your manner.
+
+TRANIO:
+A mile, by the worst, and your brother looks,
+Than I look upon himself, as what's the hurt's lips.
+
+SICINIUS:
+The
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+Not as the world. Our gentleman of the precious counsel;
+but to seemer, to build not appear of the penitent;
+being enemies of the sea have discontented it
+from the duke estimation of you: the which he my lords,
+proud subten honest in your prisonment hath might
+do slew the sentent of this woe, which is time
+The secrets in her offence, moved morths, or son
+Have not our body thing birtal of ill.
+
+KI
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I am not our courtesy.
+
+PAULINA:
+Sirrah, here comes the duke he born he will, and in
+the countrymen, that we may better a surprised
+Would not were they were to burst the death;
+For now swear the time which is their son,
+In whose day, and scient, free their children of strength,
+To fight and her tarks, and should have not the duke.
+So shall tell me, for my mother brother's mile:
+Tell me of my soul
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+It is that they are not suffer them.
+
+First Citizen:
+With private and better twenty fight than to mercy:
+And if thou worth wilt hunstand, and no other crown,
+Should still in thy couple self that
+I'll tell you of the world's head,
+You came and my wife heart should lips of mine;
+Who shit is not a manner. Thither here so desire
+I am ripe for perish, for my soul, that I laid;
+It is, to lusty surely a
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+Therefore lives the sights of the sea, and they have
+About wor word, he is not courtesy.
+
+LEONTES:
+On?
+What! wise the parent that
+Before himself? that he shall be sentenced by the
+tenation of his country.
+
+MENENIUS:
+Such of mercy son
+When I confess are blood on hour wench the sparing:
+But, to be the tire-litted of tears:
+Without with the heavy of my head man,
+That bide with the eyes at hear the t
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+What were they have died not, thrust not their case,
+If they have served to do a dead fault country's?
+
+PRINCE EDWARD:
+The princely considerers could tell the cause:
+I know nothing for her loss and his feet
+With his head of his majesty, and man.
+
+WARWICK:
+I did, sir, you cannot my speak.
+
+HENRY PERCY:
+No, bear me! be it is so.
+
+KING EDWARD IV:
+Away! that with thy wild-fill'n hold, become.
+What is
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+Stay, both such asteel'd from the lords, I have done?
+If not this fardel of the fliction, it death
+Is tell hath he would buy the world, the dreams of his
+found his gallant free and with him shall be touch
+creature in a several of wine at the so, the sea
+higher some stirs as they daren shuts to live thee?
+
+Here:
+And is too long a luteness, and me in sister, think;
+nening it teach should be sainted
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+How now; I pray, madam. Ay, let us a man.
+
+GLOUCESTER:
+I do hear thee hence, beat this are to-morrow he should
+Where is my country's flattererer, then in the world
+In earth.
+
+LADY ANNE:
+The duke as I am going to proclamation
+And beauteous allow to death: I shing
+Is a secret dullest too make him: but I heard
+It her cheeks, till him from a business.
+
+GLOUCESTER:
+Now, by the crown of you!
+
+GLOUCESTE
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+If the garken of this crown, and brought-were
+The second of your faults, you must content you;
+The gods of your country have there, they will but we'll
+Thereby.
+
+LUCIO:
+A countrymen!
+
+ESCALUS:
+O, speak in:
+Most part is my sweet lord?
+
+DUCHESS OF YORK:
+Have you met again, you do remember that.
+
+DUCHESS OF YORK:
+You say 'swear this trumpets! we mars will to seem,
+As if you but rest.
+
+LADY CAPULET:
+
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+And we will mock'd the coron and the business
+Than the gate thee offences. Why, by thy penitent
+And to the pretty, for attempt the cause
+That made them home and thy heaven:
+Behold, I will be not lived to be a drunken'd like;
+I will never lend from harm fast thee far's hate,
+And my wrain'd head, here hath the duke's pawn;
+And bear him and made the cheapest and bids,
+My heart brother must die marve
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+Shall hungry him from the breast and must say 'I love
+The fire of my son and found, helcomes the city.'
+
+First Murderer:
+She doth she bold of some from their princess, hath
+Then distradest the house of Chertol?
+
+Second Murderer:
+Nay, at my boon, by any heart of my state,
+That he child begin me forth thy brother's presence;
+But he could think you weep to murder: but sweetly,
+Bid it is a boar to be
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+I pray, if no more intends than that hangmen,
+For they are the surerstify. Was to any mind,
+They'll brother was mine in peers, see your straight:
+What is not appear, so set'st to be our desires;
+In those sea arm to meet to help to leave for.
+
+BUCKINGHAM:
+To-morrow them, our exchange.
+
+COMINIUS:
+It is as this friends that they stay the mind.
+To weep some cloudy of theirs.
+
+ARCIUS:
+Ashe will I as m
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+No long is by which is bears nunnines, with our blood.
+
+LARTIUS:
+He will sees his love and the rescratal sin
+To be dwelling well, and with a pomise more
+Like in him: the dance, and thereof we will?
+
+ROMEO:
+As the man is thus meaning with him; hence and myself
+in the that the prince that breaker. Can you are:
+You slain, and think you have heard here in a most shame.
+
+ROMEO:
+Why, sir, tell me you t
+
+===== seed 18 =====
+To be, or not to be, that is the question: I stay,
+Wrath this. What's a cried once a worren a meddle and
+Have shed man in the face of our steels of their trench
+Whicieves to bed an take him as mine.
+Therefore, he so shall profess she's face, he did speak them.
+They are man many had a father of months!
+Or embrace! Thou do't now thee: and answer thy siety!
+I thank this dog to him, hole have blaves a
+doublement of lime her humble land altred
+
+===== seed 19 =====
+To be, or not to be, that is the question: who
+he dost on else too farewell at her tongues?
+
+First Gentleman:
+Are all that true; which he will seem over tongue
+the traitors: she must be pregned, and make when made to hell,
+all thy foe, and thou hastly'st betimes. You wouldst
+do not to your holy oath: and I'll fie, and
+field me in honour her, and hear I bear my house must
+myself warm of my chest
+Is pointed her safer with pleasure, that I
+m
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I did not but trust.
+This is not to your bears, being so moved?
+
+SOMERSET:
+At thy boots issue! O she, my lords; and I'll hear the
+sixter for Rome, than the greyhold up from help me:
+'Tis a last, and the means that have writ, art to rave my cousin. Arbaid
+thou stay'st my soul.
+
+CLARENCE:
+Withdress many son! What do I take my foreture
+A tongue the wrongs.
+
+FLORIZEL:
+How, my good lord:
+To comfort th

@@ -1,0 +1,351 @@
+prompt='To be, or not to be, that is the question:' temperature=0.6 top_p=1.0 top_k=10 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+Such a cornal but a since the last accords with a grave
+To the crown them. Who comes the princes here,
+And then love the country's sake of the death,
+Having here been a bound with the solemeties
+Are the sun as he should be the soul'd,
+And then to such a stream of the shame of his beed
+And which then beholding ballad and say the death
+To be satisfied his holy soul.
+
+LEONTES:
+He hath he hath hath r
+
+===== seed 2 =====
+To be, or not to be, that is the question:
+And, as I do not believe thee of thy bosom.
+
+RIVERS:
+Good night, sir, good my lord.
+
+KING EDWARD IV:
+Ay, be it is a fool several sir,
+Which in my scarcely should be blood.
+
+ROMEO:
+What, thou mayst do not?
+
+BENVOLIO:
+There is my lord, I love to lay thee all this world,
+And for the world of the princes of my tent,
+How far the stronger of the father of that their deputy,
+The devils of the business o
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+He cannot lost have done to him; he was not fear
+But with his man, he is the deputy of his word,
+And see the present her lives and so far,
+And twenty times thee and his wife, when they have
+Said him to the second and his blood, they are do
+I would not contrary them at their fair highness
+And their enemies are and mirth strike at,
+And make their fury their entreations, and their tears are the
+thro
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+The wars will to do whose should not sleep with thee?
+
+JOHN OF GAUNT:
+And that took the sense of the drink to the way:
+I think that, sir, the rest, the deputy of you
+In any time of the heart of our close and
+The worst of the fair of the priest, the wools
+Of the duke shall down of you?
+
+POMPEY:
+O think you that I may be so much of sight.
+
+LUCIO:
+I will not be gone, and sir, the sun, I say,
+And in 
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+And what then the way she had scourted and the body
+To be a prisoner that shepherd's need;
+The state wound it is a winter would but care
+A poor little better which you here in the world.
+
+BALTHASAR:
+I had a king of man's death better here,
+And I will not be thing to be a sentence
+To her silence and brows of the land, and the officer
+With double contrary, and there the people
+With soldiers from th
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+Not a bear of as that we are not for the charge
+To be so both of a feast, that a word and word
+The sentence of the warlike of the field;
+And so did I beg the firest world in the sun
+Will sent the poison of the crown.
+
+COMINIUS:
+He is the curse of the world,
+Which saw the law to the prince of the prince
+Which so much we think of his power, on his brother
+Being or hour, and then withal body humour,
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I am not of the son of the man is the world.
+
+ROMEO:
+And then the prince that we have should been to the country's:
+I have done, and see thee and means to the course
+That shortly we was blue as faires of a dear,
+Yet shall have to the day of the mind of the child,
+Be not be put to my words. There's no less in the crown,
+And her sound by the ears of the proceeding of his
+strange to see him to the e
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+I at the senate of the faults of the complaint
+That they have some proved to him hour in their bosom.
+
+CAMILLO:
+I have no more than they do not to be the duke;
+And I'll be the father of the commons.
+
+ISABELLA:
+Why, then my mother?
+
+AUFIDIUS:
+I do not stay the consul?
+
+ARCIUS:
+Ay, their eventress soldiers.
+
+CORIOLANUS:
+Well, this true.
+
+COMINIUS:
+I know not the prince and lives we before they were
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+Therefore lives the sights of the sea, and they have
+A fellow that would not die upon them?
+O my sword, my most mind, I pray thee means,
+That will we may such fast.
+
+LUCIO:
+Not I, my lord. Harry, but thou art:
+Alas, thou art not to the crown of the friends?
+
+DUKE VINCENTIO:
+Marry, hark, I am satisfied.
+
+Provost:
+Where is here?
+
+DUKE VINCENTIO:
+I have a love man best with his head.
+
+LUCIO:
+What th
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+What we will be cause to the sun bids of the world.
+
+KING RICHARD III:
+Then we would the power in the world weep:
+So the children of the world of the seats
+Of the presently steal of the swords of my brother
+Would not be so wish'd a heavy word friends.
+
+KING RICHARD II:
+Why with my soul are there the peerl's little before?
+
+KING RICHARD II:
+Out of the crown the maid, that is not of them;
+For he wa
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+Shall I be so that set it is a man of the thoughts;
+And who may be some stone of livery stregs
+To make my wish a short and sentence of the day:
+The presently throne and the manner of my brother,
+Should be a shortly brother and on him.
+
+GREMIO:
+So much be that be most beard and banish'd but a time
+To say thee for the shadow of the death particular
+And the world counsels of the heaven
+Was the best 
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+He shall be received.
+
+AUFIDIUS:
+No, but it is a foolish fool,
+I prove thee, beat thou art too beat thou honour.
+
+DUKE VINCENTIO:
+O, if thou art not put to my sorrow.
+
+Provost:
+I am a most poison soul'd by the world of that
+is our hope, that will be a looking of thy sees
+that I had been a straight to thee.
+
+DUCHESS OF YORK:
+What is the courtesy? the gods the noble deed?
+
+LUCENTIO:
+Sir, in the gre
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+I do not remember married to be served
+With the subjects of your father's house,
+And yet me with your honour and yours. He would you have leave.
+
+CLARENCE:
+The means of your brother shall be seen.
+
+BUCKINGHAM:
+What, wilt thou dost her means to the prince?
+
+Provost:
+What, no believe me?
+
+First Lord:
+I am the more of the desire of mine honour,
+And then waters to be distrusted flight.
+
+BUCKINGHAM:
+M
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+And when I have done my wife and the mother,
+But not when I will not were so straight.
+
+GLOUCESTER:
+Come, good sir, you to make the people, or the world.
+
+LADY ANNE:
+What comes him to the brave slave of his speeding;
+The marsh of your honour to his wealther bosom,
+That you have made a while to dream of many
+In he's pawn and of the world and birth of a death,
+For so sweet love her seek with heart 
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+Shall I be come to your countrymen.
+
+LUCIO:
+Your gracious general drinks and my heart liege,
+And you are the crown have my service here is not
+To help your lordship in him so displeasure;
+The coronation of your birth, and your honour,
+If the matter of her, the head thereof of death
+Of your brother strain of my death self,
+But what you shall please you must be content.
+
+DUKE VINCENTIO:
+I was not a
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+I cannot say I have married the same of my son,
+As if I would be particular among and
+The same of the friar, a courtering of his
+eyes, and the world to the patricians of yours,
+In the prince of the barks dead of the limity.
+
+HENRY BOLINGBROKE:
+Here is the prince of Lancaster, I do repent
+To say it will give it were on the while:
+The damned will I sense the liberty of thee,
+If thou shalt not be a 
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+No more is by the hour bears of your part,
+And but your words and stay all with the little see
+The wars and sea of the public of your counsel
+But me to your grace, and you are noble attended
+With the pent.
+
+Second Servingman:
+Hath you seen the wars of your highness of the flies?
+
+Page:
+Why, yet in her come home to bed, and then was the world.
+
+First Murderer:
+What say you are not for me.
+
+First M
+
+===== seed 18 =====
+To be, or not to be, that is the question:
+I should be so stand by the house of York.
+
+HENRY BOLINGBROKE:
+The man of the maid with this blood of the house,
+Where is it be the blood of the princely sea,
+That I have loved him and a shelterate of him;
+The duke the duke she hath not find for the point
+With reverence and still her heart and hate
+There is no more than he beggar.
+
+BENVOLIO:
+I will some and say my son, but I have deserved
+To true
+
+===== seed 19 =====
+To be, or not to be, that is the question:
+Who, if they will be gone to speak the crown of it.
+
+First Watchman:
+What a tarry better than they shall be gentleman,
+I thank, and so full of the feast, and they do me
+For they would be so set the world that they of them.
+
+Second Murderer:
+This is they are are the flower of brother was
+about the crowned to the desire of them.
+
+ANGELO:
+I think it, I shall have thee too such of thee.
+
+First Murder
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I did not beseech you.
+
+LADY ANNE:
+O thou shalt be like to the crown.
+
+GLOUCESTER:
+I think you not so.
+
+KING EDWARD IV:
+Why, then, I will not be confence to thy soul?
+
+GLOUCESTER:
+The king is well, and the grief of my sick,
+To three and my cousin and at the posterns.
+
+LADY ANNE:
+My lord, if you can should the beggar to be?
+
+KING RICHARD II:
+And yet so, I have heard to him, my lord.
+
+KING EDWARD I

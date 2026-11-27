@@ -1,0 +1,397 @@
+prompt='To be, or not to be, that is the question:' temperature=0.6 top_p=1.0 top_k=5 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+I would not, if I do love you, I am not born.
+I will not, if I had rather say you do.
+I am not the <unk> of the house of me;
+But I will be <unk> to be satisfied.
+
+QUEEN ELIZABETH:
+My lord, I am not a subject born of York.
+
+KING RICHARD III:
+Madam, I am not to be <unk>.
+I am not a little <unk> of York:
+And I am a subject to be a king;
+For I am a king, I am a king,
+To have bought my father to my so
+
+===== seed 2 =====
+To be, or not to be, that is the question:
+I have not heard the man of it.
+
+DUKE VINCENTIO:
+I am a courtier, I warrant it not.
+
+DUKE VINCENTIO:
+I am a man to be a <unk> of a man.
+
+DUKE VINCENTIO:
+I would not have been a gentleman as I do.
+
+Provost:
+I know the duke to do know you now to you.
+
+DUKE VINCENTIO:
+I would you do you know you well.
+
+DUKE VINCENTIO:
+I will not do't; and I do not you know it, if
+you do not know the duke.
+
+DUKE VINC
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+I have not been <unk> in my heart;
+But I am a <unk> of a <unk>,
+To have a <unk> of <unk> eye,
+And a <unk> <unk> in my <unk>,
+I would not be a <unk> of the world.
+
+GREMIO:
+I am a lord; I would not be a <unk>
+To <unk> of my <unk> eye of a man.
+
+TRANIO:
+My lord, my lord, I am not in my name:
+I am a little man that is a <unk> of love
+To take the <unk> of mine own ear:
+The other I am <unk> to be <unk>
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+I would not be the king, and my lord is a king.
+
+BUCKINGHAM:
+My lord, I will not be <unk> to my heart,
+But I will not be satisfied.
+
+GLOUCESTER:
+And so, then I am a lord, I will not be so.
+
+BUCKINGHAM:
+Then, my lord, I hope to be <unk>.
+
+GLOUCESTER:
+I will not, my lord; and I pray you well.
+
+KING EDWARD IV:
+I will not be so <unk> to be a king.
+
+LADY GREY:
+I am not so much of my life to be.
+
+GLOUC
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+The <unk> of the <unk> and the <unk>
+Of the poor <unk> of a <unk> <unk>,
+That it were as a <unk> <unk> as the <unk> <unk>
+Of <unk> <unk>, <unk> the <unk> <unk>,
+<unk> the <unk> <unk> the <unk>, as the <unk> and
+<unk> <unk> and <unk> <unk> <unk> <unk>
+<unk> the <unk> <unk> <unk> <unk>. I saw a <unk> <unk>
+<unk>, a <unk> man <unk> a <unk> of a
+<unk> of <unk> a <unk>, <unk> <unk>, a <unk> <unk>
+<unk
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+I pray you, sir, you will not be so much of me.
+
+HORTENSIO:
+I will you be a <unk>, sir, if it be not a mystery.
+
+GREMIO:
+I will be a gentleman that you know it now; but it
+is not a thing of the house, sir, if you be a gentleman were a
+gentleman, she were a <unk> of a <unk> and
+strange, a man to be a <unk> of her wife; a man is a gentleman as
+she would be a <unk> of a man of <unk>.
+
+PETRUCHIO:
+I h
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I would not be the king of you, as you
+will be the king and not to be so <unk>.
+
+KING RICHARD II:
+My liege, I am your <unk> to the king.
+
+KING RICHARD II:
+Why, what news?
+
+DUKE OF YORK:
+My lord, I have learn'd my son.
+
+DUKE OF AUMERLE:
+My gracious lord, you shall not be the king.
+
+KING RICHARD II:
+My lord, I will not be your highness.
+
+DUKE OF AUMERLE:
+I will not be content to your grace.
+
+DUKE O
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+I pray you, my lord, and I will not stay.
+
+LADY ANNE:
+I will, as you will not be so so much.
+
+LADY ANNE:
+Why, then, I will not stay to you.
+
+LADY ANNE:
+I pray, I will not be revenged to you.
+
+LADY CAPULET:
+What, do you not, you love?
+
+LADY CAPULET:
+I will go for your grace and you to her.
+
+LADY CAPULET:
+Madam, I pray you, you will.
+
+JULIET:
+I will not go, sir, sir.
+
+JULIET:
+Why, I do not what you
+
+===== seed 9 =====
+To be, or not to be, that is the question: but it
+is the better, the <unk> of the duke, but the
+<unk> and in the <unk> of the <unk> <unk>,
+<unk> of the <unk> and the <unk> <unk> the
+<unk> and <unk> <unk> <unk> and <unk> the
+<unk> <unk> with the <unk> the <unk> <unk> of the
+<unk> and <unk>  the <unk> <unk> the <unk> <unk>,
+<unk> the <unk> and the <unk> <unk>,
+<unk> the <unk> of a <unk> <unk> <unk>,
+<unk> the sun of the <unk> <unk> <unk> <u
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+I have been <unk> in the <unk>;
+But in the <unk> of my <unk>,
+And I do not in my life <unk>.
+But now I have a king in the Tower,
+And <unk> my <unk> in the <unk> of my love,
+And <unk> me in a name of my <unk>,
+To the <unk> of my descent of my love,
+To the <unk> <unk> of my soul,
+To <unk> the <unk> of my <unk> and <unk>,
+And <unk> in the <unk> of my blood,
+<unk> and my <unk> <unk>, <unk> my <unk>,
+
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+If you do not think, I do not confess, as I will,
+As I do confess I am <unk> in this world;
+I will not be a <unk> in the <unk>,
+Nor I in my heart of my heart,
+But my lord is my father a man.
+
+KING RICHARD II:
+I will not be a man to be <unk>.
+
+KING RICHARD II:
+Why, then you will <unk> to your <unk> love.
+I do not repent you what you are <unk> to me.
+<unk> you with the <unk>-house of the duke
+And y
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+I will not be a little thing to be so much.
+
+GREMIO:
+I am a <unk> of you, sir.
+
+GREMIO:
+I will not be a suitor of you.
+
+GREMIO:
+I pray, sir, you shall have you any thing of
+you: you have a <unk> of a <unk> <unk>.
+
+TRANIO:
+You have paid a tapster, sir.
+
+TRANIO:
+I will not bite your thumb and a bawd; I will not be a <unk>.
+
+PETRUCHIO:
+I am a bawd; for I have been a gentleman to be a
+man of a man of
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+The king is not so hot, and his son,
+And so much better than his life be <unk>.
+
+GLOUCESTER:
+Then so please you to my lord and your king.
+
+BUCKINGHAM:
+<unk> your lord, your lord, your son and his son,
+The earldom of your royal queen,
+Your father and your grace and his friends;
+The which of Hereford and his son is coming.
+
+GLOUCESTER:
+My lord, I will not to be satisfied.
+
+QUEEN MARGARET:
+My gracio
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+<unk> me not in the <unk> of my life,
+And I will not be <unk>, but I am a king.
+I am a gentleman that I should be king,
+And so I am <unk> to my father's death;
+For I will not, by the king is left of York.
+
+GLOUCESTER:
+My lord, my lord, I will not be satisfied.
+
+KING EDWARD IV:
+My lord, I will not be a king to be king.
+
+KING EDWARD IV:
+And, as thou wilt be, I am king.
+
+GLOUCESTER:
+I will, my lord,
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+The king is not gone to the king,
+And yet we may <unk>.
+The queen is gone to the king and the prince.
+The king that hath been <unk> to the crown,
+And <unk> the <unk> of our brother and <unk>:
+The Earl of Wiltshire is the king to the crown.
+
+QUEEN ELIZABETH:
+And when you have no king, and the queen
+<unk> in the behalf of your <unk> <unk>.
+
+QUEEN ELIZABETH:
+My lord, the Duke of York of Norfolk;
+And
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+I am glad for the king, that I am not so.
+
+GREMIO:
+I am not the king that I was so, but I will not swear.
+
+PETRUCHIO:
+I am not, I am not so much more <unk>:
+I am glad of you; I am not a gentleman.
+
+TRANIO:
+I would I had rather not so much for it is a little.
+
+TRANIO:
+I am a gentleman to be revenged for it.
+
+GREMIO:
+I will not, sir: if I will not be a <unk> <unk>,
+though I be not a gentleman, I ha
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+I am not a man of my love and a man;
+I would I have <unk> my life to be <unk>:
+I am a <unk> to be <unk> of a man,
+I have a <unk> to be <unk> of <unk>.
+I am <unk> for a man of <unk>,
+And <unk> in a <unk> of a <unk> <unk>,
+<unk> in a <unk> <unk> and a <unk> <unk>,
+<unk> in <unk> <unk> of <unk> <unk> <unk>;
+<unk> in the <unk> of a <unk> <unk> <unk>,
+Her <unk> <unk> <unk> and <unk> <unk>,
+<unk> the <
+
+===== seed 18 =====
+To be, or not to be, that is the question:
+I would not have been <unk> to be the king.
+
+KING HENRY VI:
+Why, then what then?
+
+KING HENRY VI:
+My Lord of Buckingham, what is this news?
+
+KING HENRY VI:
+My gracious lord, I will not stay to thee.
+
+KING HENRY VI:
+My Lord of Buckingham, I will not be satisfied.
+
+KING RICHARD III:
+Why, my lord, what news?
+
+KING RICHARD III:
+My lord, my lord.
+
+KING RICHARD III:
+Why should I be a subject, and my lor
+
+===== seed 19 =====
+To be, or not to be, that is the question:
+I have heard you know it is not a man, but a man.
+
+PETRUCHIO:
+I pray you, sir.
+
+HORTENSIO:
+A very very very <unk> <unk>, a very bawd, a
+gentleman, a very a gentleman of the man, a gentleman of
+the <unk> and a <unk> <unk> a <unk> <unk>,
+a <unk> in the <unk> <unk> <unk> <unk>,
+and <unk> of <unk>-<unk> <unk>. <unk>, I say,
+I am not a <unk>, I warrant you.
+
+GREMIO:
+No, good madam.
+
+TRANIO:
+I am a <un
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I am too much of you.
+
+LUCIO:
+What news?
+
+DUKE VINCENTIO:
+I would you had been as I had lief be a man to be a
+good man; but I am no more of a <unk>, a <unk> of
+a man of a man of you. I pray you, I warrant you well well.
+
+LUCIO:
+I will not be hanged of it. I am not well a bawd; I would
+not a man of you have been a <unk> of me.
+
+LUCIO:
+I am a <unk> of a man, sir.
+
+DUKE VINCENTIO:
+Nay, a bawd, I war
