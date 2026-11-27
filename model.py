@@ -18,6 +18,9 @@ class GPTConfig:
     n_head: int = 6
     n_embd: int = 384
     dropout: float = 0.0
+    # Course ablations; defaults preserve the original architecture.
+    residual_scale: float = 1.0
+    weight_tying: bool = True
 
     def __post_init__(self):
         """Reject invalid model settings before allocating a model."""
@@ -79,14 +82,15 @@ class Block(nn.Module):
     def __init__(self, config):
         super().__init__()
         self.ln_1 = nn.LayerNorm(config.n_embd)
+        self.residual_scale = config.residual_scale
         self.attn = CausalSelfAttention(config)
         self.ln_2 = nn.LayerNorm(config.n_embd)
         self.mlp = MLP(config)
 
     def forward(self, x):
         """Mix prefix information, then apply the position-wise MLP."""
-        x = x + self.attn(self.ln_1(x))
-        return x + self.mlp(self.ln_2(x))
+        x = x + self.residual_scale * self.attn(self.ln_1(x))
+        return x + self.residual_scale * self.mlp(self.ln_2(x))
 
 
 class GPT(nn.Module):
@@ -102,7 +106,8 @@ class GPT(nn.Module):
             ln_f=nn.LayerNorm(config.n_embd),
         ))
         self.lm_head = nn.Linear(config.n_embd, config.vocab_size, bias=False)
-        self.transformer.wte.weight = self.lm_head.weight
+        if config.weight_tying:
+            self.transformer.wte.weight = self.lm_head.weight
         self.embedding_dropout = nn.Dropout(config.dropout)
 
     def forward(self, idx, targets=None):

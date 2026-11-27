@@ -18,7 +18,7 @@ from model import GPT, GPTConfig
 
 @dataclass
 class TrainConfig:
-    max_steps: int = 5000
+    max_steps: int = 10000
     batch_size: int = 64
     max_lr: float = 1e-3
     min_lr: float = 1e-4
@@ -29,6 +29,16 @@ class TrainConfig:
     eval_batches: int = 20
     seed: int = 42
     eval_seed: int = 12345
+    # Improvement: stop after this many evaluations without a strictly lower CE.
+    patience: int = 5
+    optimizer_name: str = "adamw"
+    momentum: float = 0.9
+    # Keep evaluation windows identical when training B or T changes.
+    eval_batch_size: int | None = None
+    eval_block_size: int | None = None
+    tokenizer_type: str = "character"
+    # Gradient accumulation preserves effective B when the word vocabulary grows.
+    micro_batch_size: int | None = None
 
     def __post_init__(self):
         """Validate optimization and evaluation settings."""
@@ -41,22 +51,30 @@ class TrainConfig:
             raise ValueError("Require 0 <= min_lr <= max_lr and max_lr > 0")
         if self.grad_clip <= 0 or self.weight_decay < 0:
             raise ValueError("grad_clip must be positive; weight_decay non-negative")
+        if not isinstance(self.patience, int) or self.patience < 0:
+            raise ValueError("patience must be a non-negative integer; 0 disables stopping")
+        if self.optimizer_name not in ("adamw", "sgd"):
+            raise ValueError("optimizer_name must be adamw or sgd")
+        if self.tokenizer_type not in ("character", "word"):
+            raise ValueError("tokenizer_type must be character or word")
+        if self.micro_batch_size is not None and self.micro_batch_size <= 0:
+            raise ValueError("micro_batch_size must be positive")
 
 
 def experiment_config(name):
-    """Return fresh configs; full experiments differ in one stated factor."""
+    """Compare model sizes with shared dropout and early-stopping settings."""
     model, training = GPTConfig(), TrainConfig()
-    if name == "smoke":
-        return (replace(model, block_size=32, n_layer=2, n_head=2, n_embd=64),
-                replace(training, max_steps=20, batch_size=4, warmup_steps=2,
-                        eval_interval=10, eval_batches=2))
     if name == "baseline":
+        # Historical configuration retained for replay/resumption of existing runs.
+        return model, replace(training, max_steps=5000, patience=0)
+    model = replace(model, dropout=0.1)
+    if name in ("medium", "dropout"):
         return model, training
-    if name == "dropout":
-        return replace(model, dropout=0.1), training
+    if name == "tiny":
+        return replace(model, n_layer=2, n_head=2, n_embd=128), training
     if name == "small":
         return replace(model, n_layer=4, n_head=4, n_embd=256), training
-    raise ValueError("Choose smoke, baseline, dropout, or small")
+    raise ValueError("Choose tiny, small, medium, baseline, or dropout")
 
 
 def get_device():
@@ -93,10 +111,16 @@ def evaluate(model, data, config, device):
             rng = torch.Generator().manual_seed(config.eval_seed + offset)
             losses = []
             for _ in range(config.eval_batches):
-                x, y = data.batch(split, model.config.block_size,
-                                  config.batch_size, device, rng)
-                _, loss = model(x, y)
-                losses.append(loss.item())
+                x, y = data.batch(split, config.eval_block_size or model.config.block_size,
+                                  config.eval_batch_size or config.batch_size, device, rng)
+                micro = config.micro_batch_size or len(x)
+                total = 0.0
+                for start in range(0, len(x), micro):
+                    xx, yy = x[start:start + micro], y[start:start + micro]
+                    logits, loss = model(xx, yy)
+                    total += loss.item() * len(xx) / len(x)
+                    del logits, loss
+                losses.append(total)
             scores[split] = sum(losses) / len(losses)
             if not math.isfinite(scores[split]):
                 raise FloatingPointError(f"Non-finite {split} loss")
@@ -132,11 +156,12 @@ def source_metadata():
         revision = None
     return {"git_revision": revision, "source_tutorial_revision": SOURCE_REVISION,
             "file_sha256": {name: hashlib.sha256((root / name).read_bytes()).hexdigest()
-                            for name in ("model.py", "data.py", "train.py", "generate.py")}}
+                            for name in ("model.py", "data.py", "train.py", "generate.py", "word_data.py")
+                            if (root / name).exists()}}
 
 
 def train(data_path, output_dir, model_config, train_config, device=None,
-          resume=False, step_limit=None):
+          resume=False, step_limit=None, init_checkpoint=None):
     """Train or resume one experiment, saving best/last checkpoints and metrics.
 
     step_limit pauses at a completed-step count without changing the LR schedule.
@@ -144,7 +169,15 @@ def train(data_path, output_dir, model_config, train_config, device=None,
     """
     device = torch.device(device) if device is not None else get_device()
     config = train_config
-    data = CharacterData(data_path)
+    if resume and init_checkpoint:
+        raise ValueError("Choose exact resume OR a new fine-tuning run")
+    if config.eval_block_size and config.eval_block_size > model_config.block_size:
+        raise ValueError("Evaluation context exceeds model context")
+    if config.tokenizer_type == "word":
+        from word_data import WordData
+        data = WordData(data_path)
+    else:
+        data = CharacterData(data_path)
     model_config = replace(model_config, vocab_size=len(data.chars))
     if any(len(tokens) <= model_config.block_size for tokens in data.splits.values()):
         raise ValueError("Both data splits must be longer than block_size")
@@ -160,22 +193,53 @@ def train(data_path, output_dir, model_config, train_config, device=None,
         torch.cuda.manual_seed_all(config.seed)
         torch.backends.cudnn.benchmark = False
     model = GPT(model_config).to(device)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=config.max_lr,
-                                 weight_decay=config.weight_decay)
+    parent = None
+    if init_checkpoint:
+        state = torch.load(init_checkpoint, map_location="cpu", weights_only=True)
+        if (asdict(GPTConfig(**state["model_config"])) != asdict(model_config)
+                or state["data_sha256"] != data.sha256 or state["chars"] != data.chars
+                or state.get("tokenizer_type", "character") != config.tokenizer_type):
+            raise ValueError("Fine-tuning parent model/data/tokenizer mismatch")
+        model.load_state_dict(state["model"])
+        parent = dict(checkpoint=str(Path(init_checkpoint).resolve()), step=state["step"],
+                      best_val_loss=state["val_loss"], optimizer_reset=True,
+                      tokens_seen=state["history"][-1]["tokens_seen"])
+        del state
+    if config.optimizer_name == "sgd":
+        optimizer = torch.optim.SGD(model.parameters(), lr=config.max_lr,
+                                    momentum=config.momentum, weight_decay=config.weight_decay)
+    else:
+        optimizer = torch.optim.AdamW(model.parameters(), lr=config.max_lr,
+                                     weight_decay=config.weight_decay)
     train_rng = torch.Generator().manual_seed(config.seed + 1)
     history, completed, best_loss, best_step, elapsed_before = [], 0, float("inf"), 0, 0.0
+    bad_evaluations = 0
     manifest = dict(model_config=asdict(model_config), train_config=asdict(config),
                     data_sha256=data.sha256, data_split_index=data.split_index,
-                    train_chars=len(data.splits["train"]), val_chars=len(data.splits["val"]),
+                    train_chars=getattr(data, "train_char_count", len(data.splits["train"])),
+                    val_chars=getattr(data, "val_char_count", len(data.splits["val"])),
+                    train_tokens=len(data.splits["train"]), val_tokens=len(data.splits["val"]),
+                    tokenizer_type=config.tokenizer_type,
+                    loss_unit="nats/character" if config.tokenizer_type == "character" else "nats/word_or_layout_token",
                     chars=data.chars, parameters=sum(p.numel() for p in model.parameters()),
                     python=platform.python_version(), torch=str(torch.__version__),
                     device=str(device), gpu=torch.cuda.get_device_name(device)
                     if device.type == "cuda" else None, **source_metadata())
+    manifest["parent"] = parent
+    if config.tokenizer_type == "word":
+        manifest["tokenizer_statistics"] = data.statistics
+        write_json(output_dir / "tokenizer.json", data.tokenizer.metadata())
     if resume:
         state = torch.load(last_path, map_location="cpu", weights_only=True)
+        # Older checkpoints predate early stopping and always ran to max_steps.
+        state["train_config"].setdefault("patience", 0)
+        state["model_config"] = asdict(GPTConfig(**state["model_config"]))
+        state["train_config"] = asdict(TrainConfig(**state["train_config"]))
         for key in ("model_config", "train_config", "data_sha256"):
             if state[key] != manifest[key]:
                 raise ValueError(f"Cannot resume: {key} changed; use a new output directory")
+        if state["chars"] != data.chars:
+            raise ValueError("Cannot resume: tokenizer vocabulary changed")
         model.load_state_dict(state["model"])
         optimizer.load_state_dict(state["optimizer"])
         train_rng.set_state(state["batch_rng"])
@@ -186,6 +250,8 @@ def train(data_path, output_dir, model_config, train_config, device=None,
         completed, history = state["step"], state["history"]
         best_loss, best_step = state["best_val_loss"], state["best_step"]
         elapsed_before = state["elapsed_seconds"]
+        bad_evaluations = state.get("bad_evaluations", 0)
+        parent = state.get("parent")
         # Record environment/code changes on resume; exact replay is only expected
         # on the same backend/software and unchanged implementation.
         old_manifest = json.loads((output_dir / "config.json").read_text())
@@ -200,6 +266,9 @@ def train(data_path, output_dir, model_config, train_config, device=None,
           f"steps: {completed} -> {stop_at}", flush=True)
     started = time.perf_counter()
 
+    def early_stopped():
+        return config.patience > 0 and bad_evaluations >= config.patience
+
     def export_metrics():
         """Rebuild sidecar files from checkpoint history after an interrupted save."""
         row = history[-1]
@@ -210,18 +279,22 @@ def train(data_path, output_dir, model_config, train_config, device=None,
             writer.writerows(history)
         summary = dict(
             run=output_dir.name, step=row["step"], max_steps=config.max_steps,
-            complete=row["step"] == config.max_steps, best_step=best_step,
-            best_val_loss=best_loss, best_val_perplexity=math.exp(best_loss),
+            complete=row["step"] == config.max_steps or early_stopped(), best_step=best_step,
+            stop_reason="early_stopping" if early_stopped() else (
+                "max_steps" if row["step"] == config.max_steps else "paused"),
+            bad_evaluations=bad_evaluations,
+            best_val_loss=best_loss,
             last_val_loss=row["val_loss"], parameters=manifest["parameters"],
             elapsed_seconds=row["elapsed_seconds"], tokens_seen=row["tokens_seen"],
             model_config=asdict(model_config), train_config=asdict(config),
-            data_sha256=data.sha256)
+            data_sha256=data.sha256, parent=parent,
+            tokenizer_type=config.tokenizer_type, loss_unit=manifest["loss_unit"])
         write_json(output_dir / "summary.json", summary)
         return summary
 
     def record(step):
         """Evaluate, update best selection, and save a complete recovery point."""
-        nonlocal best_loss, best_step
+        nonlocal best_loss, best_step, bad_evaluations
         scores = evaluate(model, data, config, device)
         elapsed = elapsed_before + time.perf_counter() - started
         row = dict(step=step, train_loss=scores["train"], val_loss=scores["val"],
@@ -231,10 +304,17 @@ def train(data_path, output_dir, model_config, train_config, device=None,
         is_best = scores["val"] < best_loss
         if is_best:
             best_loss, best_step = scores["val"], step
+            bad_evaluations = 0
+        else:
+            bad_evaluations += 1
         payload = dict(step=step, model=model.state_dict(), optimizer=optimizer.state_dict(),
                        model_config=asdict(model_config), train_config=asdict(config),
                        chars=data.chars, data_sha256=data.sha256, val_loss=scores["val"],
+                       tokenizer_type=config.tokenizer_type,
+                       tokenizer=data.tokenizer.metadata() if config.tokenizer_type == "word" else None,
                        best_val_loss=best_loss, best_step=best_step, history=history,
+                       parent=parent,
+                       bad_evaluations=bad_evaluations,
                        elapsed_seconds=elapsed, batch_rng=train_rng.get_state(),
                        torch_rng=torch.get_rng_state(), cuda_rng=torch.cuda.get_rng_state_all()
                        if device.type == "cuda" else [])
@@ -247,6 +327,8 @@ def train(data_path, output_dir, model_config, train_config, device=None,
 
     if not history:
         record(0)
+    if early_stopped():
+        return export_metrics()
     model.train()
     for step in range(completed, stop_at):
         for group in optimizer.param_groups:
@@ -254,28 +336,47 @@ def train(data_path, output_dir, model_config, train_config, device=None,
         x, y = data.batch("train", model_config.block_size, config.batch_size,
                           device, train_rng)
         optimizer.zero_grad(set_to_none=True)
-        _, loss = model(x, y)
-        if not torch.isfinite(loss):
-            raise FloatingPointError("Non-finite training loss; reduce learning rate")
-        loss.backward()
+        micro = config.micro_batch_size or len(x)
+        for start in range(0, len(x), micro):
+            xx, yy = x[start:start + micro], y[start:start + micro]
+            logits, loss = model(xx, yy)
+            if not torch.isfinite(loss):
+                raise FloatingPointError("Non-finite training loss; reduce learning rate")
+            (loss * (len(xx) / len(x))).backward()
+            del logits, loss
         torch.nn.utils.clip_grad_norm_(model.parameters(), config.grad_clip,
                                        error_if_nonfinite=True)
         optimizer.step()
         completed = step + 1
         if completed % config.eval_interval == 0 or completed == stop_at:
             record(completed)
+            if early_stopped():
+                print(f"Early stopping at {completed}: {bad_evaluations} evaluations "
+                      f"without improvement; using best.pt from step {best_step}.", flush=True)
+                break
     return export_metrics()
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--experiment", choices=["smoke", "baseline", "dropout", "small"],
-                        default="smoke")
+    parser.add_argument("--experiment", choices=["tiny", "small", "medium", "baseline", "dropout"],
+                        default="medium")
     parser.add_argument("--data", default="data/shakespeare.txt")
     parser.add_argument("--output")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--device")
+    parser.add_argument("--max-steps", type=int, help="Optimizer-step ceiling and cosine schedule horizon")
+    parser.add_argument("--max-lr", type=float, help="Peak learning rate in the schedule")
+    parser.add_argument("--min-lr", type=float, help="Final learning rate in the schedule")
     args = parser.parse_args()
     model_config, train_config = experiment_config(args.experiment)
+    if args.max_steps is not None:
+        train_config = replace(train_config, max_steps=args.max_steps)
+    if args.max_lr is not None or args.min_lr is not None:
+        train_config = replace(
+            train_config,
+            max_lr=train_config.max_lr if args.max_lr is None else args.max_lr,
+            min_lr=train_config.min_lr if args.min_lr is None else args.min_lr,
+        )
     train(download_shakespeare(args.data), args.output or f"runs/{args.experiment}",
           model_config, train_config, device=args.device, resume=args.resume)

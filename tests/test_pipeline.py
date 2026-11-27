@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 import torch
 
@@ -18,6 +19,36 @@ from train import TrainConfig, evaluate, train
 
 
 class PipelineTests(unittest.TestCase):
+    def test_early_stopping_resume(self):
+        """Count ties as failures and preserve patience across interrupted runs."""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            data_path = root / "data.txt"
+            data_path.write_text("abc " * 100)
+            model_config = GPTConfig(vocab_size=4, block_size=4, n_layer=1,
+                                     n_head=1, n_embd=8)
+            config = TrainConfig(max_steps=100, batch_size=2, warmup_steps=2,
+                                 eval_interval=10, eval_batches=1, patience=5)
+            scores = [dict(train=0.5, val=value)
+                      for value in (1.0, 0.9, 0.9, 1.0, 1.1, 0.95, 1.0)]
+            with patch("train.evaluate", side_effect=scores) as evaluate_mock:
+                paused = train(data_path, root / "run", model_config, config,
+                               device="cpu", step_limit=30)
+                self.assertFalse(paused["complete"])
+                self.assertEqual(paused["bad_evaluations"], 2)
+                result = train(data_path, root / "run", model_config, config,
+                               device="cpu", resume=True)
+                self.assertTrue(result["complete"])
+                self.assertEqual(result["stop_reason"], "early_stopping")
+                self.assertEqual(result["step"], 60)
+                self.assertEqual(result["best_step"], 10)
+                best = torch.load(root / "run/best.pt", weights_only=True)
+                self.assertEqual(best["step"], 10)
+                replay = train(data_path, root / "run", model_config, config,
+                               device="cpu", resume=True)
+                self.assertEqual(result, replay)
+                self.assertEqual(evaluate_mock.call_count, 7)
+
     @classmethod
     def setUpClass(cls):
         """Keep these CPU checks small and deterministic."""

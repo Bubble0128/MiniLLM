@@ -32,13 +32,11 @@ markdown("""
 训练数据也固定为该版本的 `data/shakespeare.txt`，并校验内容。
 无预训练权重；词表为字符级；预测下一个字符。
 
-**首次默认运行 `smoke`（20 步）只检查流程，不是最终实验。**
-跑通后把第 3 步的 `EXPERIMENT` 改为 `baseline` 进行完整基线训练。
-再单独运行 `dropout` 或 `small`，对比 loss 与生成文本。
-结果取决于实际训练；此 Notebook 不预填任何性能结论。
+分别运行 tiny、small、medium 进行模型规模对照。三组使用 dropout=0.1，
+验证 loss 连续五次未改善时早停。默认读取结果，设置 RUN_TRAINING=True 后训练。
 
 作业交付：代码、生成文本、报告（结构分析、改进讨论、数学证明）。
-这里提供代码与实验记录工具，报告仍需依据真实结果完成。
+报告见仓库中的 `Report_English.md`。
 """)
 markdown("""
 ## 1. 下载程序并检查环境
@@ -100,15 +98,17 @@ print("Results will be saved to:", RUNS_ROOT)
 markdown("""
 ## 3. 集中配置实验
 
-| EXPERIMENT | 模型 | 训练步数 | 用途 |
-|---|---|---:|---|
-| `smoke` | 2 层 / 2 头 / 64 维，context 32 | 20 | 检查代码，不能用作正式基线 |
-| `baseline` | 6 层 / 6 头 / 384 维，context 256 | 5000 | 教程默认架构与训练预算，dropout=0 |
-| `dropout` | 与 baseline 相同，dropout=0.1 | 5000 | 正则化实验，其余配置保持一致 |
-| `small` | 4 层 / 4 头 / 256 维，context 256 | 5000 | 教程建议的容量实验，dropout=0 |
+| EXPERIMENT | 层数 / 头数 / 维度 | dropout | patience |
+|---|---|---:|---:|
+| tiny | 2 / 2 / 128 | 0.1 | 5 |
+| small | 4 / 4 / 256 | 0.1 | 5 |
+| medium | 6 / 6 / 384 | 0.1 | 5 |
 
-完整实验使用 batch size 64、AdamW、lr=1e-3、100 步 warmup、cosine decay、梯度裁剪。
-默认保存最佳验证 checkpoint，但不自动提前停止；这样各组的训练预算一致。
+三组使用 context 256、batch 64，最多 10000 步，AdamW、100 步 warmup 和 cosine decay。
+每 100 步验证一次，连续 5 次没有严格更低的验证 CE 就停止，生成使用 best.pt。
+余弦学习率按 10000 步规划。统计指标统一使用 loss=CE。
+早停使实际步数和 token 预算有所不同，比较表记录实际消耗。
+历史 baseline 为 dropout=0、无早停，配置入口保留以便恢复已有实验。
 temperature/top-k 属于生成设置，不改变 checkpoint 的标准验证 loss。
 
 **修改参数后使用新的 `RUN_TAG`**。相同目录默认从 `last.pt` 恢复，若参数或数据改变则报错。
@@ -121,8 +121,8 @@ import json
 from train import experiment_config
 from generate import DEFAULT_PROMPT
 
-EXPERIMENT = "smoke" #@param ["smoke", "baseline", "dropout", "small"]
-RUN_TAG = "v1" #@param {type:"string"}
+EXPERIMENT = "tiny" #@param ["tiny", "small", "medium"]
+RUN_TAG = "scale_d01_p5_10k_5080_v1" #@param {type:"string"}
 RESUME_IF_AVAILABLE = True #@param {type:"boolean"}
 PROMPT = DEFAULT_PROMPT  # Hamlet 独白首行，可改成另一段独白的首行
 
@@ -134,9 +134,9 @@ model_config, train_config = experiment_config(EXPERIMENT)
 if not RUN_TAG or any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-" for c in RUN_TAG):
     raise ValueError("RUN_TAG 只能包含英文字母、数字、下划线、短横线")
 RUN_DIR = RUNS_ROOT / f"{EXPERIMENT}_{RUN_TAG}"
-MAX_NEW_TOKENS = 120 if EXPERIMENT == "smoke" else 800
-SAMPLE_SEEDS = (42,) if EXPERIMENT == "smoke" else (42, 123, 2026)
-TEMPERATURES = (0.8,) if EXPERIMENT == "smoke" else (0.6, 0.8, 1.0)
+MAX_NEW_TOKENS = 800
+SAMPLE_SEEDS = (42, 123, 2026)
+TEMPERATURES = (0.6, 0.8, 1.0)
 TOP_K = 40
 print(json.dumps({"model": asdict(model_config), "training": asdict(train_config)}, indent=2))
 print("Run directory:", RUN_DIR)
@@ -187,13 +187,15 @@ markdown("""
 code('''
 from train import train
 
-summary = train(
-    DATA_PATH, RUN_DIR, model_config, train_config, device=DEVICE,
-    resume=RESUME_IF_AVAILABLE and (RUN_DIR / "last.pt").exists(),
-)
+RUN_TRAINING = False #@param {type:"boolean"}
+if RUN_TRAINING:
+    summary = train(DATA_PATH, RUN_DIR, model_config, train_config, device=DEVICE,
+                    resume=RESUME_IF_AVAILABLE and (RUN_DIR / "last.pt").exists())
+else:
+    if not (RUN_DIR / "summary.json").exists():
+        raise FileNotFoundError("请上传已有实验目录，或将 RUN_TRAINING 设为 True。")
+    summary = json.loads((RUN_DIR / "summary.json").read_text())
 print(json.dumps(summary, indent=2))
-if EXPERIMENT == "smoke":
-    print("流程检查完成。下一步将 EXPERIMENT 改为 baseline，从第 3 步重新运行。")
 ''')
 markdown("""
 ## 6. Loss 曲线与最佳 checkpoint
@@ -235,29 +237,30 @@ print("All generated texts and metadata:", SAMPLES_DIR)
 markdown("""
 ## 8. 跨实验比较表
 
-运行 baseline、dropout、small 后，比较表会汇总这些目录。默认排除 smoke。
+运行 tiny、small、medium 后，比较表汇总这些目录。
 优先对比相同 RUN_TAG 的实验，避免混入不同预算。请检查 CSV 中的配置列。
 small 同时改变层数、头数和宽度，是整体容量对比，不能把结果单独归因于某一个参数。
 dropout 是否有帮助，需要实际结果支持；更小模型也不保证更好的 loss。
 """)
 code('''
-from analysis import compare_runs
+from analysis import compare_runs, plot_validation_comparison
 
-experiment_dirs = [RUNS_ROOT / f"{name}_{RUN_TAG}" for name in ("baseline", "dropout", "small")]
+experiment_dirs = [RUNS_ROOT / f"{name}_{RUN_TAG}" for name in ("tiny", "small", "medium")]
 experiment_dirs = [path for path in experiment_dirs if (path / "summary.json").exists()]
 if experiment_dirs:
     rows = compare_runs(experiment_dirs, RUNS_ROOT / f"comparison_{RUN_TAG}")
+    display(plot_validation_comparison(experiment_dirs, RUNS_ROOT / f"comparison_{RUN_TAG}"))
     for row in rows:
         print(row["run"], "best val:", round(row["best_val_loss"], 4),
               "best step:", row["best_step"], "complete:", row["complete"])
     print("Saved:", RUNS_ROOT / f"comparison_{RUN_TAG}" / "comparison.csv")
 else:
-    print("目前仅有流程检查；完成 baseline 后这里会生成正式实验比较表。")
+    print("目前没有结果；完成实验后生成比较表。")
 ''')
 markdown(r"""
 ## 9. 理论部分：数值演示与证明边界
 
-作业要求书面证明，而不是只运行数值实验。下面只是帮助检查理解。
+书面证明见报告第 4 节；下面的数值演示用于辅助检查。
 令 $A(X)=\mathrm{softmax}(QK^\top/\sqrt{d_k})V$，$P$ 为置换矩阵。
 对于**没有位置编码、没有固定 causal mask**的 self-attention，证明目标是
 $A(PX)=PA(X)$，可使用按行 softmax 的恒等式
@@ -265,12 +268,12 @@ $\mathrm{softmax}(PSP^\top)=P\mathrm{softmax}(S)P^\top$。
 
 对固定的绝对位置编码 $E$，比较 $A(PX+E)$ 与 $PA(X+E)$：
 通常 $PX+E\ne P(X+E)$，因此等变性不再普遍成立。
-但仅指出输入不同，不足以证明输出必然不同；书面论证应给反例或证明一般性失败，
-不要宣称每个位置编码、每个置换、每组参数都必然破坏等变性。
+仅指出输入不同不足以证明输出不同，报告因此用反例说明等变性一般不成立；
+并非每个位置编码、每个置换、每组参数都必然破坏等变性。
 若把内容和位置编码一起置换，基础 attention 的等变性仍成立。
 
 本项目的 GPT 使用**固定 causal mask**，它本身就破坏任意置换下的等变性。
-请按课程符号区分理论问题里的 unmasked attention 与实际 GPT。
+理论问题讨论的是 unmasked attention，需与实际 GPT 区分。
 """)
 code('''
 from analysis import attention_equivariance_demo
@@ -286,7 +289,7 @@ markdown("""
 压缩包包含 `.py`、原始 Notebook、参数、曲线、生成文本、比较表（若已存在）。
 默认不打包体积较大的模型权重；权重仍保留在 Drive。
 **另用 Colab 的“文件 → 下载 → .ipynb”保存带运行输出的 Notebook**；
-压缩包里的 Notebook 是 GitHub 的未执行版本。报告需单独完成并加入最终提交材料。
+压缩包里的 Notebook 是 GitHub 的未执行版本。
 """)
 code('''
 from zipfile import ZipFile, ZIP_DEFLATED
@@ -314,22 +317,22 @@ if IN_COLAB and DOWNLOAD_ZIP:
     files.download(str(archive_path))
 ''')
 markdown("""
-## 报告记录清单与来源
+## 说明与来源
 
-- 描述字符级 tokenization、上下文长度、causal attention、位置 embedding、层数/头数/宽度。
-- 标明基线、每项改动的动机、参数、训练预算、随机种子、GPU 与代码版本。
-- 引用 train/val 曲线和真实生成片段；讨论语言自然度、重复、连贯性及局限。
-- temperature/top-k 已在原教程中介绍；不能声称为新增模型结构。
+- 模型为字符级 tokenization、固定上下文长度、causal attention、learned position embedding；层数/头数/宽度见配置单元。
+- 每次运行记录参数、训练预算、随机种子、GPU 与代码版本；基线与各项改动的动机见报告。
+- 报告引用 train/val 曲线和真实生成片段，讨论语言自然度、重复、连贯性及局限。
+- temperature/top-k 已在原教程中介绍，不属于新增模型结构。
 - dropout 是实验性修改；best checkpoint、日志、恢复和固定评估是工程改进。
-- 用课程符号完成数学证明。此 Notebook 的演示不构成完整证明。
-- 本程序使用 AI 辅助实现；保留来源说明，并按课程要求披露使用情况。
+- 数学证明见报告；此 Notebook 的演示不构成完整证明。
+- 本程序使用 AI 辅助实现。
 
 来源：[README](https://github.com/angelos-p/llm-from-scratch/blob/63069f99af8ce9a6ab6e261000f4f9f1daaa1ee9/README.md)，
 [Part 1–5](https://github.com/angelos-p/llm-from-scratch/tree/63069f99af8ce9a6ab6e261000f4f9f1daaa1ee9/docs)。
-原仓库 Part 6 的诗歌竞赛属于另一项活动，不代替本课程截图里的作业要求。
 """)
 
 for index, cell in enumerate(cells):
+    cell["source"] = cell["source"].splitlines(keepends=True)
     cell["id"] = f"minillm-{index:02d}"
     cell["metadata"]["id"] = cell["id"]
 
@@ -341,5 +344,5 @@ notebook = dict(cells=cells, metadata={
 
 if __name__ == "__main__":
     path = Path(__file__).resolve().parent / "MiniLLM_Colab.ipynb"
-    path.write_text(json.dumps(notebook, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    path.write_text(json.dumps(notebook, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(path)

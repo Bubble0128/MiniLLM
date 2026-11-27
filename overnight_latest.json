@@ -1,0 +1,49 @@
+{
+  "batch": "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z",
+  "pid": 785813,
+  "BEST_LR": 0.0003,
+  "lr_reference": "/home/chenrui/projects/MiniLLM/runs/medium_lr0p0003_lr_d01_p5_10k_5080_v1",
+  "stage": "finished",
+  "failures": [],
+  "runs": [
+    "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/A1_d01_wd01",
+    "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/A2_d02_wd001",
+    "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/A3_d02_wd01",
+    "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/B_context512_batch32",
+    "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/C1_residual_scale05",
+    "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/C2_no_weight_tying",
+    "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/C3_depth4_heads6_width384",
+    "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/C4_sgd_lr01_momentum09",
+    "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/D1_champion_seed73",
+    "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/D2_champion_finetune1000_batch16"
+  ],
+  "complete": true,
+  "source_sha256": {
+    "run_overnight.sh": "9c747ea5be5e67402c30499b7e46e4270558b22f0d2aef758ae3c8ed8ac7bf1d",
+    "generate.py": "e672a6710a6c403a0fa6839bf530ef8dcd64d081aa354e92a245fbc77f160e26",
+    "data.py": "0766adbf6fe83f3cd88af33cdcfd61dc7bb6219c6e9102d802d52285712cf6d8",
+    "model.py": "db36a534b47d6d9c866ba55046ca55e7caf5bb680ceaef9bb3702ef4d73e9e39",
+    "train.py": "0ecc74b0e554c2979d0e9bcdf1de234fc27ea06ab7923326e160440228dae263",
+    "run_overnight.py": "d18826c1eda637aaefa5920089e9fb74cb352e73b10a9439c88014202b131187"
+  },
+  "notes": [
+    "All new from-scratch runs: 5000 steps, warmup 150, no early stopping.",
+    "Common selection CE: fixed T=256 B=64, 20 batches, eval seeds 12345/12346.",
+    "Context512 additionally records native-context CE; fixed training B*T=16384.",
+    "Historical warmup/budgets/LRs differ: this is not a fully matched factorial design.",
+    "A chooses among its three successful new runs; if all fail, use the historical LR reference.",
+    "SGD exception: max_lr=0.1/min_lr=0.01, momentum=0.9, same cosine/warmup/weight decay.",
+    "SGD is one tuned setting, not proof that AdamW is necessary.",
+    "D seed check uses winner architecture/LR with current 5000-step/150-warmup budget; historical budgets may differ.",
+    "Fine-tuning loads parent weights, resets AdamW state and step count, uses seed42/43 and warmup150.",
+    "Validation selects configurations; no independent test-set claim."
+  ],
+  "BEST_DO": 0.1,
+  "BEST_WD": 0.1,
+  "regularization_reference": "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/A1_d01_wd01",
+  "pre_D_champion": "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/C2_no_weight_tying",
+  "fine_tune_parent": "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/C2_no_weight_tying",
+  "champion": "/home/chenrui/projects/MiniLLM/runs/overnight_20261127T013704_336480Z/D2_champion_finetune1000_batch16",
+  "champion_CE": 1.4752394258975983,
+  "finished": true
+}

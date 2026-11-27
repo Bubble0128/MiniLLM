@@ -26,8 +26,7 @@ Implementation and experiments based on
 The accompanying [report](https://github.com/Bubble0128/MiniLLM/blob/main/Report_English.md)
 contains the methods, experiment discussion sections, and attention proof.
 
-Select a GPU runtime and run the cells in order. Run `baseline` first, then
-`dropout` and/or `small`. Results and generated text are produced by execution.
+Select a GPU runtime and run the cells in order. Run `tiny`, `small`, and `medium` for the size comparison. Results and generated text are produced by execution.
 """)
 markdown("""
 ## 1. Setup
@@ -63,9 +62,9 @@ USE_DRIVE = True #@param {type:"boolean"}
 if IN_COLAB and USE_DRIVE:
     from google.colab import drive
     drive.mount("/content/drive")
-    RUNS_ROOT = Path("/content/drive/MyDrive/MiniLLM/runs/submission")
+    RUNS_ROOT = Path("/content/drive/MyDrive/MiniLLM/runs")
 else:
-    RUNS_ROOT = PROJECT_DIR / "runs/submission"
+    RUNS_ROOT = PROJECT_DIR / "runs"
 RUNS_ROOT.mkdir(parents=True, exist_ok=True)
 if DEVICE.type == "cpu":
     torch.set_num_threads(min(4, os.cpu_count() or 1))
@@ -77,22 +76,25 @@ markdown("""
 
 | Experiment | Layers | Heads | Embedding dimension | Dropout | Purpose |
 |---|---:|---:|---:|---:|---|
-| baseline | 6 | 6 | 384 | 0.0 | Tutorial reference model |
-| dropout | 6 | 6 | 384 | 0.1 | Test regularization |
-| small | 4 | 4 | 256 | 0.0 | Test reduced model capacity |
+| tiny | 2 | 2 | 128 | 0.1 | Lower capacity |
+| small | 4 | 4 | 256 | 0.1 | Intermediate capacity |
+| medium | 6 | 6 | 384 | 0.1 | Default size with regularization |
 
-All experiments use context length 256, batch size 64, 5,000 updates, AdamW,
+All experiments use context length 256, batch size 64, at most 10,000 updates, AdamW,
 100 warmup steps, cosine learning-rate decay (0.001 to 0.0001), weight decay
 0.01, and gradient clipping at 1.0. Evaluation uses 20 fixed batches per split
-every 100 updates. Change `RUN_TAG` when changing parameters.
+every 100 updates. Stop after five consecutive evaluations without a strictly lower
+validation CE. Generate with the best checkpoint. Actual steps and token budgets
+may differ. The cosine schedule uses the 10,000-step horizon. All reported losses are CE. The historical baseline used dropout 0 and no early stopping.
+Change `RUN_TAG` when changing parameters.
 """)
 code('''
 from dataclasses import asdict, replace
 import json
 from train import experiment_config
 
-EXPERIMENT = "baseline" #@param ["baseline", "dropout", "small"]
-RUN_TAG = "v1" #@param {type:"string"}
+EXPERIMENT = "tiny" #@param ["tiny", "small", "medium"]
+RUN_TAG = "scale_d01_p5_10k_5080_v1" #@param {type:"string"}
 RESUME = True #@param {type:"boolean"}
 
 model_config, train_config = experiment_config(EXPERIMENT)
@@ -144,8 +146,14 @@ the optimizer and random states for resuming training.
 code('''
 from train import train
 
-summary = train(DATA_PATH, RUN_DIR, model_config, train_config, device=DEVICE,
-                resume=RESUME and (RUN_DIR / "last.pt").exists())
+RUN_TRAINING = False #@param {type:"boolean"}
+if RUN_TRAINING:
+    summary = train(DATA_PATH, RUN_DIR, model_config, train_config, device=DEVICE,
+                    resume=RESUME and (RUN_DIR / "last.pt").exists())
+else:
+    if not (RUN_DIR / "summary.json").exists():
+        raise FileNotFoundError("Upload existing results or set RUN_TRAINING=True.")
+    summary = json.loads((RUN_DIR / "summary.json").read_text())
 print("Best validation loss:", summary["best_val_loss"])
 print("Best checkpoint step:", summary["best_step"])
 ''')
@@ -183,15 +191,15 @@ for sample in samples:
 markdown("""
 ## 7. Experiment comparison
 The table includes completed experiments with the selected `RUN_TAG`. Compare loss,
-training cost and generated text. The report should connect observed spelling,
+training cost and generated text. The report connects observed spelling,
 grammar, coherence and repetition to model and sampling choices.
 """)
 code('''
-from analysis import compare_runs
+from analysis import compare_runs, plot_validation_comparison
 from IPython.display import Markdown, display
 
 completed_runs = []
-for name in ("baseline", "dropout", "small"):
+for name in ("tiny", "small", "medium"):
     path = RUNS_ROOT / f"{name}_{RUN_TAG}"
     summary_file = path / "summary.json"
     if summary_file.exists() and json.loads(summary_file.read_text())["complete"]:
@@ -199,10 +207,11 @@ for name in ("baseline", "dropout", "small"):
 
 if completed_runs:
     rows = compare_runs(completed_runs, RUNS_ROOT / f"comparison_{RUN_TAG}")
-    table = "| Experiment | Parameters | Best step | Best val loss | Final val loss | Minutes |\\n"
-    table += "|---|---:|---:|---:|---:|---:|\\n"
+    display(plot_validation_comparison(completed_runs, RUNS_ROOT / f"comparison_{RUN_TAG}"))
+    table = "| Experiment | Parameters | Actual steps | Tokens | Best step | Best val loss | Final val loss | Minutes |\\n"
+    table += "|---|---:|---:|---:|---:|---:|---:|---:|\\n"
     for row in rows:
-        table += (f"| {row['run']} | {row['parameters']:,} | {row['best_step']} | "
+        table += (f"| {row['run']} | {row['parameters']:,} | {row['actual_steps']} | {row['tokens_seen']:,} | {row['best_step']} | "
                   f"{row['best_val_loss']:.4f} | {row['last_val_loss']:.4f} | "
                   f"{row['elapsed_minutes']:.1f} |\\n")
     display(Markdown(table))
@@ -211,10 +220,10 @@ else:
 ''')
 markdown("""
 ## 8. Submission files
-The archive contains Python modules, the English source notebook, the English report
-draft, and results from the completed experiments above. Complete the report using
-these results, and separately download this executed notebook from Colab to retain
-its displayed outputs. Model checkpoints remain in the results directory.
+The archive contains Python modules, the English source notebook, the English report,
+and results from the completed experiments above. Download the executed notebook from
+Colab separately to retain its displayed outputs. Model checkpoints remain in the
+results directory.
 """)
 code('''
 from zipfile import ZipFile, ZIP_DEFLATED

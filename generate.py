@@ -10,9 +10,11 @@ from model import GPT, GPTConfig
 DEFAULT_PROMPT = "To be, or not to be, that is the question:\n"
 
 
-def load_model(checkpoint_path, device="cpu"):
+def load_model(checkpoint_path, device="cpu", expected_tokenizer="character"):
     """Load tensor/primitive-only checkpoints without pickled custom classes."""
     checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=True)
+    if checkpoint.get("tokenizer_type", "character") != expected_tokenizer:
+        raise ValueError("Tokenizer mismatch: use the word-generation entry point for word checkpoints")
     model = GPT(GPTConfig(**checkpoint["model_config"]))
     model.load_state_dict(checkpoint["model"])
     return model.to(device).eval(), checkpoint
