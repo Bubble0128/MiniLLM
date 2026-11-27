@@ -62,19 +62,26 @@ class TrainConfig:
 
 
 def experiment_config(name):
-    """Compare model sizes with shared dropout and early-stopping settings."""
+    """Named configurations: tutorial baseline, the size comparison, and the final model."""
     model, training = GPTConfig(), TrainConfig()
     if name == "baseline":
         # Historical configuration retained for replay/resumption of existing runs.
         return model, replace(training, max_steps=5000, patience=0)
     model = replace(model, dropout=0.1)
+    if name == "final":
+        # Improvement (report Sections 3.2-3.4): untied output projection, lower peak
+        # learning rate, stronger weight decay, longer warmup, fixed 5,000-step budget.
+        return (replace(model, weight_tying=False),
+                replace(training, max_steps=5000, max_lr=3e-4, min_lr=3e-4 / 10,
+                        warmup_steps=150, weight_decay=0.1, patience=0,
+                        eval_batch_size=64, eval_block_size=256))
     if name in ("medium", "dropout"):
         return model, training
     if name == "tiny":
         return replace(model, n_layer=2, n_head=2, n_embd=128), training
     if name == "small":
         return replace(model, n_layer=4, n_head=4, n_embd=256), training
-    raise ValueError("Choose tiny, small, medium, baseline, or dropout")
+    raise ValueError("Choose tiny, small, medium, baseline, dropout, or final")
 
 
 def get_device():
@@ -359,7 +366,7 @@ def train(data_path, output_dir, model_config, train_config, device=None,
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--experiment", choices=["tiny", "small", "medium", "baseline", "dropout"],
+    parser.add_argument("--experiment", choices=["tiny", "small", "medium", "baseline", "dropout", "final"],
                         default="medium")
     parser.add_argument("--data", default="data/shakespeare.txt")
     parser.add_argument("--output")

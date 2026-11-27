@@ -26,7 +26,7 @@ Implementation and experiments based on
 The accompanying [report](https://github.com/Bubble0128/MiniLLM/blob/main/Report_English.md)
 contains the methods, experiment discussion sections, and attention proof.
 
-Select a GPU runtime and run the cells in order. Run `tiny`, `small`, and `medium` for the size comparison. Results and generated text are produced by execution.
+Select a GPU runtime and run the cells in order. `EXPERIMENT` selects the tutorial `baseline`, the `tiny`, `small` and `medium` size comparison, or the `final` model. The saved outputs were produced with `final`, reading the results trained on an RTX 5080 (`RUN_TRAINING = False`).
 """)
 markdown("""
 ## 1. Setup
@@ -52,7 +52,8 @@ if not (PROJECT_DIR / "model.py").exists():
 os.chdir(PROJECT_DIR)
 if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
-subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-r", "requirements.txt"], check=True)
+if IN_COLAB:  # a local environment is expected to have requirements.txt installed
+    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-r", "requirements.txt"], check=True)
 
 import torch
 from train import get_device
@@ -76,16 +77,20 @@ markdown("""
 
 | Experiment | Layers | Heads | Embedding dimension | Dropout | Purpose |
 |---|---:|---:|---:|---:|---|
+| baseline | 6 | 6 | 384 | 0 | Tutorial configuration |
 | tiny | 2 | 2 | 128 | 0.1 | Lower capacity |
 | small | 4 | 4 | 256 | 0.1 | Intermediate capacity |
 | medium | 6 | 6 | 384 | 0.1 | Default size with regularization |
+| final | 6 | 6 | 384 | 0.1 | Untied output projection, lower learning rate |
 
-All experiments use context length 256, batch size 64, at most 10,000 updates, AdamW,
+The size experiments use context length 256, batch size 64, at most 10,000 updates, AdamW,
 100 warmup steps, cosine learning-rate decay (0.001 to 0.0001), weight decay
 0.01, and gradient clipping at 1.0. Evaluation uses 20 fixed batches per split
 every 100 updates. Stop after five consecutive evaluations without a strictly lower
 validation CE. Generate with the best checkpoint. Actual steps and token budgets
 may differ. The cosine schedule uses the 10,000-step horizon. All reported losses are CE. The historical baseline used dropout 0 and no early stopping.
+`final` changes these to 5,000 updates, 150 warmup steps, cosine decay from 0.0003 to 0.00003,
+weight decay 0.1 and no early stopping (report Sections 3.2 to 3.4).
 Change `RUN_TAG` when changing parameters.
 """)
 code('''
@@ -93,8 +98,8 @@ from dataclasses import asdict, replace
 import json
 from train import experiment_config
 
-EXPERIMENT = "tiny" #@param ["tiny", "small", "medium"]
-RUN_TAG = "scale_d01_p5_10k_5080_v1" #@param {type:"string"}
+EXPERIMENT = "final" #@param ["baseline", "tiny", "small", "medium", "final"]
+RUN_TAG = "5080_v1" #@param {type:"string"}
 RESUME = True #@param {type:"boolean"}
 
 model_config, train_config = experiment_config(EXPERIMENT)
@@ -103,10 +108,10 @@ model_config, train_config = experiment_config(EXPERIMENT)
 
 PROMPT = "To be, or not to be, that is the question:\\n"  # Hamlet, Act 3, Scene 1
 MAX_NEW_TOKENS = 800
-TEMPERATURES = (0.6, 0.8, 1.0)
-TOP_K = 40
+TEMPERATURES = (0.6, 0.8, 1.0, 1.2)
+TOP_K = 10
 SEEDS = (42, 123, 2026)
-SAMPLE_TAG = "hamlet_v1"  # Change this when modifying the prompt or sampling settings.
+SAMPLE_TAG = "hamlet_topk10_v1"  # Change this when modifying the prompt or sampling settings.
 
 for label in (RUN_TAG, SAMPLE_TAG):
     if not label or any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-" for c in label):
@@ -119,7 +124,7 @@ markdown("""
 The pinned Shakespeare corpus is encoded at character level and split contiguously
 into 90% training and 10% validation data. Targets are inputs shifted by one character.
 The model combines token and learned positional embeddings, pre-normalized causal
-attention blocks, residual connections, a 4x-width GELU MLP, and a tied output head.
+attention blocks, residual connections, a 4x-width GELU MLP, and an output head tied to the token embedding (untied in `final`).
 """)
 code('''
 from data import CharacterData, download_shakespeare
@@ -199,7 +204,7 @@ from analysis import compare_runs, plot_validation_comparison
 from IPython.display import Markdown, display
 
 completed_runs = []
-for name in ("tiny", "small", "medium"):
+for name in ("baseline", "tiny", "small", "medium", "final"):
     path = RUNS_ROOT / f"{name}_{RUN_TAG}"
     summary_file = path / "summary.json"
     if summary_file.exists() and json.loads(summary_file.read_text())["complete"]:
@@ -232,6 +237,7 @@ DOWNLOAD_ARCHIVE = False #@param {type:"boolean"}
 archive_path = RUNS_ROOT / f"MiniLLM_{RUN_TAG}.zip"
 with ZipFile(archive_path, "w", ZIP_DEFLATED) as archive:
     for name in ("model.py", "data.py", "train.py", "generate.py", "analysis.py",
+                 "word_data.py", "sampling_comparison.py",
                  "requirements.txt", "MiniLLM_Submission.ipynb"):
         archive.write(PROJECT_DIR / name, f"code/{name}")
     archive.write(PROJECT_DIR / "Report_English.md", "report/Report_English.md")
