@@ -165,7 +165,9 @@ print("Best checkpoint step:", summary["best_step"])
 markdown("""
 ## 5. Loss curves
 Loss is cross-entropy in nats per character. Validation data are used for model
-selection, rather than as an independent test set.
+selection, rather than as an independent test set. Losses are evaluated every
+100 steps and the points are joined by straight lines, so the first segment (step 0
+to step 100) is a single line across the steep initial drop.
 """)
 code('''
 import matplotlib.pyplot as plt
