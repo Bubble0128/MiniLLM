@@ -100,13 +100,14 @@ def sample_batch(model, prompt_ids, pieces, seeds, temperature, top_p, top_k,
 class Scorer:
     """Corpus-based surface statistics; none of them measures meaning."""
 
-    def __init__(self, corpus, split_index):
-        self.train = corpus[:split_index]
-        self.vocab = {w.lower() for w in WORD_RE.findall(corpus)}
+    def __init__(self, corpus, split_index, extra=''):
+        # extra: additional training text, so models trained on it are scored against what they saw
+        self.train = extra + corpus[:split_index]
+        self.vocab = {w.lower() for w in WORD_RE.findall(corpus + extra)}
         train_words = [w.lower() for w in WORD_RE.findall(self.train)]
         self.grams = {n: {tuple(train_words[i:i + n]) for i in range(len(train_words) - n + 1)}
                       for n in (2, 3)}
-        self.speakers = set(LABEL_RE.findall(corpus))
+        self.speakers = set(LABEL_RE.findall(corpus + extra))
 
     def score(self, new):
         unk = new.count('<unk>')
@@ -178,6 +179,8 @@ def main():
     parser.add_argument('--char-name', default='character', help='label for the character variant')
     parser.add_argument('--only', default='', help='comma-separated variant names to run')
     parser.add_argument('--device', default='cpu')
+    parser.add_argument('--word-ckpt', help='word-level checkpoint, relative to --root')
+    parser.add_argument('--extra-train', help='extra training text the models were trained on, relative to --root')
     parser.add_argument('--no-write', action='store_true')
     args = parser.parse_args()
     SETTINGS = GRIDS[args.grid]
@@ -189,16 +192,17 @@ def main():
 
     corpus = (root / 'data/shakespeare.txt').read_text(encoding='utf-8')
     split_index = int(0.9 * len(corpus))
-    scorer = Scorer(corpus, split_index)
+    extra = (root / args.extra_train).read_text(encoding='utf-8') if args.extra_train else ''
+    scorer = Scorer(corpus, split_index, extra)
     seeds = list(range(1, args.seeds + 1))
 
     char_model, char_ckpt = load(root / args.char_ckpt)
-    word_model, word_ckpt = load(root / WORD_RUN / 'word_model/best.pt')
+    word_path = root / (args.word_ckpt or WORD_RUN + '/word_model/best.pt')
+    word_model, word_ckpt = load(word_path)
     char_model, word_model = char_model.to(args.device), word_model.to(args.device)
     assert char_ckpt.get('tokenizer_type', 'character') == 'character'
     assert word_ckpt['tokenizer_type'] == 'word'
-    assert char_ckpt['data_sha256'] == word_ckpt['data_sha256'] == hashlib.sha256(
-        (root / 'data/shakespeare.txt').read_bytes()).hexdigest()
+    assert char_ckpt['chars'] == sorted(set(corpus)), 'character checkpoint uses another vocabulary'
     tokenizer = WordTokenizer(word_ckpt['tokenizer']['vocabulary'],
                               word_ckpt['tokenizer']['min_frequency'])
     chars = char_ckpt['chars']
@@ -294,13 +298,12 @@ def main():
         writer.writerows(summary)
     provenance = dict(
         purpose='Multi-seed regeneration for a character-vs-word sample comparison.',
-        grid=args.grid, prompt=PROMPT, settings=SETTINGS, seeds=seeds, new_characters=args.chars, device=args.device,
+        grid=args.grid, extra_train=args.extra_train, prompt=PROMPT, settings=SETTINGS, seeds=seeds, new_characters=args.chars, device=args.device,
         threads=args.threads, torch=torch.__version__, python=sys.version.split()[0],
         checkpoints={
             args.char_name: dict(path=str(root / args.char_ckpt), sha256=sha256(root / args.char_ckpt),
                               step=char_ckpt['step'], val_loss=char_ckpt['val_loss']),
-            'word': dict(path=str(root / WORD_RUN / 'word_model/best.pt'),
-                         sha256=sha256(root / WORD_RUN / 'word_model/best.pt'),
+            'word': dict(path=str(word_path), sha256=sha256(word_path),
                          step=word_ckpt['step'], val_loss=word_ckpt['val_loss'])},
         source_snapshot=str(root / WORD_RUN / 'source'),
         script_sha256=sha256(__file__),

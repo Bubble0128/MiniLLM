@@ -215,6 +215,8 @@ It does not resemble English above the level of a phrase. Clauses lose their gra
 
 Validation CE was used to choose every setting, so it is not an independent estimate of generalization, and most configurations were trained with a single seed.
 
+A follow-up experiment that retrains the tuned models with more Shakespeare text is reported separately in `appendix_more_data/More_Data_Experiment.md`.
+
 ## 4. Attention and positional encoding
 
 For unmasked attention, define

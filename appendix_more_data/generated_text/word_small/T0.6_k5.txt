@@ -1,0 +1,351 @@
+prompt='To be, or not to be, that is the question:' temperature=0.6 top_p=1.0 top_k=5 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+But yet the king is in the time of the king:
+For the king is not the king.
+
+DUKE OF AUMERLE:
+The king is in the king of York, and to the king.
+
+DUKE OF YORK:
+What is the king of Warwick to York?
+And Somerset to the King Henry's king
+That Lewis and England's king and England's king?
+
+DUKE OF YORK:
+The crown of York, and the king is dead;
+And, in his protectorship he is deposed,
+And in his protecto
+
+===== seed 2 =====
+To be, or not to be, that is the question:
+I would fain say I am not in my mind,
+And I would fain have my love to be a <unk>.
+
+KING EDWARD IV:
+And then I am resolved to my lord,
+And I am a king and a subject to be a king.
+
+KING RICHARD II:
+And so I may be so bold to be a king.
+
+KING RICHARD II:
+
+KING RICHARD II:
+What say'st thou to that king to do me?
+
+KING RICHARD II:
+I am the king of my king, and my son.
+
+RICHARD:
+I know not what you ar
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+But I know not how to be <unk>
+As I am sure I am a subject.
+But if you do not, then, I will be so:
+I will not be so good a <unk> for my life;
+And so I will not be a suitor to do me
+To be a <unk> to my master to my lady.
+
+ANTONIO:
+And will you be so <unk> a thing.
+
+ANTONIO:
+You will not love me in your love.
+
+ANTONIO:
+I am not a man that I would be so loath to be a man to my sister as
+your husband
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+But yet it is my fault of my life,
+That I may be <unk> and <unk> my grave.
+O God, thou art a king, thou art a fool!
+And thou hast been a king and a son,
+And I have no cause to thee for thee.
+
+KING HENRY:
+What a thousand times I have been of thee?
+
+KING HENRY VI:
+The king hath been so great a king;
+And so much as a king of a king to a prince,
+As I have <unk> with a king,
+And I will make it good to
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+And, as you say you are not in the time,
+But you are a man and a man that I know not what.
+
+DUKE VINCENTIO:
+Why, what is that you have done to me?
+
+ISABELLA:
+I am sure you are a fool, sir, sir.
+
+LUCIO:
+I know not, sir, I think I am not a man in the world, but
+I know not what I am a man to do me wrong to tell you what I
+would have me to do it.
+
+LUCIO:
+I do not love you; and therefore I am a <unk> 
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+I know not what I can do it.
+
+First Senator:
+What is that viper of the world that is not the
+<unk>? No man that is not the last time to be a man of a
+monarch for the which he hath made him a
+beggar. But I have a neighbourly of his own person and his own apparel
+with him that he hath given him his own way in his own behalf
+and his commendation in his own behalf of his own person and he
+would have 
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+Therefore, I will be gone with you, sir, and you, as
+you are as you are the <unk> of the <unk>, to
+<unk> a <unk> of a man.
+
+FROTH:
+O sir, sir, sir, you will not be so bold in your
+heart, and your good will be a scholar to you, and I shall be in your
+<unk>. You shall see a <unk> of your good will and you be
+ruled by your own house and your <unk> of your
+honour. You shall find me to your <unk> of y
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+I am not sorry to do it good to be a man,
+And I will not be a man to be a man
+That he shall have a man in my life.
+
+DUKE VINCENTIO:
+I pray you, sir, I have a little good to do
+you wrong me to the court of your brother.
+
+ANGELO:
+I am not so well, sir.
+
+LUCIO:
+Why, sir, I pray you, sir, you are a good man in the house, and
+the very same tradition in the court of your own own person.
+
+ESCALUS:
+Well,
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+But, if the king will be so great to do it.
+
+DUKE OF AUMERLE:
+I am sorry that I am sure I am a man.
+
+DUKE OF YORK:
+O God! what a king is this!
+
+DUKE OF AUMERLE:
+O, I will not stay to thee for thee again!
+
+DUKE OF AUMERLE:
+What a quarrel of that thou takest my heart?
+What wilt thou do with me speak with me?
+I have a king of thy father, and I am dead.
+
+DUKE OF AUMERLE:
+I will not be so bold to be s
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+I am a king and my son;
+And therefore my brother Montague,
+To be my son and your king.
+
+GLOUCESTER:
+I know not what you are to do me;
+And so you may not do me wrong to me.
+
+BUCKINGHAM:
+Why, then, thou art a king,
+And thou shalt be a king of a king
+To make a <unk> to a king of mine own son.
+
+GLOUCESTER:
+My brother is not so much to be protected.
+
+GLOUCESTER:
+And so will I do so much a king,
+That I
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+Therefore I am a fool of your love;
+And I will not be a <unk> and I will not be a subject of my house;
+and I will be a subject to be a <unk> of a <unk> <unk> of my
+<unk> of my heart.
+
+DON PEDRO:
+You shall not know me what I am a man, and I will do you good
+to do. You are too hard to the court of your own house and
+your brother Claudio, and my brother is a good man. You are
+not well contented to b
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+But in the time is not the man of the time,
+And he that makes him know the duke to his own.
+
+DUKE VINCENTIO:
+You must be a <unk> in the Tower:
+For I know not what I know not what you are to know
+The king that you have been <unk> to your grace,
+<unk> your brother and your son
+To whom the King is not the king.
+
+DUKE OF AUMERLE:
+The duke is not a king of a king.
+
+DUKE OF AUMERLE:
+I am not a king of 
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+But that the <unk> of the king
+Is in the <unk> of the city and the King.
+But I am sure to do him good,
+And that he is a king of the King.
+
+DUKE OF AUMERLE:
+What, what is he that is here?
+
+DUKE OF AUMERLE:
+I will not be so.
+
+DUKE OF AUMERLE:
+I pray you, sir, to do it with him.
+
+DUKE:
+You are deceived, my lord; and I will not be so.
+You are too bold to your love and your love,
+And you shall have me
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+For I do not know what I am sure
+To think of my life is not what I am not to say.
+
+DUKE VINCENTIO:
+What is it that to say that you are in love?
+I know not how much as I am a fool of it,
+And I will not be a king of it,
+And you will not love me to wed my life:
+If it be my brother's daughter to me
+And that my duty may not be so far
+To make my <unk> of my life.
+
+ISABELLA:
+What sayst thou then to do t
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+And, if you can, then you are a fool to the <unk>,
+And you shall find you not to know the man of me,
+For I am a king to the Tower.
+
+ANGELO:
+What are you then to do me wrong to me?
+
+DUKE VINCENTIO:
+I am not well, but I am a man,
+That I am not altogether in your own person.
+
+ISABELLA:
+Why, then, I am bound to you to do me wrong,
+And I will do my brother and Claudio.
+
+DUKE VINCENTIO:
+I do not know m
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+But yet I am a man of a king,
+A man and a man to be a flatterer.
+But if you were a man of the king, you were a fool,
+You should not know the chain: I would not be a man,
+I would not be a <unk> to the crown,
+But I will not know me to my master,
+For I will not speak it in the court of it.
+But now I will not know you of it.
+
+DUKE OF AUMERLE:
+You are not, sir, but I am sure to be a maid.
+You are the 
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+I would not be <unk> to be <unk>.
+I know you well that you are not well enough.
+But if you love me for you, sir, and you love me.
+But I will love you. You are well bound in me,
+For I will be your spaniel maid,
+And I am your servant in your house,
+And I will not be your servant with
+A <unk> of the <unk> and <unk> of your own love
+To make me <unk> your love to my love.
+
+DUKE VINCENTIO:
+I am a subje
+
+===== seed 18 =====
+To be, or not to be, that is the question:
+But I am sure you are not well,
+To do the <unk> of your own state
+To do the <unk> of your love
+Than that which is to your <unk>
+<unk> and your <unk> and your <unk> and
+Destroy'd your <unk> and <unk>
+<unk> of your own <unk> <unk>
+<unk> of the <unk>
+Which I have <unk> <unk> of your <unk>.
+You have been <unk> in this <unk> of your <unk>
+<unk> and brimstone of my <unk>
+<unk> of your own <unk>,
+And yo
+
+===== seed 19 =====
+To be, or not to be, that is the question:
+I know you that I have a maid of you.
+
+ANTONIO:
+I am not a good husband, but I will not be a <unk> of a
+<unk>. But I will tell you of the house of the Count Claudio.
+
+ANTONIO:
+I will not be so good a <unk> of your own house to be as well as
+well as I am a gentleman to be a <unk> and a
+<unk> in the <unk> <unk>.
+
+ANTONIO:
+You are the very <unk> of the <unk>, sir, you are in the
+disciplines of the <
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+But, if it be so, I will not be a <unk>
+To make a <unk> and the <unk> of <unk>
+<unk> and <unk> of the <unk> of the <unk>,
+<unk> of the <unk> and the <unk> of the state
+Of <unk> and <unk> <unk> <unk> <unk>
+<unk> <unk> <unk> of the <unk>
+Of <unk> pencil, and <unk> of <unk>
+<unk> <unk> the <unk> <unk> <unk> <unk> <unk>
+<unk> and <unk> <unk> <unk> <unk>, the <unk>,
+<unk> <unk> <unk> of <unk> <unk> <u

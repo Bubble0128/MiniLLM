@@ -1,0 +1,9 @@
+model,seed,parameters,best_validation_ce,loss_unit,best_step,stop_step,stop_reason,seconds
+"Small tuned, character",42,3258368,1.328596,nats/character,6600,7100,early_stopping,642
+"Small tuned, character",73,3258368,1.30405,nats/character,9900,10000,max_steps,909
+"Medium tuned, character",42,10795776,1.314308,nats/character,9800,10000,max_steps,2330
+"Medium tuned, character",73,10795776,1.28817,nats/character,9800,10000,max_steps,2331
+"Small tuned architecture, word",42,12274688,2.746477,nats/word_or_layout_token,2400,2900,early_stopping,559
+"Small tuned architecture, word",73,12274688,2.731976,nats/word_or_layout_token,2700,3200,early_stopping,613
+"Medium tuned architecture, word",42,24320256,2.682574,nats/word_or_layout_token,4700,5200,early_stopping,1831
+"Medium tuned architecture, word",73,24320256,2.685227,nats/word_or_layout_token,4800,5300,early_stopping,1869

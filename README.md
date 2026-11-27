@@ -8,10 +8,11 @@ The code follows [angelos-p/llm-from-scratch](https://github.com/angelos-p/llm-f
 | Report | [Report_English.md](Report_English.md) |
 | Notebook with outputs | [MiniLLM_Submission.ipynb](MiniLLM_Submission.ipynb) ([open in Colab](https://colab.research.google.com/github/Bubble0128/MiniLLM/blob/main/MiniLLM_Submission.ipynb)) |
 | Generated text | [generated_text/](generated_text/) |
+| Appendix: follow-up experiment with more training text | [appendix_more_data/](appendix_more_data/More_Data_Experiment.md) |
 
 ## Results
 
-Validation cross-entropy in nats per character, best checkpoint of each run.
+Validation cross-entropy in nats per character, best checkpoint of each run. Lower is better.
 
 | Model | Layers / heads / width | Parameters | Best validation CE |
 |---|---|---:|---:|
@@ -24,18 +25,19 @@ The final model is Small with an untied output projection and weight decay 0.1. 
 
 ## Files
 
-| File | Purpose |
+| Path | Purpose |
 |---|---|
 | `model.py` | `GPTConfig`, causal attention, MLP, Transformer blocks, GPT |
-| `data.py`, `word_data.py` | Pinned dataset, character and word tokenizers, 90/10 split |
+| `data.py` | Pinned dataset, character encoding, 90/10 split, optional extra training text |
+| `word_data.py` | Word-level tokenizer and data |
 | `train.py` | Training loop, named configurations (`experiment_config`), checkpoints |
-| `generate.py`, `sampling_comparison.py` | Temperature and top-k sampling, multi-seed comparison |
+| `generate.py` | Temperature and top-k sampling |
 | `analysis.py` | Loss curves, comparison tables, numerical check for the proof |
-| `run_size_experiments.py`, `run_overnight.py`, `run_extra.py`, `run_extra_e1.py`, `run_word_experiment.py`, `run_small_untied.py`, `run_seed_check.py` | Experiment drivers |
-| `prepare_extended_data.py`, `run_extended_data.py` | Extra training text from the Complete Works (Project Gutenberg) and the runs that use it |
-| `overnight_summary.csv` | Results of the ablation batch |
-| `build_submission_notebook.py`, `build_notebook.py` | Regenerate the notebooks from source |
-| `MiniLLM_Colab.ipynb` | Chinese walkthrough notebook |
+| `experiments/` | One script per experiment: size and learning-rate comparison, ablations, word tokenizer, tuned Small model, seed checks, sampling comparison, extra training text |
+| `results/` | Result records of the ablation batch |
+| `appendix_more_data/` | Separate follow-up: the tuned models retrained with 28 more Shakespeare plays |
+| `figures/`, `generated_text/` | Plots used in the report; generated samples and their statistics |
+| `build_submission_notebook.py` | Regenerates the notebook source |
 | `tests/` | Unit tests |
 
 ## Running
@@ -44,6 +46,7 @@ The final model is Small with an untied output projection and weight decay 0.1. 
 python -m pip install -r requirements.txt
 python -m unittest discover -s tests
 python train.py --experiment final
+python experiments/run_extended_data.py final   # downloads and converts the extra text on first use
 ```
 
 In the notebook, `EXPERIMENT` selects `baseline`, `tiny`, `small`, `medium`, `medium_tuned` or `final`.

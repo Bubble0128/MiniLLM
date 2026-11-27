@@ -1,0 +1,367 @@
+prompt='To be, or not to be, that is the question:' temperature=0.8 top_p=1.0 top_k=10 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+But if we were all men but one of them,
+We are as subjects and men do fear.
+The time of our love is the time of men
+And every one blazing in the court of heaven.
+
+KING PHILIP:
+And yet you are not so hasty and wise.
+
+BASTARD:
+I will not do it. You are my lords, sir, we
+Have not heard a man in all this sort.
+You have not seen him in the <unk> of him.
+You are too young to have an honourable tongue
+T
+
+===== seed 2 =====
+To be, or not to be, that is the question:
+I would not say I am not for that I should.
+I would God forgive me!
+
+DUKE:
+If you did. How now, my lord?
+
+DUKE VINCENTIO:
+I pray you, go to the house; come on: do you not
+know me of your patience?
+
+ISABELLA:
+I do not, sir: the duke that is a respected fellow;
+for he will not die, but he shall not do it.
+
+ISABELLA:
+He is a very villain: the duke is gone.
+
+DUKE VINCENTIO:
+It is the friar, my lord.
+
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+If I would not have you here, I pray you, sir, you are so saucy
+a <unk>, as you are. You have a good wit: the better
+of your own good and <unk> of your blood than to do a good husband to be
+ungartered. You have heard of the lady say well, is a kind of good
+English and a true woman, but a good man, and a good man is
+but a good word; and yet, as I say, is an ass and a beast in
+a man: but if he do l
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+If he should be true, he is a villain of the world:
+If he be his enemy, why should he be?
+
+ROMEO:
+Ay, ay, and that were the man of man.
+
+JULIET:
+What is he, that he should be mad?
+
+ROMEO:
+Ay, that he is mad.
+
+ROMEO:
+And that, my lord, to whom I came in debt.
+
+ROMEO:
+Why, so do I:
+The sun will not be long ere I have.
+
+ROMEO:
+Romeo, I think she is dead; and thou hast done
+To call a husband to me as
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+And, as thou art a villain, I think, 'tis a good deed to be so.
+If thou art a good fool, thou art a fool and a beast, and
+thou art a man that art a man. If thou be wise, I am no man in that
+art an ass; I am an ass, and thou art a fool.
+
+PRINCE HENRY:
+I would thou wert well enough to be the louse of thy men.
+But thou art as a man would do the world of thy father. Thou
+wert good a man thou wast a <
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+I know that we are not here to come to me.
+
+KING EDWARD IV:
+My lord, we come to meet our house;
+And therefore we will return to us again
+And then we'll meet with them to be friends;
+And therefore will we go, my Lord of Warwick.
+
+GLOUCESTER:
+I know not what we intend to make it right.
+
+KING EDWARD IV:
+I do not love you in this place; but if we
+Have not the time to have a king, we know,
+Our brother
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+Therefore, I will be patient, to make the best of me.
+
+ROMEO:
+O, be quiet; and yet I am dead,
+Thou art a collop of a king.
+
+CAPULET:
+O thou art the man of my son: tell me of this,
+I should be so bold to see thee dead.
+
+ROMEO:
+I do not know what; 'twas the world, and not the world;
+I am a villain, and I am a king.
+What says the man? I have to do thee service;
+And, as I know, thou art not to me pla
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+If she be not so much <unk>,
+Yet should be she is the <unk> of the law
+And not she is the theme of the world?
+
+ROMEO:
+What mean you? I am not well forsworn in love.
+I pray you, go on, and go to bed;
+I will do it so, and I will go with you.
+
+ROMEO:
+O woful <unk>, how I do love thee,
+And bid my Juliet welcome to my house!
+
+FRIAR LAURENCE:
+What noise art thou mad in my face?
+
+Nurse:
+Why, so will I b
+
+===== seed 9 =====
+To be, or not to be, that is the question: if I do love her, and
+do it to do you good to make her thankful the wrong. I pray you take
+your leave in this fair gentlewoman, and to make the good man a lady good
+to my lord and to my lady in the world; which is my name in that
+I am to be revenged, and that I am to be no wiser to you, if you
+be a better sufficient than to do me good; and you shall be so proud, as you
+are, sir, to put your wife 
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+If thou wilt be king, thou art my son:
+If I do love thee, thou hast done a man
+As to thy father and thy father is mine.
+
+KING RICHARD III:
+What means he to thee? and to him, my lord, I am bound.
+
+QUEEN ELIZABETH:
+I have no reason to hear of thee but my son.
+
+KING RICHARD II:
+I thank thee for thy love, and thy love to me:
+I know thee not. I do not love thee well;
+Thou art a king, and therefore be 
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+If I do see of any such a thing,
+Or a man of woman, or a wife, and his own son,
+I would have him love my soul.
+
+LEONTES:
+What think you, Camillo?
+
+LEONTES:
+I know not, but that, I know not.
+I am a maid that you are not worthy
+By my good lord of my lord of mine;
+For I am yours to you, and: I know not: but my name
+Is all my duty; for my wife is not my son
+That you have well done my father.
+
+LEONTES
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+If you will do so, you shall.
+
+ANGELO:
+I have a good cause. But I pray you, sir,
+Be not content me with him.
+
+ANGELO:
+O, sir, be ruled with you.
+
+ANGELO:
+I pray you, let me go and bring me word.
+
+ANGELO:
+I pray you, sir, do you not care?
+
+ANGELO:
+Why, sir, I will not be your wife.
+
+ANGELO:
+I will bestow you in the Centaur;
+But if you fail me as you do, I pray you, let me hear.
+
+ANGELO:
+I know you
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+But when I am no man, thou hast none.
+If thou wilt be so, thou wouldst not have a care,
+And not be thou shalt have me live a king.
+I will not trust thee, and be gone, and go not with me.
+Thou art a murderer, and a friend,
+<unk> me in the Temple Garden of mine,
+<unk> to the King with a beggar,
+And then thou shalt not have me leave to go.
+
+QUEEN ELIZABETH:
+Ay, madam, I thank your grace and your Gra
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+If he do, then he's no man of the time:
+For I am not mad, nor he is dead of me;
+And so will I, to find a man to be a friend,
+And then I am sure you are not well repaid.
+
+DUKE SENIOR:
+What, will he do to do? For me, my lord, you know;
+But when I am in love to do him good,
+I will not think that he hath no reason to me.
+I think he is mad, and therefore is not;
+I think he is not so <unk> with her.
+He
+
+===== seed 15 =====
+To be, or not to be, that is the question: if I be not by the tabor, I
+will be married to thee again. If you do, be gone.
+
+RODERIGO:
+I do desire to see thee, I must be as soon for thee. But yet I am
+the better for thee. I will go with thee. I am in a kind of love, and thou shalt find
+me a thousand shillings to make thee a good fool.
+
+RODERIGO:
+Nay, then, I'll make you amends.
+
+IAGO:
+What a caterwauling is this, sir?
+
+IAGO:
+I have not dine
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+To be a subject that is not so dear:
+What is your name?
+
+LEONTES:
+The queen of your father, your lord: he is dead,
+Which, for my poor self, I know the truth
+Is but a queen's queen's: the duke hath won
+To be your daughter, and I am content
+To do your own honour in Rome.
+
+LEONTES:
+
+LEONTES:
+You may,
+My lord; but you are your brother: you know not
+But what I am of your displeasure?
+
+LEONTES:
+I have 
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+He may not be so much as is he is his name.
+But yet I'll go with him: and yet he's gone
+To bring him to the Tower. So may he be:
+Yet he will make us strangers with us.
+The duke is gone in arms; he hath sent
+To tell you what he will do.
+
+Second Watchman:
+Why do you wrong?
+
+First Watchman:
+Ay, and not for the king is sick.
+
+Third Watchman:
+O that he had no eyes of him!
+
+First Watchman:
+How now, my 
+
+===== seed 18 =====
+To be, or not to be, that is the question:
+But when I am not, I am sure I do not, I do know thou
+lovest me for my life. If thou dost deny me, thou wouldst not,
+let me see.
+
+Clown:
+I will not hear me speak.
+
+VIOLA:
+I thank thee, madam, for I am the fool I am of thee. I
+have no more ado in thee.
+
+Clown:
+But I know not what thou canst. But if thou art, thou'rt wise, for I
+am sure thou art my fool, thou art a traitor.
+
+SIR TOBY:
+Well, sir.
+
+M
+
+===== seed 19 =====
+To be, or not to be, that is the question:
+I am sure of you; and I am no better;
+And yet I know you are too little: for your husband is
+To be your brother. I do beseech you,
+You shall be satisfied; therefore let me have me.
+
+ANGELO:
+I pray you, sir; I have you good to be a woman:
+I pray you have done with me to the Porpentine.
+I am sure you are a wise and a man:
+The duke hath given you cause.
+
+ANGELO:
+O, he is a woman, and a rope:
+He is a
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I am the wiser. Good night. Welcome, good my lords;
+I have a <unk>-house; I am not for you.
+
+PERICLES:
+Good my lord, I have seen a little.
+
+PERICLES:
+O noble queen,
+I have forgot you all of your country here
+To be your brother, and that you are not
+To your son and your brother.
+
+SIMONIDES:
+My lord, you are well met: my lord I know,
+The man is not the king: I am sure of you--
+
+PERICLES:
+If you be 

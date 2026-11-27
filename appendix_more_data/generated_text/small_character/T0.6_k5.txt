@@ -1,0 +1,375 @@
+prompt='To be, or not to be, that is the question:' temperature=0.6 top_p=1.0 top_k=5 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+The sun of the sun is the people's blood,
+The sun and the sun were the window of all,
+And then she is a good man that hath told her hands
+Strokes her head.
+
+Second Watch:
+I would not be so fair as she should be a son,
+But wherein she had been a shepherd,
+And therefore her singular the shepherd.
+
+First Witch:
+The profession of the world of this soldier,
+The present state of the present place of th
+
+===== seed 2 =====
+To be, or not to be, that is the question:
+A month, a man.
+
+CAMILLO:
+The greatest sun is a penny.
+
+CAMILLO:
+I am not able to be a maid of that the gods
+I can tell you the servant.
+
+CAMILLO:
+Why should I do?
+
+CAMILLO:
+I have some profit of her; but I am no more
+Than I would not be so forward to the merry world,
+Nor I would be a more fair woman's perfect.
+
+CAMILLO:
+That would be true, and the world to see the moon.
+
+CAMILLO:
+I do but the wo
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+And that the world were the prince of the sea
+I shine that the side of the present strength
+Of the sun should deserve the sun of the sun.
+
+CHARMIAN:
+The great present that the gods be done.
+
+PAROLLES:
+I do not see how the great sight, the world says he hath such a servant,
+That have been so strange in such a strong-born son,
+The wind of these shadows were they are.
+
+CHARMIAN:
+Not to be so true.
+
+
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+The world that will I with a woeful sword,
+The world were the people of my stubborn,
+The service of mine armours with the sight.
+What say you have my father that you might not see
+The streets of this fair son, the world is a great praise.
+
+KING RICHARD II:
+Then let me see your lordship with the state,
+And therefore I am sure all the fire-ship of the same?
+
+KING RICHARD III:
+The courtesy of this b
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+A month that will be come to me to the
+wisdom of the way.
+
+FALSTAFF:
+I have too soon as I had rather would not be. I will not spoke awhile I have the world.
+
+FALSTAFF:
+I will not do it with him. I have a saucy of him that so far in the strange of the world. I will
+be a woman.
+
+FALSTAFF:
+What says you will, and you shall not serve this palm of him. If I could not, I could be so
+plucked, I will not
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+What is it so?
+
+PORTIA:
+I will not be so long to this so long of a feeble praise,
+To say the time of the world of a fellow
+That the presence of mine eyes shall not be more than the world
+That we have a promise, which shall be better
+To hear him at the world and wisdom the truth,
+And the proud words are we strong into a thing
+And the treacherous state of the world,
+And the thing with his head and 
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I will seem to thee as to thy sight.
+
+CASSIUS:
+The state of the soldiers that thy son hath stol'n to thee.
+
+CASSIUS:
+Sir, I will tell thee, I will not live in thee.
+
+CASSIUS:
+What will you be so much?
+
+CASCA:
+No, no, no, no.
+
+CASCA:
+No, no; but, no, no more.
+
+CASCA:
+I say, nor I am not well to do it.
+
+CASCA:
+I will not have been an ancient to see the gods
+To see this woman's song and stop of the 
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+Then the world is not of the world will be true,
+And the true son of the world of the streets,
+And we are but only through the while.
+
+PRINCE:
+Well, my lord, we'll be so far off.
+
+FORD:
+Why, then, then, then we have been and to say
+And both the world we should speak of heaven;
+Who shall still all the people of his service.
+
+FORD:
+He was sent in his head on't.
+
+FALSTAFF:
+Well, I am a man's pretty 
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+Therefore they are the west of these things that they are now. I
+have their honour in them. I am sorry that
+they were born to their bodies. And I will not be their house.
+
+SIR TOBY:
+I will be his wife. I will do assure him to his son and see him with his son.
+
+VALENTINE:
+In his best power, I will not speak them to thee.
+
+SIR TOBY:
+I will not see him a bounty of the world, I would say they are to
+
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+What were the market and secretly soldiers in the bond?
+
+DUKE VINCENTIO:
+And yet I did not be said, but I have seen the seal
+of my liege with some stronger than my life and stands, and my blood
+against your son and my father's son.
+
+DUKE VINCENTIO:
+The same sad that I am not to my speech.
+
+DUKE VINCENTIO:
+That's a father's fortune for my son, and I will not still it with my heart.
+
+DUKE VINCENTIO
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+The man is shall stand by the sum, and the sun of mind,
+The man of a man and most pale from the world.
+
+ANTONIO:
+They will, sir, and she shall be true.
+
+ANTONIO:
+I have no matter.
+
+CLEOPATRA:
+I will not speak with her.
+
+ANTONY:
+The gods will be some strength to me.
+
+ANTONY:
+They are not so far as I can tell, my lord.
+
+ANTONY:
+I am a servant too false, and the man is an infant.
+
+ANTONY:
+Why should
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+I am sure you should be the court of men.
+
+PISTOL:
+That I shall have said that you shall not speak the sands of the great colour.
+
+PISTOL:
+That I have seen my sorrow.
+
+PISTOL:
+Have you not heard the gallant sight of me, the poor shall be
+but only began to be the world of my husband.
+
+FLUELLEN:
+I will not speak with her faith, and then I will stay.
+
+PISTOL:
+Nor I will seek thee words of my love at
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+I do not serve them with them.
+
+Second Citizen:
+A place of my lord in the world, and the merry that
+should be so long to be hanged with him.
+
+CORNWALL:
+There's my mother that would say I see him, some of him at the city of the world.
+
+CORNWALL:
+If you say, I would not weep the same same saying of a brain, I would not have sent it in my
+profit of the profit.
+
+GLOUCESTER:
+I would not have merry in 
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+And when you shall die with your sword to be strong,
+And then be so sweet sons that you shall not,
+And then you are not the common man's sense;
+Which you may be so many should be more to do,
+I will not see you thrust me to say when you are:
+Therefore I can do something the prince of your father,
+And say you shall not have my brother so
+And bid me when you are too late.
+
+ANTONY:
+I have some soldie
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+The sun is not wonderful, but in a father,
+The servant courtesy that she hath stol'n her words
+And will not be a prince of me to speak off.
+
+CORIOLANUS:
+This is the sea, the prince of the world,
+Whiles the world in the bosom of the prince,
+To be the stronger of the times of the sun,
+The world of the time of the wholesome part,
+The which time of the wars of the blood
+And the time and sure of the s
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+The world will be a change of this fool.
+
+DUKE OF YORK:
+The sheep of the property of the world,
+The manner of the time of the stars,
+Or at the world that shall be a man.
+
+DUKE OF YORK:
+I am a stranger so soon in the common colour.
+
+DUKE OF YORK:
+The good word is to the mountain of the war.
+
+DUKE OF YORK:
+Why, then, the word is the most father,
+And will talk of the world.
+
+KING RICHARD II:
+Then th
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+The great side of her will she will, and she shall she be the season of
+her silk. How can you be that same true let her human she was
+to be a man to the world with marty that we have talked of him.
+
+KING:
+I will be with the palace of the sun
+And what they do not be standed of true and truth.
+
+KING RICHARD III:
+What says the world they?
+
+KING RICHARD II:
+And so that were they to see him this poor 
+
+===== seed 18 =====
+To be, or not to be, that is the question:
+The King hath been the present monarch
+Of any other profit and soul, and the poor without
+As truth as the King is the captive of the King.
+
+KING HENRY:
+The King with him.
+
+KING HENRY:
+When the King was a free that the King's son,
+That the King of England hath brought me with the King's son,
+Whose storm shall be the proclaim'd of the King.
+
+KING HENRY:
+I am sorry of the King's crown;
+But now a par
+
+===== seed 19 =====
+To be, or not to be, that is the question:
+Thou shalt do not believe thee, and thou shalt not see thee to me.
+
+First Murderer:
+I will speak what I am to think.
+
+MISTRESS FORD:
+Therefore I can speak a woman that I may be mad.
+
+First Murderer:
+Who can you see it by the world?
+
+First Murderer:
+How now, madam?
+
+MISTRESS PAGE:
+How now! How now! what news? I have said the man were the great conscience?
+
+MISTRESS FORD:
+Why, then I am not for my 
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I desire thee to say, thou hast borne to be
+Than thou shalt strike the season of thy hearts.
+
+DON PEDRO:
+And so shall thou see thee a word,
+I do not be thy friend.
+
+LANCE:
+Ay, and thou wilt have any man that I am thy bred,
+And thou didst not speak to the stones,
+That which is a brother of thy father.
+
+BOLINGBROKE:
+I will not speak to thy heart with some sacred man.
+
+LANCASTER:
+Then will I be as w

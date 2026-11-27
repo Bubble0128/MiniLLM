@@ -3,17 +3,20 @@
 Everything else matches the best earlier Small run (small_scale_d01_p5_10k_5080_v1): peak
 learning rate 0.001, 100 warmup steps, 10,000-step cosine horizon, patience 5, dropout 0.1.
 
-Usage: python run_small_untied.py [training_seed] [untied|tied] [weight_decay]
+Usage: python experiments/run_small_untied.py [training_seed] [untied|tied] [weight_decay]
 The optional arguments give the second-seed check and the single-change controls.
 """
 from dataclasses import replace
 from pathlib import Path
 import sys
 
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))  # core modules are in the repository root
 from data import download_shakespeare
 from train import experiment_config, train
 
-root = Path(__file__).resolve().parent
+root = Path(__file__).resolve().parent.parent
 seed = int(sys.argv[1]) if len(sys.argv) > 1 else 42
 tying = sys.argv[2] if len(sys.argv) > 2 else "untied"
 weight_decay = float(sys.argv[3]) if len(sys.argv) > 3 else 0.1

@@ -13,4 +13,4 @@ File names give the temperature and top-k, for example `T0.8_k10`. All samples w
 | `word_no_unk/` | Word-level model with `<unk>` masked during sampling |
 
 The `summary_*.csv` files hold the statistics quoted in the report.
-`sampling_comparison.py` in the repository root produced these files.
+`experiments/sampling_comparison.py` produced these files.

@@ -1,0 +1,310 @@
+prompt='To be, or not to be, that is the question:' temperature=0.6 top_p=1.0 top_k=10 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+Saw my lord, my cousin, I think, and my mother's cause.
+There is my friendship and my soul, and my part with me.
+
+BRABANTIO:
+I cannot but tell you so, that you are not for your love
+to the fair appronounce of your wife.
+
+IAGO:
+O, gentle lord, and say you then your shame to do,
+In the heavens, the book of your battle passage,
+If you do as you were as you are still.
+
+IMOGEN:
+Sir, be gone, sir, as y
+
+===== seed 2 =====
+To be, or not to be, that is the question: the town to
+the world of the former state, and when they did but see the
+wars that took too late a cock above a thing, but that they will be
+there are so sweet a fair fine and the law.
+
+THESEUS:
+And yet, the world shall be the little prince, or as a price of the
+peril of a complexion to the world a star of the cur, and the first comes
+that they should be to see the morning by the servant.
+
+PIRITH
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+And that the world is so full of his sword.
+
+PISTOL:
+I will not like the leave.
+
+PISTOL:
+He shall be so. I will go with you.
+
+FALSTAFF:
+And so the devil is for it, so the devil. It is not so cut in
+better than the hand that he did bear his face. I must have too
+heart of forfending to some fear of service.
+
+PISTOL:
+Why, so it is.
+
+PISTOL:
+I shall not see your fortunes. This is the fool that must b
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+For when the way do I come again my life
+To see the country of the heavens of their sons,
+Whose wronging in the carriage of this face
+And their souls will make me laugh at their life;
+And when they were a thousand man, they were a prince,
+And not the people of their souls and speak to the purpose
+Of the common sheep-banished action.
+
+CADE:
+And when he does not speak from her, we came to forth
+And
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+A monstrous prince of the cursed morning foot,
+But then the prince of his preparation
+And had been a word of the great court
+And made heavy to be thought to be suffered.
+And now be the manners of the world,
+The comfort is so far of the steed
+That to see another do thine enemy.
+The fearful of his life is cold and strange
+To lie and birth in the confirmation.
+
+MARIA:
+The sun is better than the sun 
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+Not a beast so soon to come to go above.
+
+SIR TOBY:
+There's a breather than the man will be called away with them for them. They
+are a gentleman to see them against the place of the state of the field, and the
+complaints of honour in the exchanged of the time I will not speak of. Therefore I make thee two
+single of my power to the speech, of a present man with my court
+before me than my father sh
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I am not so long, nor I see the father for thee
+The same of the book of any shame is a chain.
+
+LUCIUS:
+And therefore I have told thee that we would be.
+
+TITUS:
+Are son these things all swear the twenty purpose?
+
+TITUS:
+The world is a gallant to be made to see thee.
+
+LUCIUS:
+And so it is not to do anything.
+
+TITUS:
+When he was the sun of the sword, he shall be satisfied,
+And with thee thee that he
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+Then the senate and the sun and shall be delivered
+With more plot and the promises of the sea,
+To meet the stream of the way or but then,
+The care is the truth of the stroke of my daughter's love.
+
+TITUS:
+I have said so, then, then there is no matter here.
+
+TITUS:
+No, no more man than a son to be made.
+The world, when the court have made me sing,
+And for the state of all the soul before
+There to 
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+Therefore let us be some shadows of state,
+And the service shall have the sword to the sea
+That we will commend me with the tune of our formers,
+And will endure them to the battle and the field
+That he lives not at the world of the two comes.
+Here comes the senses a great person of the world,
+When the world is so much as his will:
+They could show the world hear of their sons,
+And stand up a boutt
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+What would I be counterfeited?
+
+PAROLLES:
+Here comes the precious sufferance. If you do not come to her mother, the shape
+that I would have last it to her father, and there is no more in such a dog, in
+your pride in her heart, and you will not hear me. If I can
+tell it all the day I can be sent for thee. I pray thee, I will prove it
+to desire this pardon. I am a good part of it; so had I not a pa
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+Stand by his fortunes from the prince of his sea,
+That which he hath done to command his mind.
+
+SATURNINUS:
+It is a fool and a man to him.
+
+TAMORA:
+By this is the man of the thing to be a wise to be a
+companion to be a serpent.
+
+TITUS:
+Mark the world that the best spoils of the sea on the law?
+
+TITUS:
+I tell you, good mother. I am a servant too good
+to say that I went to thee.
+
+TITUS:
+Well, be go
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+He says the world is a fault.
+
+SANDYS:
+You shall forsake him, and make him a sword.
+
+FALSTAFF:
+What has an addition?
+
+SHALLOW:
+His sister, my lord, he is a man to see him in the court of all that he hath done to
+court me as if he were better than he is he.
+
+SHALLOW:
+And he were, sir; he was he, and he would not have me now.
+
+SHALLOW:
+He was a thing in the sea-cock and love for a day.
+
+SHALLOW:
+Wh
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+I do not leave the princes of thee, for they live of our love
+in the sea-book, and there be relenting of the place of the cooling.
+
+CLAUDIO:
+So. I have heard thee with thy sword to thee, and I have thee not the part of my
+sweet lady.
+
+DON PEDRO:
+I think the man is a gentleman of this base boy.
+
+CLAUDIO:
+But what say you? What need you see your wisdom?
+
+CLAUDIO:
+I do not know my master for this. L
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+And when the best blood of what he shall be,
+That should be the worst of whose wine blood
+Hath been a fine shadow, which we may defend
+His son and to me. He hath pass'd his wife
+And painted but such men as happy finger
+As this wind our majesty in working stocks,
+And the town of our services of my head,
+And the heart of all the sea with the bride
+Of the same that did supply me to him.
+
+ARCITE:
+May
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+The brought the proper in the street of time of strength
+The boot of the highest state that the body of it.
+
+PORTIA:
+I know so the first that I am a most night
+To scorn and to be so far as the sweet courtesy,
+Which is the stronger of the world with a change
+To his state and self-commanded face,
+Which way more honour than the sun of this;
+The lady is the proud of the way,
+That have been born to be
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+Or the wise of the world she hath a complexion
+In the fair that was fairly bad to him
+And say nothing but to make him a pretty sea,
+The story of the study of a father's court,
+To be a swift better of his dead blood,
+Who to hear the hand of his legs and say
+A satisfaction from his fortunes of flood,
+That the bare of our sense his love still dead,
+And, the man be spirit, the heavens she will not be
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+Nor never see the fortunes shall be sure to find
+The subjects of the people, the blood of the head,
+Whose blessed souls and wasteful proceeding,
+The truth of death and most stream of their world,
+And with their several peril season and their discretions
+Of our commendations and discovery of their wife
+Will not be laid to blame their loves to say.
+
+KING HENRY VI:
+Sir John and your faith, I can giv
+
+===== seed 18 =====
+To be, or not to be, that is the question:
+The truth was better before us; so so his wife,
+Than the wind, the sharp of his sword of time,
+Whereof, being to stay and the honour of my part;
+And when the first seat of his love and the three-pettise
+With all the conditions, and all the tongues of my blood
+Is not a time of the man's son: he shall be said.
+
+BENVOLIO:
+The gentleman is not so hot to be call'd
+The people's dead and working too.
+
+L
+
+===== seed 19 =====
+To be, or not to be, that is the question: who
+I may be gone, that are as well as true as a particular to me,
+that we do not betray that we will send the world, we that
+the truth shows of the world and the form of the devil.
+
+PORTIA:
+I will not have my father to hell thee and the world for thine and
+man in the world; but thou dost know the man that I have seen thee there.
+
+SHYLOCK:
+I know, I shall have thee thou worst.
+
+PORTIA:
+And then I
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+The brief I may come, there is no more of this
+matter. And therefore be in the sea, or these
+confessions the same fools of the princess of the world, or
+the world, and the world he came from them to his shame, that is a charge for
+a merry part of the sight of steel, which will come in his friendship with his
+face from his children service. I do not stay him better than he, and he
+will buy away th

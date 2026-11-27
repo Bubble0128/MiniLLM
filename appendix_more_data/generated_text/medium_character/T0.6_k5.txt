@@ -1,0 +1,354 @@
+prompt='To be, or not to be, that is the question:' temperature=0.6 top_p=1.0 top_k=5 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+There is no strange for a time, and the man is such a starting
+with the poor man.
+
+PARIS:
+What's the matter?
+
+PARIS:
+The country is as to death.
+
+PARIS:
+I was a weak an angry wit of the court, and she's a man, and shall be
+the sooner of the way of a country to me.
+
+PARIS:
+And when I do desire thee, there is no such a stranger.
+
+PANDARUS:
+The main was not to be a man of strength better than the wo
+
+===== seed 2 =====
+To be, or not to be, that is the question: the town to
+the world of the power that were so long at the world as the
+wars of the way in the same company. But then I see thee this
+the same day that thou hast done the wind of the traitor.
+
+PARIS:
+And I am no more true than I have done to be a stranger for thee at the world.
+
+PARIS:
+There's no more than to say, the sun a thousand times to the state of this devil will
+never show the business o
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+And that the world is so full of his sword.
+
+PISTOL:
+I will not like the world.
+
+PISTOL:
+Now, by my life, I will not hear him by the story.
+
+FALSTAFF:
+Nay, by the world, I will not stand at the pretty presence of the common passion.
+
+BISHOP OF SYRACUSE:
+The sun is a good stranger.
+
+PISTOL:
+And I think so far as the world as the world is the fishes of the sense.
+
+DAUPHIN:
+The son of the chain, man
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+The man is mine, and the sea the man is there in the world.
+
+POSTHUMUS:
+The gods begin to be so much in the world!
+
+ARTHUR:
+This is the forest of many a fool, and that the man is to see
+them in a state and this poor story.
+
+POSTHUMUS:
+There is a sort of the sense of the whole strange.
+
+ARCITE:
+I think the service of the state, and the common's son shall speak
+the lady and be seen to the part of m
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+A monstrous prince of the clouds of his princess,
+And to be a castle with a constant sea,
+That stands them in a beauteous countryman
+Is as a perfect to the sea, and the present
+Of the strength of the world, the stock of the court
+That we will have the people of the time
+And we may deceive and star the weaker with them.
+
+THESEUS:
+Then, then they call them for their presence.
+
+PERICLES:
+Why, then, 
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+What is he would not seem the subject of the time
+To see the course of the wars that was before
+The stock of the country. The truth is a stone
+That were a friend of some shame to bear
+The streets of the wars and will stay in him.
+
+Second Citizen:
+Alas, how many words the warlike store of the storms,
+And then so farther than to see them to be a proper
+And so the face of my person is, and a place
+A
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I am not so long, nor I see the father of
+the fault that was my body to meet, and what I can be
+come to me to say at the father that I have laugh'd
+with the most weather. And so, my lord, I will not see thee to thee and
+the world that I have to be made to see thee.
+
+PRINCE:
+And so I would thou do so, and so doubt I went to hear thee at mine eye of
+me.
+
+PRINCESS:
+Well, madam, well said, I would ha
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+Then the senate of the fault was not to be so.
+
+LUCIANA:
+The plot of the deed where I have said,
+And then the false search will be still,
+And therefore to the world with their backs.
+
+ADRIANA:
+There's no more of the world's head,
+Than should be the first of this dead man in the book,
+I am not a man to stay the first of the world
+Of all the world, and the sun of the state
+That will the show of the
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+Therefore be a courtier than the commonwealth
+To the sea.
+
+CAESAR:
+In this, to be the world, and then the common strength
+Of the treacherous trial of my bed,
+And to make his shame to his friends.
+
+CAESAR:
+Then that I have stayed to the commonwealth
+And being a should not speak of his back,
+But thou art a sea-sick to bear him for thee.
+
+CAESAR:
+I have a woman of thy fortune in the state,
+And there
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+What would I be a stone of myself?
+
+CLAUDIO:
+It may be blest before you.
+
+CLAUDIO:
+What is the matter?
+
+IMOGEN:
+The gods are the worse, my lord,
+The greatest fair presence of the power,
+That the fault of the shadow of the sun,
+The threatening fair powers of the towns,
+And bring me to the people's praise of man;
+And this is the present of the sea,
+The broke the brain of the sun, or the way
+Will be
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+The princely doth the field of my love and husband;
+And now my brother Henry is the King,
+That the streets hath seen thee to the state,
+And there were too little a bawd,
+That thou hast sent thee to stand thee on thy heart.
+I have no stranger to thee, the world so far
+That thou art not so much made to be taken,
+And the state of thy father's heart is so long.
+
+DUKE VINCENTIO:
+And then thou dost see
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+That the world's secret that shall be so long.
+
+PANDARUS:
+How, have you not seen the morning that the world?
+
+PANDARUS:
+What is it that the matter? How now, my lord?
+
+TROILUS:
+That which was there in my blood to break the world?
+
+PANDULPH:
+The people of his highness and his hand
+In the state of the holy charm of his peace,
+Which is the court of honour of the south
+That he did be the senate to bre
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+I have not so high a coward, but in the world
+That should be a soldier to his face;
+And when I did have his father seem him
+To hear the better than his heart than my life
+With such as he is more than his heart of his wife
+As I would have been to have him; but he's a gentleman.
+
+KING HENRY:
+What says he that will straight then, and then the wind
+As he was as the strong to be a subject of the
+Town 
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+And when the best common commandment?
+
+First Lord:
+I would then have the worst of the county of the world.
+
+Second Lord:
+What say you to her?
+
+Second Lord:
+Have you not so fairly to make me no worth to be so further with my
+father, and I would have a stranger than the matter of my heart is to me.
+
+First Lord:
+And there was mine eyes taken that my lord with me?
+
+Second Lord:
+I heard you think you 
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+The sun of men do so, the truth is the sense of him.
+
+SALISBURY:
+Why, there is no more than the maid is no strength.
+
+LADY MACBETH:
+The man of man is the sea and shows the strength
+of the streets of the fearful distinction.
+
+SIMONIDES:
+I will not think of your highness in your chamber;
+And I am not the commanded well as the promise
+To study all the way of holy state.
+
+MACBETH:
+That I am not so fa
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+The sun is not fit in my sinner than the first.
+
+CLAUDIO:
+No, but the matter, I think it were all but as a fault, I will not hold you.
+
+DON PEDRO:
+The presence of my soul to my son, and the word of the world and the world will be the
+man of the world.
+
+DON PEDRO:
+What, ho! what a fool?
+
+CLAUDIO:
+What is this?
+
+CLAUDIO:
+A word is the common too late and to the fool of the court?
+
+DON PEDRO:
+The po
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+There's a serious for the chance of the world,
+The seven of a serpent to see the blood of thee.
+
+LUCIO:
+Is the matter of the world and most charge?
+
+PISANIO:
+I am the fresh true love that they will be the world
+and will they see them to the senate and true like the
+peace to be advantage to the likeness of them. If they come to them all,
+sometimes that they should be true and tears with the wing o
+
+===== seed 18 =====
+To be, or not to be, that is the question:
+The matter that the sea were brief of his body,
+Which we will be the country of his bonds;
+For such a sharp as the stony of the state,
+Of the blood of his place, and the soldiers
+Of his proclaim and his harm and his face.
+
+HERMIA:
+And therefore the common princes of his pardon,
+Who should not see him straight on.
+
+LEONTES:
+We have been there a shadow.
+
+HELENA:
+I have been all the heavy sides,
+And
+
+===== seed 19 =====
+To be, or not to be, that is the question: all
+things to the gods, and the poor soul that his face will
+not come to his friend.
+
+PALAMON:
+The more of him is a proper than he should be a common part of his
+pension; for he is the first of the world that same the first company.
+
+ARCITE:
+Wilt thou be the stranger?
+
+PALAMON:
+I hope it be so.
+
+ARCITE:
+The princess are the man of the sea.
+
+ARCITE:
+Is the poor son?
+
+PALAMON:
+The more words that h
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+The crown was true for a strange of my body,
+Which, by such a princely, and the moon is not
+That which the world in the blood of men
+As wonder of the common tender to the world,
+And then to the control whereof the world,
+Was a fruitful traitor for a battle star,
+That was the merry of my house,
+That thou heard the flowers of thy state,
+And stand in thy face. What though I would do
+The proceeding o

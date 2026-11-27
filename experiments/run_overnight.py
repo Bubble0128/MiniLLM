@@ -18,6 +18,9 @@ import subprocess
 import sys
 import traceback
 
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))  # core modules are in the repository root
 from data import download_shakespeare
 from model import GPTConfig
 from train import TrainConfig, train, write_json
@@ -179,7 +182,8 @@ def main(root):
     snapshot = batch / 'source'
     snapshot.mkdir()
     for name in ('run_overnight.py', 'run_overnight.sh', 'model.py', 'train.py', 'data.py', 'generate.py'):
-        shutil.copy2(root / name, snapshot / name)
+        source = Path(__file__).resolve().parent if name.startswith('run_overnight') else root
+        shutil.copy2(source / name, snapshot / name)
     data = download_shakespeare(root / 'data/shakespeare.txt')
     state = dict(batch=str(batch), pid=__import__('os').getpid(), BEST_LR=best_lr,
                  lr_reference=str(chosen_path), stage='starting', failures=[], runs=[], complete=False,
@@ -293,7 +297,7 @@ def main(root):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parent)
+    parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parent.parent)
     parser.add_argument('--worker', type=Path)
     parser.add_argument('--generate', type=Path)
     parser.add_argument('--output', type=Path)

@@ -1,0 +1,347 @@
+prompt='To be, or not to be, that is the question:' temperature=1.0 top_p=1.0 top_k=5 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+But yet I know I do not. I am not well, and yet to be ruled, and
+yet I am a <unk> to be a man. But, alas, I will
+not be <unk>-<unk>, but I'll <unk> in thy throat-proof. But to be a good woman
+and a good word. But if I be in love, I'll be a <unk> and <unk> to
+the <unk> of my flesh: I have a good wit to be a good
+woman, to have, to have my <unk> with a fool, but I
+will make the <unk> of my flesh an
+
+===== seed 2 =====
+To be, or not to be, that is the question:
+I would not, if I had not been a man of his own.
+But if I had not a brother in the law,
+I should be a traitor and a king;
+And, for his brother, thou hadst no son of him;
+I know not why I should not be well of him;
+I know his brother, he will not do me good.
+And so, good lord, I am resolved I,
+And so I do not love his brother York.
+I am resolved of the King.--What, is he, my lord?
+
+KING RICHARD II
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+If I do not love, I'll not do it good,
+But I must not love thee. But, good sir,
+You know me well enough, I do know not you:
+If you do love me to love, and do love me so
+That I am not for love and love I love you.
+
+OTHELLO:
+O that the devil had not been false!
+O me, how would she were a husband to her?
+
+OTHELLO:
+I would have it for my love and her.
+
+OTHELLO:
+If it were true, she had not a heart.
+
+
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+If he should be so <unk>, he shall be so.
+
+JULIET:
+And I for thee, that I will requite thee.
+
+ROMEO:
+What is that which I have to be forsworn?
+
+JULIET:
+I know thee, my lord, I have not watch'd thee.
+
+LADY CAPULET:
+And I, by my troth, I'll go with thee,
+And give me leave to tell thee what I am.
+
+ROMEO:
+And yet I will not, to flatter thee with my love:
+For that I will not be forsworn for my love,
+A
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+I am not so <unk>, nor I have seen the time
+To see the end of this day's king and me
+As to be the king, I do know not why
+I do not love thee not, nor I am not so well.
+
+GLOUCESTER:
+My lord, my lord, I know your grace is not.
+
+KING EDWARD IV:
+My lord, I do beseech your highness' pleasure:
+I know, that your highness are so <unk>
+That you may be well advertised you to do.
+
+GLOUCESTER:
+Then do I, my 
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+I know you are so saucy in your own love.
+You were as good a woman to do
+Your father and your brother to my son.
+And therefore I am not to do with my daughter;
+Nor will I be, and you are my wife.
+But, for you are a woman of love
+Than any of the world I am not in you.
+
+ANTONIO:
+I pray you, do me wrong for my love.
+But, for your love I will go along,
+I will go with thee and; for I will not stay
+To 
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I do beseech your honour, pardon me,
+And give your patience to the Tower.
+What, are you now, my Lord of Winchester, sirrah?
+
+STANLEY:
+The king is coming, and he is fled;
+And therefore I am no king: but, I pray thee,
+Thou know'st my brother Gloucester, and my son;
+Thou shalt be king; and thou shalt know my brother,
+I will not trust thee.
+
+CLARENCE:
+Why, then I have no power, nor no more than thou.
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+If I have any other of that you are,
+I would not be so fond that you have not to.
+
+VIOLA:
+You know the lady of the servant's house,
+To be the lady of your servant's daughter.
+I do beseech you now, let me go in,
+And tell you what I am in love to you;
+For I do not, I pray you pardon me.
+
+VIOLA:
+I am sorry that you love me, and in the way,
+For you shall know my duty. I have heard my brother
+Is of my
+
+===== seed 9 =====
+To be, or not to be, that is the question: if I do love her, and
+that I will do anything with her.
+
+DON PEDRO:
+I would have her too much, for I would have been a woman and a
+<unk>. I have bestowed to her own good words: and I would be in my heart for my
+husband, for she would have a husband of her and a good wit. I will tell my
+husband is of my love; and I have a lady of her own
+love, I have no more care to do my friend for my good will.
+
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+If thou wilt be king; thou art a king:
+Thou art a king to thy son of York;
+And thou shalt not stay.
+What, shall I do so with the duke my son?
+
+DUKE OF YORK:
+No, Warwick, thou hast no son to me:
+And thou art not king: and wilt thou be king;
+And I that thou wilt not be king; and thou art
+That thou shalt be no better than I am king,
+But for thy brother York thou hast done.
+But if thou be Protector o
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+If I do not, I know, you know what I do; but I know you are
+not to be married by the house of;
+and you must needs know of me in your hand:
+You know not how I know you have, sir.
+
+ANTIPHOLUS OF SYRACUSE:
+I am not ignorant. I am not mad.
+But I am not ignorant of the chain.
+If you do not love me, let me see
+The chain I have not to do you wrong.
+
+DROMIO OF EPHESUS:
+I am sure you are not so fair.
+I ha
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+If you will do so, you shall.
+
+ISABELLA:
+I have a good cause. But I pray you, let me
+Be so much of this good man: if you will be
+<unk> in any thing to do me, I am a fellow
+That you have not been so much as to do.
+
+CLAUDIO:
+I pray you, go along with me to your honour.
+
+CLAUDIO:
+I will.
+
+ISABELLA:
+I will be gone tomorrow with you.
+
+DUKE VINCENTIO:
+I am a woman of that contract
+That is the man: but 
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+But when you are the <unk>, I pray, be gone.
+
+DUKE OF AUMERLE:
+And I will do thee so, for I will requite,
+That I shall be a king of the law.
+
+DUKE OF AUMERLE:
+What, will I go, and do you good lord to me?
+
+DUKE OF YORK:
+No, no more: but I am not king of York;
+For I am no son; for he is not so <unk>,
+But that my son will be king of me:
+But I am a subject, and yet my lord.
+
+DUCHESS OF YORK:
+What sha
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+If he do, he will, for the next man knows of us.
+
+LEONATO:
+What news, my lord? Is my brother Montague?
+
+CLAUDIO:
+He is a traitor and a brother of York; he
+is a villain of a man; a man is very wise; he
+that hath a father to be a man.
+
+DON PEDRO:
+And he is a traitor traitor: but I think, he is not the
+duke that is the duke, and I do know the man is
+a very good man. I think he would not have him in 
+
+===== seed 15 =====
+To be, or not to be, that is the question: if, I can
+make a man of any man that hath not a man to say of his
+honesty; and therefore he is a very fool to the devil, to make a
+man to a <unk> of his wit. He is a very <unk> and a <unk>.
+
+Clown:
+Indeed, that is the <unk> and the fool of the law, and the devil is a
+<unk>. He hath a good wit.
+
+SIR ANDREW:
+Excellent!
+
+SIR TOBY:
+'Slight!
+
+SIR TOBY:
+Ay, a good <unk>, and an ass will be a fool. I ha
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+The which is the way that is to be done;
+And I have done to know what we know.
+The <unk> of the house: and this is the friar,
+To make him proud and to the court:
+The king is the prisoner: the king is dead.
+Now, for the king and I do know him not:
+For this is true, he is not so nigh;
+But what is it is, and that is the duke?
+The King of Gloucester is gone in England.
+How is your will? and how now, 
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+I would not I would not be forsworn.
+I would you were so good to do with me:
+I am not sorry that my wife; for I
+am sure you are a maid. You were best
+<unk> to me; I would you were so good;
+I have been so good, and I know you:
+If you were in the love I should be your wife,
+And you were my wife in the fault.
+
+ISABELLA:
+If you were so well pleas'd, you were in love.
+
+LUCIO:
+And so do I.
+
+ISABELLA:
+I
+
+===== seed 18 =====
+To be, or not to be, that is the question:
+But when I am not, I am sure I do not, I do repent
+myself to make a woman. I am sorry
+I have not loved myself to have her good;
+But I will not trust you. I know you do know,
+If I do love you, I will not love you, sir,
+Nor by my life I will not be your wife,
+Nor wish not nor any man. But if I love you, I know you
+As well I am well reputed; I know not why
+I know your mind to know you do well wrong,
+
+===== seed 19 =====
+To be, or not to be, that is the question:
+I am sure of you; and I am no better
+Than to be so fond in my blood.
+
+DUKE:
+And so farewell, my lords.
+
+OTHELLO:
+I do beseech,
+That you shall find me out of your pains.
+
+OTHELLO:
+Why then I will not stay;
+For though you will be so obdurate officious,
+I shall not have you to do your service with
+<unk> and my love in my heart
+Than in the balance of your honour and love
+Be not a subject to your hono
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+But, if thou dost not, thou art not a king.
+
+QUEEN MARGARET:
+What, wilt thou be?
+
+MARGARET:
+I know not what.
+
+SUFFOLK:
+Why, I know not what thou art: and what wilt thou say.
+
+GLOUCESTER:
+A thousand times is that thou hast not been a son.
+
+SUFFOLK:
+I am the King that slew his father in his.
+
+SUFFOLK:
+And he that will be so obdurate, for I,
+And he is not Protector; for his meed is not so.
+
+GLOUCEST

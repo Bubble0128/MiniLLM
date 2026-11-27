@@ -1,0 +1,365 @@
+prompt='To be, or not to be, that is the question:' temperature=1.2 top_p=1.0 top_k=5 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+If I do see the captain of me, I hope
+These wars in a sea that were trailors, and wings,
+And welcome to thine eloquence to the case:
+Thou art sometime to dresd a man,
+And bring it through the witchcraft of happiness
+To the services of my powers, that my house
+Should be trespessed. Therefore, thou hast miscord thyself,
+In a faith of self-blind, I would thou wert an idle of my
+state, and I will str
+
+===== seed 2 =====
+To be, or not to be, that is the question: then to make
+harsh this.
+
+PANDARUS:
+This way of time is my heart; and, tie my fault,
+as I well as thou shouldst have made; for I
+advised him, I would have a matter-pace of life
+at large as a man in my bosom.
+
+CRESSIDA:
+If it be so, there is not, that with me, then the state
+truths and more cannot prophet, and bear, there is sometimes, then
+such thou attorneys. Here comes the present stock a messe
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+And if I discharge it be to bring your former
+To the word of his cheek. It is not stirs to tell
+As this will I. In whose which I can,
+I come with his wisdom. We are as mad, I was,
+But fools to this.
+
+PISANIO:
+I do do not. It was sure, this
+I made among the stock, and this,
+That his swelling sprites interrow,
+Take already aside.
+
+IMOGEN:
+These shadows were there. If this be sad,
+As I do nothing sh
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+Therefore the sons of these two days in them to them.
+
+CORIOLANUS:
+What, what troops as you are wrong'd with me?
+
+CORIOLANUS:
+Ay, ay.
+
+CONSIO:
+Now, my lord, the lancest of a free of steel;
+A present shall become of the sentent.
+The provides are the woods, we should be such
+To speak the worse.
+
+CORIOLANUS:
+Truly, my lord,
+Took, we shall.
+
+ARCITE:
+I take this, and that well do.
+
+COMINIUS:
+I would b
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+A mongrel's delicate soldiers in my hand
+A tenderness.
+
+PALAMON:
+A mind at my heart.
+Tell him I that was befalled. I will not have
+After that will do my husband's hole spies:
+Thou hast mine, sir.
+
+ARCITE:
+Why, here is a gentle company,
+The man hath more anothment of men.
+The creditor was mannerly on him.
+
+Page:
+I do not know home; but I have an ass,
+Which is thy better sorrows in to the shade.
+I 
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+What is my love?
+
+SHALLOW:
+Well?
+
+SLENDER:
+Ay, madam, sir.
+
+SLENDER:
+Thither is my meat, miscan that you are. The general soldiers of himself are stander in an
+hour. Wiltship his book?
+
+SLENDER:
+Who's my lord?
+
+SLENDER:
+Think you to this, and the world should be merry to have her women that women
+shall not lose me to me with a friend; but so I have done them a man.
+
+SHALLOW:
+If I have no man in, 
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I am not so long, nor I seem not strength
+That to discharge our sorrow sheep, and white,
+To this men that were any thing on this woman
+Whose banners still through their harmless, which she meants.
+I'ld take him, and save them away.
+Take hence the fruit that without my sword and down.
+
+ALBANY:
+Who is't, sister?
+
+EDMUND:
+As therefore I saw my lord.
+
+EDMUND:
+True, so is my friend to speak of my lord
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+It is to send the cross of the sun.
+
+CAESAR:
+It is my faith, my lord, as I would have seem my soul
+And saying.
+
+DICK:
+If told thee him, that hath been sent the white,
+This careful time will I bring you to bear
+Thy force thy heads.
+
+CAESAR:
+I'll
+Assure to thee is this: but if thou wert a son
+If thou stand by that,--thou shalt hold mine eyes
+Which, if you should have miscorrible
+The city's strength
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+Therefore be a courtier. Have you seen all?
+
+CLEOPATRA:
+That is at home.
+Was that these things are bought, and we are bore?
+And, tell us, whether two breed and strongs on the end,
+The whole shrieks whereto were taken, thou hast seen
+They seen the starving of our stampety;
+And, but this, if then too, thou see'st them by.
+If thou dost brave me, the fruit is a maid,
+In whose fair service as thy stat
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+Weak of mother has a serpent, or a woman's death,
+To hang me whom I had been before
+This power in thine enemies to him,
+And then I'll serve against thee.
+
+PORTIA:
+And there it is no servant,
+And warning together.
+
+PERICLES:
+Ay, marry,
+If thou shalt be moved, and say i' th' world,
+And that work thou wilt not live in service
+With this same: and if I do bring thee back
+Against thy sword on thy hand,
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+The princely dogs the field of mine arm,
+It shall be dead; and if then, will such
+That shall be still tell this father's favour
+To taste the whole weakness, which shall be truth,
+The fiery studied of the wars of this was.
+Are the wind to blush? What serve them so?
+
+MELUN:
+Ten traitor is stand in the sad tree, there is a
+disturbed arcentive.--Wherefore, the lady-boy,--
+I have a mouler too, on him 
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+If your spirit--will you spy.
+
+SANDYS:
+Your wrongful, my lord, I think, if I beat this
+word, though I had rather speak if I but say if you'll
+be sure to try.
+
+CLEON:
+I am the world against my sword; I'll strew it work to the company. If this day be taking in, i'
+there, it is a good too mate. I'll but a sort of my signior, till the
+frozen be the comfort of me too much took for me. Well, i' the
+cro
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+If thou break'st that wilt be the world,--
+
+Clown:
+Who's there?
+
+MONTANO:
+What a man that I will do?
+
+Messenger:
+What then worship would I wake. It is she had been so much,
+and, if so, if she had sport in the world, he should
+died but that she would draw her.--When she can carried me say so, as I am
+harded with her ask twelve, something so finely, still suspites to
+my presence; for her fortunes s
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+And we'll be such a point of a man or no, beink thine, which
+is too long. But, if you have a strange of the cause, I seek,
+any other than your loss of my sword. By my
+horse, I as my point which I had rather, and, indeed, my sovereign,
+both I hope I am; for the wars,' if they can, an address of
+my head, it will ne'er holds my brave.
+
+PALAMON:
+I'll then spare thither to have mercy of my love i'
+the
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+Thou'rt not the park, thou, a stranger, boys of spirit,
+A pearful man intrust.
+
+SUFTLY:
+I will not.
+I warrant you, my good lord.
+
+PANDARUS:
+Anon, men of an ill o'er the practice of your hand;
+And yet, think'st me, I have, i'faith, and thy looks
+Art a changer officer; but in a stroke
+Than to make a stroke of my pains and thee.
+
+TROILUS:
+This my lady was my holy better.
+
+CRESSIDA:
+Thy sorrows striv
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+If you will become it, yes, you say to speak,
+Whose bride your husband and have to the weak of you
+As they were all brave, to see you.
+
+CLAUDIO:
+The money is almost fair friend,
+With servant, and so look you a father,--
+And then the sea we have done't: and so strange your faults,
+As the weak as you are a milk as you have theirs:
+Truly, they say, then.
+
+DUMAINE:
+Now I am no wife.
+
+LAFEW:
+What a fo
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+To be that which show it.
+
+PRINCE EDWARD:
+I do but save it.
+
+QUEEN ELIZABETH:
+She is, to be a feeter table to see her than a world and
+house and the way is, but not trickly, nor no matter. Is not
+there not so long that they dare not be the casket?
+
+KING:
+No matter, sir; but intress they should be answered. This was that
+done to make you. As well and mad, I should not spend you, sir, tell me
+you t
+
+===== seed 18 =====
+To be, or not to be, that is the question: I stood
+against the same sorrow should have treat you found out of men. I would
+have the wise of this poor friends.
+
+FANNIS:
+I would I had a son of my fortune itself in me; for he was said the
+part, the wars at once and said together, the man to shepherd him to
+be sometimes.--What have you not, have I deliver'd him than his face?
+
+Shepherd:
+And how someward she is he took to be a gentleman?
+
+Clow
+
+===== seed 19 =====
+To be, or not to be, that is the question: all
+together in the woman of the court, to say again.
+If such a person as a throng-back and hurt a porld o' th' war.
+
+DON PEDRO:
+A stones of that, to bed.
+
+CLEOPATRA:
+They do not satisfy me. I will not have my lady, but I could.
+
+DON PEDRO:
+And thus indignities me. I will show them for my lord.
+
+DOLABELLA:
+I have seen to tarry with me.
+
+DOGBERRY:
+When I see thee, I will.
+
+DON JOHN:
+Was matter for
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I should not draw my heart in this.
+
+PAULINA:
+In this.
+
+LAUNCELET:
+Well, I'll tame you, answer no suitor to't;
+I have ask'd for you a wife, but to the charter.
+
+LADY CAPULET:
+When you do love her, my lords, and with their faults are,
+As you woo, man, and you as your prayers, to take them.
+
+JULIET:
+Take them way, then.
+
+COUNTESS:
+And take my lord with a shambler fee.
+
+JAQUENETTA:
+I'll never wish i

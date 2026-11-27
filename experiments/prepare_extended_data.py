@@ -2,7 +2,8 @@
 
 Source: Project Gutenberg ebook 100, "The Complete Works of William Shakespeare"
 (https://www.gutenberg.org/ebooks/100, plain text UTF-8, public domain in the USA).
-Save it as data/gutenberg/pg100.txt; the SHA-256 below pins the exact file used.
+It is downloaded to data/gutenberg/pg100.txt from an official mirror when missing; the
+SHA-256 below pins the exact file used.
 
 The plays are converted to the layout of data/shakespeare.txt (speaker label with a colon,
 speech lines, blank line) and restricted to its 65-character vocabulary. Left out:
@@ -11,17 +12,21 @@ speech lines, blank line) and restricted to its 65-character vocabulary. Left ou
   * Hamlet, so the soliloquy used as the generation prompt stays unseen;
   * the sonnets and narrative poems, which are not dialogue.
 
-Usage: python prepare_extended_data.py          writes data/shakespeare_extra.txt
+Usage: python experiments/prepare_extended_data.py          writes data/shakespeare_extra.txt
 """
 import hashlib
 import re
 import sys
 from pathlib import Path
+from urllib.request import Request, urlopen
 
-SOURCE = Path("data/gutenberg/pg100.txt")
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))  # core modules are in the repository root
+SOURCE = ROOT / "data/gutenberg/pg100.txt"
 SOURCE_SHA256 = "a023115c2d4e2ee12221bdd780fdf2ac5a864fe225948656f51f8be462c7fffb"
-OUTPUT = Path("data/shakespeare_extra.txt")
-ORIGINAL = Path("data/shakespeare.txt")
+OUTPUT = ROOT / "data/shakespeare_extra.txt"
+ORIGINAL = ROOT / "data/shakespeare.txt"
+MIRRORS = ("https://aleph.pglaf.org/1/0/100/100-0.txt", "https://gutenberg.pglaf.org/1/0/100/100-0.txt")
 
 ALREADY_IN_ORIGINAL = {
     "THE TRAGEDY OF CORIOLANUS", "THE THIRD PART OF KING HENRY THE SIXTH", "MEASURE FOR MEASURE",
@@ -92,7 +97,27 @@ def split_works(body):
         yield title, body[start:end]
 
 
+def download_source():
+    """Fetch ebook 100 when it is missing; only a copy matching the pinned SHA-256 is kept."""
+    if SOURCE.exists():
+        return
+    SOURCE.parent.mkdir(parents=True, exist_ok=True)
+    for url in MIRRORS:
+        try:
+            with urlopen(Request(url, headers={"User-Agent": "python-urllib"}), timeout=900) as response:
+                raw = response.read()
+        except OSError:
+            continue
+        if hashlib.sha256(raw).hexdigest() == SOURCE_SHA256:
+            SOURCE.write_bytes(raw)
+            return
+    raise SystemExit(f"Could not download the pinned Project Gutenberg file; place it at {SOURCE}")
+
+
 def main():
+    from data import download_shakespeare
+    download_shakespeare(ORIGINAL)
+    download_source()
     raw = SOURCE.read_bytes()
     if hashlib.sha256(raw).hexdigest() != SOURCE_SHA256:
         raise SystemExit(f"{SOURCE} differs from the pinned Project Gutenberg file")

@@ -241,7 +241,7 @@ DOWNLOAD_ARCHIVE = False #@param {type:"boolean"}
 archive_path = RUNS_ROOT / f"MiniLLM_{RUN_TAG}.zip"
 with ZipFile(archive_path, "w", ZIP_DEFLATED) as archive:
     for name in ("model.py", "data.py", "train.py", "generate.py", "analysis.py",
-                 "word_data.py", "sampling_comparison.py",
+                 "word_data.py", "experiments/sampling_comparison.py",
                  "requirements.txt", "MiniLLM_Submission.ipynb"):
         archive.write(PROJECT_DIR / name, f"code/{name}")
     archive.write(PROJECT_DIR / "Report_English.md", "report/Report_English.md")

@@ -1,0 +1,390 @@
+prompt='To be, or not to be, that is the question:' temperature=0.8 top_p=1.0 top_k=5 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+There's no place in single service and honour.
+
+BURGUNDY:
+The common ship. Who comes this friend?
+There was no longer to the stealing but the care?
+
+SHALLOW:
+What would you have to have the minion shows?
+
+CONSTABLE:
+If there were, madam, we will hear me, then he set the word.
+
+SHALLOW:
+I have thee not heard of the supper that thou hast so lost it with them that thou hast spoke to the case. I
+shal
+
+===== seed 2 =====
+To be, or not to be, that is the question: the town, if he
+would have a common stream out of mine eye. The sun of the times were
+a brow or successful bones,--then, if there be so, it is not so.
+
+PRINCE:
+Why, how now, man? The gods with me!
+
+PRINCE:
+Now, madam, I have so much as mad as they are, and they will be that
+truth in a body and the field of the cause and the strong of the senate.
+
+FALSTAFF:
+As for they are too late; and what is th
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+And if I discourse it be to bring your fortunes
+Which I do follow, I will do my father.
+
+BAWD:
+There is a good conscience o'er a thing there.
+
+BOULT:
+Wilt thou go? What think you'll say thou art?
+
+BALTHASAR:
+I do not bear thee, my lord.
+
+BOULT:
+I am no more too, so I have an honest man.
+
+PORTIA:
+Where is the man of the man in my heart,
+And so shall I do not laugh thee for thee.
+
+CAIUS:
+Nay, but t
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+Therefore the son of the season of this shame will
+The shepherd shall be the work.
+
+PORTIA:
+What's this thy life?
+
+PORTIA:
+Ay, that, then thou wert a fool and sentence.
+
+LORENZO:
+I do see thee born a man to speak of a man.
+
+LORENZO:
+O, be merry the wood in mind, I was a whore.
+
+PORTIA:
+It is a fool.
+
+LUCIO:
+I had a grandam, I would but this woman ill.
+
+LUCIO:
+Ay, and said I; for thou shalt not li
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+A mongrel of mine own silk.
+
+MARIANA:
+I will desire thee well.
+
+BASTARD:
+And we shall be so. Well may then a woman will be with thee.
+
+MARIA:
+The good morrow was mine eyes to hell.
+
+SIR TOBY:
+That I will be hanged for a time, the way hath made hands of me.
+
+MARIA:
+This is the matter of her.
+
+BASSIANUS:
+The gods that the love of your lips would say the life of her.
+
+MARIA:
+The seventeth is not for
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+What is he would not say to the crown?
+
+THESEUS:
+Not so; but to see them that I may come.
+
+THESEUS:
+And I'll be a cup to me, to be his wife.
+
+THESEUS:
+What art thou so?
+
+THESEUS:
+No, my lord. The gods are merited to him.
+
+THESEUS:
+I think thou shalt have mine eyes are to be a shamed to thee,
+And thou hast stronger to me with a friend;
+Thou art a shrewd for a soldier than a soldier,
+Which in thy s
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I am not so long, nor I see these three fathers of thy fortunes
+and the weeks at the second those that thou hast done it on thee;
+that I would not have to the church of their sons,
+and so shall stay the time to the season. If I can
+say it is, then I am the shipped world as to see
+any other that thought of shore I have been a mistress of thy sword,
+but a sorrow of suit as any steel of thee.
+
+Secon
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+That the senate of the fault was not water to the devil.
+
+SHYLOCK:
+Why should I have done the sooner of this son?
+
+SALARINO:
+I would not discannot be the man.
+
+SHYLOCK:
+If thou shalt have been there a maid, but I am as a man
+to say the most issue in the strange of the world, the
+sea, take thee a strength.
+
+SHYLOCK:
+To be a music to teach me to the love I shall have minister to
+thee with me, for t
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+Therefore be a courtier. Have you seen all?
+
+CLEOPATRA:
+That is the matter, and the father of any man that the
+weight is the man to be a burthen. To bring him to the state brands of a father things on
+the fall.
+
+CLEOPATRA:
+We have at the sea of the field that were a great penny thing to that
+we should be seen to be the world; therefore to be a man in a woman of a straight sore.
+Therefore be not t
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+What were the face be true, who should not live
+Tomorrow the best service?
+
+MACDUFF:
+No, no, no.
+
+MACBETH:
+What says the child was time?
+
+MACDUFF:
+There was my lord that I had a soldier
+Than the fault of the shame.
+
+MACDUFF:
+There is no mean to thee.
+
+MACDUFF:
+What sayst thou to heaven?
+
+Second Murderer:
+I dare as they say it.
+
+MACBETH:
+I am a storm to be a stomach, and I will
+not be a good son o
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+The princely dogs the field of mine arm,
+To save his fearful court and stones of life.
+
+SUFFOLK:
+Then tell him then.
+
+MENENIUS:
+I am strange from the crown, and he hath been
+The fault of the streets of all the world
+Of her parting.
+
+SUFFOLK:
+What says she?
+
+CORIOLANUS:
+What says you then to the world and see how
+We were the store of terms?
+
+SUFFOLK:
+She was a mark'd for his sickness.
+
+WOLSEY:
+Sir
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+If your spirit were as fashion, the manners
+I die with the charge of the world and the
+worst.
+
+DUKE:
+Then, if it be so, I would not say
+The way of her that hath made me for that.
+
+DUKE VINCENTIO:
+No, my good lord, you may be an end.
+
+DUKE VINCENTIO:
+I do but so, it is no man to be a fool.
+
+LUCIO:
+What, ho! what neighbour would have you answered?
+
+LUCIO:
+No, but I will not leave you for myself.
+
+D
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+If thou break'st that wilt be the world,--
+
+Clown:
+Who says that they do not know they should seem together?
+
+DUKE OF YORK:
+This is the matter, that's strange for me.
+
+DUKE OF AUMERLE:
+I am a good time were the part with the man
+Of them as a strumpet as many officers,
+They carried in many thousand courages
+To hear me to seek their common stores.
+
+DUKE OF YORK:
+And thou, my lords, I have spoke it.
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+And when the best commander of his son?
+
+BASTARD:
+No, I am sure to see the past of them,
+That the sounds they might have their father thus,
+For he will be so bought against their bosom.
+
+MARGARET:
+All the soldiers is the market-place,
+When he shall be these bounces, and they call them all
+The corners of a princely touch us in their coats;
+For they have some things to speak a sheet,
+But that hath 
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+Then if you come not, then, I have told you to see him,
+And there is another fountain that I will serve.
+Wherefore have you strong a mere so fortune,
+And see my head with a man, and when I will be
+With the wolf, I see the stronger shall be able
+And stir that I have to speak of.
+
+AUTOLYCUS:
+I am not there in my part, and there will not.
+
+AUFIDIUS:
+And the good countryman is a good wife
+To think on
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+I had a stand thing to seek his sword to myself,
+To bring his court of his bad to his son,
+Which he shall be my brother, and he seem
+Will not be the study of all the sounds
+Be to be as free as true. How now, my lord?
+
+PRINCE EDWARD:
+What man do you then?
+
+KATHARINE:
+Why, sirrah, a witch!
+
+KATHARINA:
+Why, as we were but the constant stronger
+To heaven the people's song.
+
+KING EDWARD IV:
+Thou wast 
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+To be that which should be sent to me, with the blood
+That I may deserve it in midnight.
+
+BRUTUS:
+What a singer is there?
+
+CASSIUS:
+I would they had not dreamed them to bed,
+And be their blood as they did serve a man
+To the palace of the success as an end,
+Their constant to be seen to the priest that they
+Their palaces are they are so many a shoe.
+
+CASCA:
+As I do not spend thy son with this world
+
+===== seed 18 =====
+To be, or not to be, that is the question: I should but
+the service of the story of the sense and the fourth. If there lie
+to her betimes the worst of the contrary of the time, the tidings of
+her time, it is not the spirit of her shelling. I would tell you of
+my shoulder were but a most particular to her fortune.
+These woes the sea of men, the mercile of their court, and the
+discharges of that I am so love as they are; and when
+they are a
+
+===== seed 19 =====
+To be, or not to be, that is the question: all
+things becomes things that will be true to mine eyes are
+at thy parasion, and the wars are betwixt the foes of them.
+
+ANTIPHOLUS OF SYRACUSE:
+Alexander that I may command them all.
+
+DROMIO OF SYRACUSE:
+Sir, what says the world?
+
+ANTIPHOLUS OF SYRACUSE:
+What is the mettle of me?
+
+DROMIO OF SYRACUSE:
+If that I will not be my lords to say word to hear
+Is so father than to honour for me, that I m
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I should not draw my heart in this penny,
+And the foresaid that the sea is best subject.
+
+DUKE OF AUMERLE:
+And then, beseech you, sir, are you not to be
+We are asleep, but with her father's horse,
+And she has ta'en to see a sort of the time,
+I would be so so much may say to be the song
+As true as you have ta'en a man.
+
+DUKE VINCENTIO:
+I am sorry with a soul or twenty of you.
+
+Clown:
+A good word o

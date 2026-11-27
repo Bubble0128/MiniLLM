@@ -1,0 +1,347 @@
+prompt='To be, or not to be, that is the question:' temperature=0.8 top_p=1.0 top_k=5 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+There's no place and betray'd, but I shall not say
+What seem the moon are. Who comes the strange?
+There was no longer for this palsian foe,
+To be conveyed with a man, and the world while they,
+With his honour, whose faith weeps our company
+Hath struck up their peace from this fine tempest.
+
+CAIUS:
+This is a man to see the sun.
+
+CANIDIUS:
+His waisant shall be the months of his brow
+That seems as h
+
+===== seed 2 =====
+To be, or not to be, that is the question: the
+court of her own poison and the sun, which we must do the salt and the same people
+and cherish in her thine own bonds; for I am sure
+in me, I say, so say I would be sad.
+
+SHALLOW:
+I am a man that were not strangely for these threatensions
+all the world into the commonwealth.
+
+SHALLOW:
+And so, my lord, the gods, the stocks they would not have told,
+and this were better than their seats in this
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+And yet these two sees are borne and still she should not live.
+
+BASSANIO:
+I do, better; for they have desire them as they are so sworn.
+
+BASSANIO:
+The garden prates have not want they how they shall
+be changed to have their bloods on their speech.
+
+BASSANIO:
+I hope to be the matter, so she should be their shoulder--the same
+truth of man is sixpense, they would draw them.
+
+BASSANIO:
+What shall I 
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+Therefore the stirript shall the sun in them
+And bid them fire the while we must be the same.
+
+PORTIA:
+They are said, and they are all these whose bed soldiers are.
+
+PORTIA:
+I will be satisfied one word; and if you say they'll should have seen
+A strangely between that your highness' part
+The poor of mine eyes. Is not an old face
+That you may be so late and the water of my son?
+
+PORTIA:
+Ay. I will
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+A month that will break themselves that we mean to call.
+
+BRUTUS:
+The princely shows the whilst the truth
+That when we were not the case of the world
+Which we will be seen to help.
+
+COSTARD:
+Ay, marry, and these forms are so far before.
+And, and we hold our counsel. Therefore,
+The servant of you, and wise and beards
+A servant from the person and service,
+The while the purposes in the streets;
+And
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+What is he would nothing but so?
+
+SIR TOBY:
+A matter, a word on me, there is no matter; and the true that
+the womb we would have a wife that says he is.
+
+SIR TOBY:
+I will not do that will not be so.
+
+VALENTINE:
+Not I, noble Paris is too stranger to say.
+
+SIR TOBY:
+I will not love your father, but you have seen
+your man that would be truly born to bed.
+
+SIR TOBY:
+I would have you seal more of this
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I do not so will do the seal of his life.
+
+CASSIO:
+That wisdom make him at his head the place of men, take him and the
+same mother's storm, and the world itself in something that would speak again
+with the court of the streets of the same
+with a friend that with sorrows are conversive. I am sorry of
+you would have seen him a mistress of the good son of my practice and
+my parist senders of my soul
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+Then the world is not of his blood.
+
+KING:
+I am a mercy in him of a silk, and where he comes.
+
+KING:
+What, what art thou? Why, thus?
+
+SURVEYOR:
+I will drow the moneys of their bed.
+
+KING HENRY:
+What's the King, sir?
+
+KING JOHN:
+The King of Gaunt, I am glad to him that would not be so banished, but in
+any other time.
+
+SURREY:
+I am note of him, and so to be so state
+Which he was a fateful for him; 
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+Therefore they are the west own garment, who would spread
+his heart, whose death still shows his sword
+he speaks itself.
+
+PIRITHOUS:
+And wilt thou walk on't?
+
+COSTARD:
+And so the wild when there is not the pretty sought of thee, to the colery sinews of it.
+
+KING:
+Hark you not, madam.
+
+BASSANIO:
+I will not, sir; nor I cannot speak
+But you are as the man's sake, but with your bosom.
+
+BOYET:
+What an
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+What were the marriage that was not so far in the bond?
+
+DUKE VINCENTIO:
+And yet I did not be mine, but I'll see thee, thou hast a pale fellow of
+thy soul.
+
+DUKE VINCENTIO:
+It is not mine, nor though I were a man to be made.
+
+DUKE VINCENTIO:
+That's my mother, my lord.
+
+Clown:
+There's no more than my son.
+
+DUKE VINCENTIO:
+There's mine one of the world with my black, the wisdom of my looks,
+and the
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+The marriage is a poor performance, and the part with
+the cardinal space of the trial of the people and
+shows, as he shall, so much as it is all one.
+
+CONSTANCE:
+I have no matter.
+
+CONRADE:
+As well say you shall be a woman and the world will be, and see
+himself out of the senators, and then he shall be to death of the state.
+
+KENT:
+We have a woman and his plains witness in this business,
+As in th
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+If your speed should be the country of it,
+I have not been so, I should not be a stranger.
+If you be a state of a pair fat with my side
+That I may be sorry for true more, I say.
+
+DUKE:
+That I saw your living worth or at this company.
+
+VALENTINE:
+I do beseech you, sir, you say. The stood of the world the
+discourse. I will not straight in the continent.
+
+DUKE:
+Now, my lord, then I do beseech you a 
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+I do not leave them by the greatest story,
+To his hearts and truer still by the brain.
+They will disprove the stroke of him.
+
+ANTONIO:
+Therefore be not there in their son that's their hearts;
+And sometimes and deaths were no more than their father,
+They had not been sentenced with their subjects,
+And bringing it in the seals of our father's wealth,
+And this is sometime, as thou art married,
+The s
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+And we will send him with him; whom he would have saved
+His foe would stand him in the penny,
+Who, and the stroke, whose father the world were
+To stop the world than these breath of our friends,
+Which they say 'tis strange that we are bound,
+And let me see the wars of his face.
+
+CAESAR:
+The mountain private shall be honoured
+In presence to bring him. This is a man,
+That in this world's belly and 
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+The surfeit of your father, and the cruelty
+Does the perfect of the trimmes of the sun,
+And then in the world was burn'd in your soul
+In the forcedence of them in these practices,
+So stops the story of their ships and trials
+Whose shapes whose world is dead.
+
+CORIN:
+I will do sometime with a plaintance,
+But then were all the sun of this prince too stand,
+Who hath a state of time a breach and the 
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+I do not say I am a man to say that you say.
+
+First Senator:
+We will not have thought me.
+
+Second Senator:
+The self of my heart seem'd on thy life,
+And thou art at the people of thy speed,
+The truth of thy heart to me. Thou want'st thy father,
+And thou art a patrenticle, and to defend
+Thy first and blood at the troophy teeth,
+The thick of the pleasure of my father's head.
+And so must not then, by
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+They are so man as we are; for when they say,
+Will she be the season of a man of their place;
+And that same since he says made the same
+A placed them all their shame. I will not be their blood.
+
+CAMILLO:
+Where is the matter? I have a soldier's war,
+And the state of my father and a stone
+When I did not stand as a solemnize as they are;
+The seal of a sun, and the water will and the fairest woman's
+
+
+===== seed 18 =====
+To be, or not to be, that is the question: I should have been.
+
+DUKE:
+I was not whisper in the perfection of mine honour.
+
+DUKE:
+A good wisdom, sir, a whoreson of a witch, and was a perfect of mine.
+
+DUKE:
+I will set him on his face.
+
+BRUTUS:
+He is sure of the constant, and another.
+
+Clown:
+How now, my lord?
+
+Clown:
+It is my lord, the peace is as to be the gold, and I have digested well
+had a better sound the time to be a charge, that I a
+
+===== seed 19 =====
+To be, or not to be, that is the question: who
+hath made the colour of the part traitor of
+it?
+
+First Senator:
+I was a garland to them.
+
+Second Soldier:
+With spirit of these states of the court, and they would speak to
+save.
+
+First Senator:
+I'll send you the morn. The ground of the world
+stool'd and take your faults; but therefore be a man's step, and they
+did not still seem their brother, and to serve their sons, and the faith of mine
+ar
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I desire them true for a stranger feet;
+And thunder than their conversation,
+To curse their praises in heaven stand,
+And let the weight stroke of the common peril.
+
+CAMILLO:
+Here comes that the man hath mere both this secret.
+
+LEONTES:
+I will send them with them with such cruelty.
+
+PERICLES:
+We have strangely bought to be a soldier,
+And they do not start at once, nor they,
+They are no further but
