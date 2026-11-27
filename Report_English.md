@@ -204,7 +204,7 @@ Validation CE was used to choose every setting, so it is not an independent esti
 For unmasked attention, define
 
 $$
-A(X)=\operatorname{softmax}(S)V,\qquad
+A(X)=\mathrm{softmax}(S)V,\qquad
 S=\frac{QK^\top}{\sqrt{d_k}},\qquad
 Q=XW_Q,\ K=XW_K,\ V=XW_V.
 $$
@@ -212,14 +212,14 @@ $$
 Let $P$ be a permutation matrix. For input $PX$, the projections become $PQ,PK,PV$, and the score matrix becomes $PSP^\top$. Row-wise softmax commutes with simultaneous row and column permutation because reordering leaves each row's normalization denominator unchanged. Hence
 
 $$
-\operatorname{softmax}(PSP^\top)
-=P\operatorname{softmax}(S)P^\top,
+\mathrm{softmax}(PSP^\top)
+=P\mathrm{softmax}(S)P^\top,
 $$
 
 and therefore
 
 $$
-A(PX)=P\operatorname{softmax}(S)P^\top PV=PA(X).
+A(PX)=P\mathrm{softmax}(S)P^\top PV=PA(X).
 $$
 
 Thus unmasked self-attention is permutation equivariant.
