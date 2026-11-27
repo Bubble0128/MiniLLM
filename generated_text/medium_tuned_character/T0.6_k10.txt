@@ -1,0 +1,334 @@
+prompt='To be, or not to be, that is the question:' temperature=0.6 top_p=1.0 top_k=10 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+Such a cornal but a side as a little shame
+To the private of the motion of the court
+Was beggars the water of your desert design
+With his strength son a brave and hour friends,
+And therefore I see your honour, I do not do attend
+From him to the place of his son, that she
+Should not have the better of the hollow to helps
+The common of the life and which the prince.
+
+KING RICHARD III:
+Ay, but the r
+
+===== seed 2 =====
+To be, or not to be, that is the question:
+And, all thee so long of the found by thy blood.
+
+CLIFFORD:
+Thou shalt not be thus both a place of the field.
+
+WARWICK:
+He that the sun seasons of the seas to thee
+That was in the summer with a charge in honour,
+And therefore her shall be so great a little friends
+Than that thou shalt be married, my liege,
+Or hour, if thou art thou art rest of the prince,
+That may be throne of thy brother's might
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+And that the world is some country's death.
+
+QUEEN:
+Sir Warwick, the ground the worthy gates the sea?
+
+KING RICHARD II:
+What speaks with her?
+
+QUEEN ELIZABETH:
+O, as he that he hath stands but to thee?
+
+KING RICHARD III:
+Say the sun of the fires and he heart of head
+By privilege him to the prince of his foul lack,
+The worlding of the matter of his power.
+
+KING RICHARD III:
+Why, then I mean my hea
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+The wind with the world of a the man in the high,
+And then by the which of the son house of York.
+
+HENRY BOLINGBROKE:
+The king of the king, when they say you have
+That they say with stay away in the state.
+
+NORTHUMBERLAND:
+Why, then when they say they do not stand at the hand:
+If you shall not for him for your sheet in his bear
+Than all the graves of heaven, your lives and honesty,
+Which you will
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+And what then the world is more our house to death
+And stand in the deputy of your hands,
+The secret of your presence and put of my care
+And purpose my head of the flesh men
+That you must say your honour.
+
+PAULINA:
+You had been done that worthy shall be any thing
+That makes me one fearful and myself will
+For your blood, in the mind of your mind
+To be some penemion, is your brother's love,
+In the 
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+Not a bear of all war, if I cannot be served
+to the business of the death.
+
+ANGELO:
+O my life, good my lord; be gone. He that the fire
+where so did service his house of the wives a
+maidings of his father to make a faults of his
+the city of his life and him, and with him his
+winds to his passion, and he will be so much it
+is to the sour of our throne to be a blood of his
+father; but, in the people
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I am not of the son of the man is the world
+That I shall return be done.
+
+Shepherd:
+They are not see the consul, and the flies
+In the that weary age of the sun
+Are son the worst of my sight that they do the people
+Of the second my brother of them from the soul
+Of the people blood with the time of the prompter'd
+In the bastard's death company.
+
+Provost:
+I do them not a man maid to see thee thy hea
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+I at the senator of this bed, the day
+Is dead in a brainish of our poor should have
+Been fair soon of a man as all the country,
+As she shall die it, marry, there is straight.
+
+DUKE OF AUMERLE:
+What, in my brother?
+
+DUKE OF YORK:
+I think you then, if I think not it too much.
+
+DUKE VINCENTIO:
+It is the people is the constant of it.
+
+DUKE VINCENTIO:
+And I will be proclaim'd; and you be much strength
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+Therefore lives the sights of the sea, and they have
+A fellow to him here, whose straight world,
+If not he may see him about the deep to him
+But for his bear that should he be seen and heart
+The state and fall of the field the city the colour
+Of his son of his sword with an his beholding:
+Her for his present soul he is behold,
+And he was a fearful of his majesty,
+In piece of his pitch'd her blood
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+What were they say at the surers be so,
+I can them of the people's body to him out.
+
+BENVOLIO:
+Here's a man is the head of the world of me:
+And the corn will not the world of Richard's head?
+
+ROMEO:
+And then I am no more of the matter world.
+
+ROMEO:
+I would they say it not with my soul.
+
+ROMEO:
+No, they say she's done, not sir, the world's sun.
+
+BENVOLIO:
+No, no more, no more.
+
+ROMEO:
+I would be 
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+Stay, by my brother and my thus father's stop,
+To make under the wisest with my tribunes,
+That the streets of the duke and leave of all,
+The manner thereof is the sea
+And black and mine enemies of the house.
+
+SICINIUS:
+Well, good with the while, the sense that I may be speak.
+
+CORIOLANUS:
+What, then say? and my husband the third wars?
+
+COMINIUS:
+Ay, is the conscience of his sight souls the city.
+
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+He shall be here in a crown of all and his back.
+
+POLIXENES:
+What may hand a sword to the speech of his first?
+
+CAPULET:
+Now, this is the common of the house of men,
+I would not a friend well say 'twere no more
+Than the cause of the people of the colour
+This inhappy seen the solemn to answer.
+
+CAMILLO:
+I would have heard with the lewd of the state
+Of the beggaret of my country's death!
+
+PAULINA:
+
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+I do not news to bring the mortal doom
+Than we have touch'd you and finger out o' the court;
+If they should have been to be other.
+
+CLAUDIO:
+Sir, you will not have been to such a cause,
+To be the spirit of your part is my soul.
+
+POLIXENES:
+Have you not a people is a sentence for yourself.
+
+POLIXENES:
+A husband with a man sort, sir, will I come to be hell.
+
+LUCIO:
+As the king my mother for the sou
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+And when I have done my wife and the more of our state.
+
+Lord:
+Marry, you have the denied and before your grace,
+The single of the man man of mine eyes
+And the present of the house of York
+Which shall be the further; therefore be punish'd,
+I would have you do some for your party,
+And yet shall be deserved to death him all:
+For the world that he may be discover'd his face
+And he would have proved 
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+Shall I have heard you have done a fardel of my son.
+
+QUEEN ELIZABETH:
+It is a thing but a foolish words,
+And we will not have the honesty of our head.
+
+KING RICHARD III:
+But thou know'st not how thy sorrow's head,
+That should have heard the man that thou art the country
+That he command his pauses striking his daughter:
+I hope him that he hath seen a country's blood
+That willing thy corse is thy 
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+I pray you, sir, being me well as you to me.
+
+First Senator:
+We will to do you hope; I will stay you.
+
+First Gentleman:
+We will not here; the king of the city of
+the gods that you have been been and honour, and the man thoughts
+to common my person to your particular, your
+name advisitation with a holy sight: and I
+become the higher: and we will despised you must
+be marched him to him with a warra
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+No more is by the house; and then I saw it
+To be the duke of my brother of mine own
+To play and perform.
+
+First Murderer:
+The great of my poor course and seldiers,
+Which is the foul and delight of the duke,
+That I have been deceived in the common to them,
+And in the thing my brother of my life.
+
+Page:
+What is the law and blows, what the should head
+Of the best man and where it stands my husband;
+
+
+===== seed 18 =====
+To be, or not to be, that is the question:
+If the devil content as I have none of the mirth,
+In the warrant time to him of his foot
+With the world company of the house,
+The time of the man of your sense,
+You shall be palm to your son high heads,
+And yet his prince in the chamber.
+
+SICINIUS:
+Then, the prince of the bosom of you cannot a
+cause of your honour to be at your party of him.
+
+BRUTUS:
+Well, well, sir, he is the country of his frie
+
+===== seed 19 =====
+To be, or not to be, that is the question:
+Who, if they will be gentleman, the king is of mine
+with such a children loss of a deputy.
+
+CAMILLO:
+I do beg this in the caution, sir; so I will give
+but my heart with thee the duke of your hands of
+you shall fight of the people and the poor friends,
+you find mine eyes to him for the crown.
+
+LUCIO:
+The king of your honour than your honour words
+And shall have the courtesy of you to the heart;
+An
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I did not beseech you.
+
+LADY CAPULET:
+Most proud this side that you should be the world.
+
+DUKE VINCENTIO:
+These senate, by my charity with you heart.
+
+LUCIO:
+How long is your lordship to do them;
+And I will should have my land to your son
+A false and at the posterns of your honours in his friends
+With something blood on another's honour,
+Your point shall be creature to his majesty
+In proclaim'd o

@@ -43,6 +43,19 @@ class CharacterData:
         self.splits = {"train": tokens[:self.split_index],
                        "val": tokens[self.split_index:]}
 
+    def add_training_text(self, path):
+        """Improvement: prepend more training text.
+
+        The vocabulary and the validation split are unchanged, so validation CE
+        stays comparable with runs trained on the original text only.
+        """
+        raw = Path(path).read_bytes()
+        extra = torch.tensor(self.encode(raw.decode("utf-8")), dtype=torch.long)
+        self.splits["train"] = torch.cat([extra, self.splits["train"]])
+        self.extra_train_chars = len(extra)
+        self.sha256 = hashlib.sha256(
+            (self.sha256 + hashlib.sha256(raw).hexdigest()).encode()).hexdigest()
+
     def encode(self, text):
         """Reject unseen characters instead of silently deleting prompt text."""
         unknown = sorted(set(text) - set(self.stoi))

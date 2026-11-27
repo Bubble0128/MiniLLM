@@ -39,6 +39,8 @@ class TrainConfig:
     tokenizer_type: str = "character"
     # Gradient accumulation preserves effective B when the word vocabulary grows.
     micro_batch_size: int | None = None
+    # Improvement: extra training text placed before the original training split.
+    extra_train_path: str | None = None
 
     def __post_init__(self):
         """Validate optimization and evaluation settings."""
@@ -69,7 +71,12 @@ def experiment_config(name):
         return model, replace(training, max_steps=5000, patience=0)
     model = replace(model, dropout=0.1)
     if name == "final":
-        # Improvement (report Sections 3.2-3.4): untied output projection, lower peak
+        # Improvement (report Section 3.4): Small with an untied output projection and
+        # stronger weight decay; every other setting is the size-experiment default.
+        return (replace(model, n_layer=4, n_head=4, n_embd=256, weight_tying=False),
+                replace(training, weight_decay=0.1))
+    if name == "medium_tuned":
+        # Improvement (report Sections 3.2-3.3): untied output projection, lower peak
         # learning rate, stronger weight decay, longer warmup, fixed 5,000-step budget.
         return (replace(model, weight_tying=False),
                 replace(training, max_steps=5000, max_lr=3e-4, min_lr=3e-4 / 10,
@@ -81,7 +88,7 @@ def experiment_config(name):
         return replace(model, n_layer=2, n_head=2, n_embd=128), training
     if name == "small":
         return replace(model, n_layer=4, n_head=4, n_embd=256), training
-    raise ValueError("Choose tiny, small, medium, baseline, dropout, or final")
+    raise ValueError("Choose tiny, small, medium, baseline, dropout, medium_tuned, or final")
 
 
 def get_device():
@@ -182,9 +189,12 @@ def train(data_path, output_dir, model_config, train_config, device=None,
         raise ValueError("Evaluation context exceeds model context")
     if config.tokenizer_type == "word":
         from word_data import WordData
-        data = WordData(data_path)
+        data = WordData(data_path, extra_train_path=config.extra_train_path)
     else:
         data = CharacterData(data_path)
+        if config.extra_train_path:
+            # Improvement: more training text; vocabulary and validation split unchanged.
+            data.add_training_text(config.extra_train_path)
     model_config = replace(model_config, vocab_size=len(data.chars))
     if any(len(tokens) <= model_config.block_size for tokens in data.splits.values()):
         raise ValueError("Both data splits must be longer than block_size")
@@ -366,7 +376,7 @@ def train(data_path, output_dir, model_config, train_config, device=None,
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--experiment", choices=["tiny", "small", "medium", "baseline", "dropout", "final"],
+    parser.add_argument("--experiment", choices=["tiny", "small", "medium", "baseline", "dropout", "medium_tuned", "final"],
                         default="medium")
     parser.add_argument("--data", default="data/shakespeare.txt")
     parser.add_argument("--output")

@@ -26,7 +26,7 @@ Implementation and experiments based on
 The accompanying [report](https://github.com/Bubble0128/MiniLLM/blob/main/Report_English.md)
 contains the methods, experiment discussion sections, and attention proof.
 
-Select a GPU runtime and run the cells in order. `EXPERIMENT` selects the tutorial `baseline`, the `tiny`, `small` and `medium` size comparison, or the `final` model. The saved outputs were produced with `final`, reading the results trained on an RTX 5080 (`RUN_TRAINING = False`).
+Select a GPU runtime and run the cells in order. `EXPERIMENT` selects the tutorial `baseline`, the `tiny`, `small` and `medium` size comparison, the tuned Medium model `medium_tuned`, or the `final` model (Small tuned). The saved outputs were produced with `final`, reading the results trained on an RTX 5080 (`RUN_TRAINING = False`).
 """)
 markdown("""
 ## 1. Setup
@@ -81,7 +81,8 @@ markdown("""
 | tiny | 2 | 2 | 128 | 0.1 | Lower capacity |
 | small | 4 | 4 | 256 | 0.1 | Intermediate capacity |
 | medium | 6 | 6 | 384 | 0.1 | Default size with regularization |
-| final | 6 | 6 | 384 | 0.1 | Untied output projection, lower learning rate |
+| medium_tuned | 6 | 6 | 384 | 0.1 | Untied output projection, lower learning rate |
+| final | 4 | 4 | 256 | 0.1 | Small with untied output projection and weight decay 0.1 |
 
 The size experiments use context length 256, batch size 64, at most 10,000 updates, AdamW,
 100 warmup steps, cosine learning-rate decay (0.001 to 0.0001), weight decay
@@ -89,8 +90,9 @@ The size experiments use context length 256, batch size 64, at most 10,000 updat
 every 100 updates. Stop after five consecutive evaluations without a strictly lower
 validation CE. Generate with the best checkpoint. Actual steps and token budgets
 may differ. The cosine schedule uses the 10,000-step horizon. All reported losses are CE. The historical baseline used dropout 0 and no early stopping.
-`final` changes these to 5,000 updates, 150 warmup steps, cosine decay from 0.0003 to 0.00003,
-weight decay 0.1 and no early stopping (report Sections 3.2 to 3.4).
+`medium_tuned` changes these to 5,000 updates, 150 warmup steps, cosine decay from 0.0003 to 0.00003,
+weight decay 0.1 and no early stopping. `final` keeps the size-experiment settings and changes only the
+output projection (untied) and the weight decay (0.1); see report Section 3.4.
 Change `RUN_TAG` when changing parameters.
 """)
 code('''
@@ -98,7 +100,7 @@ from dataclasses import asdict, replace
 import json
 from train import experiment_config
 
-EXPERIMENT = "final" #@param ["baseline", "tiny", "small", "medium", "final"]
+EXPERIMENT = "final" #@param ["baseline", "tiny", "small", "medium", "medium_tuned", "final"]
 RUN_TAG = "5080_v1" #@param {type:"string"}
 RESUME = True #@param {type:"boolean"}
 
@@ -124,7 +126,7 @@ markdown("""
 The pinned Shakespeare corpus is encoded at character level and split contiguously
 into 90% training and 10% validation data. Targets are inputs shifted by one character.
 The model combines token and learned positional embeddings, pre-normalized causal
-attention blocks, residual connections, a 4x-width GELU MLP, and an output head tied to the token embedding (untied in `final`).
+attention blocks, residual connections, a 4x-width GELU MLP, and an output head tied to the token embedding (untied in `medium_tuned` and `final`).
 """)
 code('''
 from data import CharacterData, download_shakespeare
@@ -206,7 +208,7 @@ from analysis import compare_runs, plot_validation_comparison
 from IPython.display import Markdown, display
 
 completed_runs = []
-for name in ("baseline", "tiny", "small", "medium", "final"):
+for name in ("baseline", "tiny", "small", "medium", "medium_tuned", "final"):
     path = RUNS_ROOT / f"{name}_{RUN_TAG}"
     summary_file = path / "summary.json"
     if summary_file.exists() and json.loads(summary_file.read_text())["complete"]:

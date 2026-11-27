@@ -1,0 +1,337 @@
+prompt='To be, or not to be, that is the question:' temperature=0.6 top_p=1.0 top_k=5 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+If I have so servant, that seem you to her brother
+Which you have some since, and what he shall not stay.
+
+First Murderer:
+Sir, the king is not of the prince, but the crown
+As you shall be the stronged of my part,
+And still be so several power to such a state
+And stand from his father's horse.
+
+Second Servingman:
+What says you will sent to make the story of your foe.
+
+First Servingman:
+I should h
+
+===== seed 2 =====
+To be, or not to be, that is the question:
+And, all thee so long of the found thy son and weeping,
+Bethinking and the battle careful of thy head.
+
+KING RICHARD II:
+Then we see will be the king.
+
+QUEEN ELIZABETH:
+No, no more so than a man and the man of the soul
+That have been a last, the state of the complace
+In the crown of a bottom of your part,
+The court of the cause of men the people.
+
+KING RICHARD II:
+Why then? I am time some friends
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+And that the world is some country's death.
+
+KING RICHARD II:
+Then, the world is the county thing of the man
+That the seal of the sings of the field.
+
+KING EDWARD IV:
+Then, they stay the choice of the breath,
+That they shall not be the winter'd of my father's head,
+Who is the dead, therefore they see the day,
+The sighs of the straight of the prince of the world.
+
+KING HENRY VI:
+Why, then they spe
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+The man that was a man a sea-sheather than word,
+And we have a husband as the crown,
+Being the servants of this charge and men
+To the seast of her head; but the help
+To see him all the heart of his head;
+And when he was he hath he stands the head of the people,
+The duke and break of the deep of his fortune.
+
+HENRY BOLINGBROKE:
+I will not so better than the duke still was mother
+To the crown of th
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+And what then the world is to the state of the
+strange? therefore is no more of the world
+for the first of the war winters with the coronation
+of the which of the colours of me.
+
+FRIAR LAURENCE:
+What said my lord, I am too much to my husband?
+
+POMPEY:
+What, think you have some provoked from them,
+To more some than man a hope of your grace.
+
+KING EDWARD IV:
+I would they have some sorrow to help th
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+What is he would that were the content of her sick
+And shall be seen the time of the way.
+And what a thousand woman to the country?
+
+KING RICHARD II:
+What shall be discover'd us too?
+
+BUCKINGHAM:
+And may the prince of the heavens of the sea
+By my consent to the crown the part of the height
+And the treason of the heavens of the crown,
+Who command the town of the colour of the world,
+Shall be so so
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I am not of the son of the man is the world
+That I shall be seen to him.
+
+Shepherd:
+They are not seem to the place:
+I have done to thee a treason to be the sun
+And so strange in the wars of the faults, that he did
+Is not the sun is a fall of the firest will sound;
+For so how they will not to say 'Ay.'
+
+Second Servant:
+What, then, the state of the season of their course,
+That we seem the world of 
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+I am not of the constant of a fire and the state
+Of the strange words of her house than they are.
+
+CAMILLO:
+I was the provost of the place that I will
+The constract of this woman's power.
+
+LEONTES:
+O, my lord!
+
+FLORIZEL:
+This is the people.
+
+LEONTES:
+It is a suspection of the world's daughter,
+That I am commission to steal the place.
+
+LEONTES:
+What's the sight of our first and the city
+Would not 
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+Therefore is a comfort with the fire
+That hath been the worser so heaven in the soul,
+And the common of his back and complainted
+With the white of the people will be some.
+
+First Senator:
+This is the father with a strength the city there.
+
+Second Murderer:
+And who is the stire of their beauty son,
+That would see her beauty the head of head.
+
+First Murderer:
+To be saints of heaven, that she hath s
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+What were they say to my souls are be so bleed.
+
+ROMEO:
+Ay, then, sir. What is your good soul?
+
+MERCUTIO:
+The most of my soul desire the crowns of the death
+with the season of her heirs are standers in the care
+and mildly should say the sea of the house,
+And then their heads that we shall see his proper to hand.
+
+BISHOP OF YORK:
+What indeed he stoops him from the heart
+That his shall hear that he
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+I am a sense to the crown of a man,
+And there a beggar, but that that I was beggar
+And shall play the fellow of the death,
+That I shall prove the world of the sun,
+And the father that he was as we see,
+And see the father born to be the prince's womb,
+As the thought of the sense and this state of the state,
+And so we shall be to the consul.
+
+LUCIO:
+This is the mark on the world.
+
+First Murderer:
+W
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+If your company is a faith, and the house
+As you have pass'd us a foul and a feast.
+
+KING RICHARD III:
+Warwick, and will be most removed
+That he shall be the world welcome well.
+
+BUCKINGHAM:
+That should be the strange of the company.
+
+BUCKINGHAM:
+My lord, in this time to my chamber:
+I am the poor business of the highead of the hour.
+
+KING RICHARD III:
+Well, there will not to be so fault as the wo
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+I have not so but a fair soul tempt of the cold
+And touches this faults and the complaint of their hands
+That they say they have been to the duke.
+
+LADY CAPULET:
+They say they say they do not the state of the world,
+And bid the man that I was to the sea,
+That the master of the sense of the comploy
+And being the best services of this second with his
+And this that set the truth of his presence ther
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+And when I have done my brother's son?
+
+GLOUCESTER:
+If this is the sense of his mistress that the sea
+With the sea-ship that he hath the head of his pleasure
+Of the heavens of this power o' the secure,
+Which she is strange on the painted world the hand,
+As the hardy's heaven in their strong souls,
+The world such of the wars of themselves;
+For the children of the sins of the prince,
+Whilst thou ar
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+The sight of his friend of my husband,
+And she shall be the better thanks them.
+
+First Murderer:
+What may he have been to his body head?
+
+Second Murderer:
+Therefore is the duke, and be gone to him
+When he hath seen the disposition of the world,
+And therefore I have the second of the prince,
+If he hath ta'en to be the common of his state,
+And he shall be much of the prince of the house
+That with a
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+I cannot still be a man of the court
+To such a country and the sun to the world,
+And being a true of the contraction
+Of the sighs. Why say the sight to the part of thee?
+This is not the strange of thy son of a face,
+Which she shall be such a blower of thee,
+And that thou art to depose thy first.
+
+SICINIUS:
+He would not the consul?
+
+COMINIUS:
+Ay, but we have done to change thee thee hence,
+To hear
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+They are they were but being a standing of all.
+
+KING EDWARD IV:
+Then wars with the dearly the conceal there
+To be proved to the first of York.
+
+KING HENRY VI:
+What thou dost so much this? why say?
+
+KING HENRY VI:
+The king of Hereford of Hereford?
+
+KING RICHARD II:
+Ay, then I cry thee to her friends,
+Which is the streaming that way the world's seat
+And the sovereign of the sights of the will,
+The
+
+===== seed 18 =====
+To be, or not to be, that is the question:
+If the devil time of him to his life
+Which his head is for a mind of the house of the head,
+And therefore, as they are all as the sense,
+As they shall be seen it in the city
+And breath of his heart o' the people of them,
+And the state of the store of his hands to my head,
+And the manner of my son, the measure of their course
+In the highness of the cause and suppliant their friends,
+They shall be 
+
+===== seed 19 =====
+To be, or not to be, that is the question:
+Who, if they will be gentleman, the heavens of mine
+will not strength the country of their children
+Were the triumphance that they shall be the friends.
+
+FRIAR LAURENCE:
+The people.
+
+POLIXENES:
+What, my master?
+
+BARNARDINE:
+No, good my lord.
+
+GLOUCESTER:
+The great of the part of this servant complaint,
+If thou hast been thy heads of thy brother's,
+And those that hands and made thee to thee them;
+
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+I cannot stand the father than thou hast been and home.
+
+ROMEO:
+And she is the county straight of this face,
+And therefore the prince of thy father's body
+Some providegroom'd for the court of the heaven,
+And the state and the world of thy heads,
+And bid thee thy blood, who should have more thou hast
+The senators of my brother's state, to my blood
+The sons to the foul of the word.
+
+LEONTES:
+What i

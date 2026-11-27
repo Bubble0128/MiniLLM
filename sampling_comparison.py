@@ -61,7 +61,8 @@ def sample_batch(model, prompt_ids, pieces, seeds, temperature, top_p, top_k,
     Rows keep whole tokens until they have emitted >= target_chars characters.
     """
     block = model.config.block_size
-    idx = torch.tensor([prompt_ids] * len(seeds))
+    device = next(model.parameters()).device
+    idx = torch.tensor([prompt_ids] * len(seeds), device=device)
     rngs = [torch.Generator().manual_seed(seed) for seed in seeds]
     emitted = [[] for _ in seeds]
     lengths = [0] * len(seeds)
@@ -80,8 +81,9 @@ def sample_batch(model, prompt_ids, pieces, seeds, temperature, top_p, top_k,
             ordered = ordered.masked_fill(mass_before >= top_p, 0.0)
             probs = torch.zeros_like(probs).scatter(1, order, ordered)
             probs = probs / probs.sum(-1, keepdim=True)
+        probs = probs.cpu()                             # per-seed CPU generators keep seeds reproducible
         tokens = torch.stack([torch.multinomial(probs[row], 1, generator=rngs[row])
-                              for row in range(len(seeds))])
+                              for row in range(len(seeds))]).to(device)
         idx = torch.cat([idx, tokens], dim=1)
         for row, token in enumerate(tokens[:, 0].tolist()):
             if lengths[row] < target_chars:
@@ -172,6 +174,7 @@ def main():
     parser.add_argument('--char-ckpt', default=CHAR_CKPT, help='character checkpoint, relative to --root')
     parser.add_argument('--char-name', default='character', help='label for the character variant')
     parser.add_argument('--only', default='', help='comma-separated variant names to run')
+    parser.add_argument('--device', default='cpu')
     parser.add_argument('--no-write', action='store_true')
     args = parser.parse_args()
     SETTINGS = GRIDS[args.grid]
@@ -188,6 +191,7 @@ def main():
 
     char_model, char_ckpt = load(root / args.char_ckpt)
     word_model, word_ckpt = load(root / WORD_RUN / 'word_model/best.pt')
+    char_model, word_model = char_model.to(args.device), word_model.to(args.device)
     assert char_ckpt.get('tokenizer_type', 'character') == 'character'
     assert word_ckpt['tokenizer_type'] == 'word'
     assert char_ckpt['data_sha256'] == word_ckpt['data_sha256'] == hashlib.sha256(
@@ -287,7 +291,7 @@ def main():
         writer.writerows(summary)
     provenance = dict(
         purpose='Multi-seed regeneration for a character-vs-word sample comparison.',
-        grid=args.grid, prompt=PROMPT, settings=SETTINGS, seeds=seeds, new_characters=args.chars, device='cpu',
+        grid=args.grid, prompt=PROMPT, settings=SETTINGS, seeds=seeds, new_characters=args.chars, device=args.device,
         threads=args.threads, torch=torch.__version__, python=sys.version.split()[0],
         checkpoints={
             args.char_name: dict(path=str(root / args.char_ckpt), sha256=sha256(root / args.char_ckpt),

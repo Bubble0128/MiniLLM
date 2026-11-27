@@ -1,0 +1,356 @@
+prompt='To be, or not to be, that is the question:' temperature=1.2 top_p=1.0 top_k=10 new_characters=400 unk_banned=False
+
+===== seed 1 =====
+To be, or not to be, that is the question:
+Suppose of our lusil, that means a bloody own.
+
+DUKE VINCENTIO:
+O, title, is, it all tale for thinking, which
+your good lordship?
+
+DUKE VINCENTIO:
+O, he is all-gold face but awhile:
+If they till breath me only had, had them are
+dogetigotless, and,
+think, they come, here insins to turn mild
+Them abonds him or much belies; and what thy hands
+Thou swear-hung-for bears! how these are true mess hands?
+
+===== seed 2 =====
+To be, or not to be, that is the question: my mild,
+Your sorrows that may serve myself
+Help me action. Thou shalt not be thus.
+
+FRIAR LAURENCE:
+A glorious lady's bosom that I surps.
+With fair, my liege! more half a life
+At lambs thousand much service, in then scrapeth.
+If I warrant thou, sir I accensed
+The chylour, I mutuse as my master where.
+
+DUCHESS OF YORK:
+So faith, I mean, you are thus bear to seement.
+
+LORD WILLOUGHBS:
+A bubhile in
+
+===== seed 3 =====
+To be, or not to be, that is the question:
+Henceforthly wont as suffer order as swings.
+Why did I send them? Who after thee--
+But, to tell them side, and denows by:
+She is this forenerate'--break is foreign,
+An ealm of a man, and, how--time-bell,
+He do with a future, whither studdenly had age!
+They stood, my lord, for her?
+It so fight your mistress of a fool
+To marvel my, then then so shall see whence I am.
+
+CAMILLO:
+My ludge is a truth.
+
+
+===== seed 4 =====
+To be, or not to be, that is the question:
+There is no mother of these case my life.
+And will yet them we here that we must be;
+But so live, and bid their cause to their woath
+The people worldly do much above
+Till their words: the was it wife for much,
+Who will speak them, nor no more of his.
+Help, mistake a state!
+
+Provost:
+Sir, my lord; is middle. Lords sea, that tears is half
+That's movily heard the brand-fast; our word, I;
+I pawn it, 
+
+===== seed 5 =====
+To be, or not to be, that is the question:
+A man, and more to be slip.
+
+MARIANA:
+I would thou know thee with modest will not be legs;
+The strange for it, no. If they will be marriage
+He in their hidden, we have been or would helm, adieu!
+We'll not for such famous is to bed?
+Were I mean had set fearful in this farlous cience' two him:
+I call be terror yours. He is no more, bunt
+It done hold that most bury.'
+His pulicious pursuival whilst I
+
+===== seed 6 =====
+To be, or not to be, that is the question:
+Not as the world. Our gentle! will the prehent could
+were by the stoe overpinion wounds which would pick,
+the womb we common to take had him of duke!
+Well-what we may betwixt our brother: the worst heary too.
+Therefore, being folk out of thy shrift chamber,
+Which saw thou art thy love in all, we hearer
+Will be still wept; for the gumbring of his
+Three-mourning from him
+That myself all obsecuse sl
+
+===== seed 7 =====
+To be, or not to be, that is the question:
+I am not our cousin off-severals and mouths?
+We must not water or a pursue my feast,
+Our countrymen, that we may better about thee?
+Welcome! O murderously thus burst for alive;
+For now swear me, as I do and bird in thee,
+Which we devisaring-work, from when I have;
+For none, but some wonder in a tarken,
+He isleep; as in harth at the best.
+
+CLAUDIO:
+Well, good came in a mother better.
+Ay, goodly gi
+
+===== seed 8 =====
+To be, or not to be, that is the question:
+It is, thou hast burns, and all slack, by thinishman,
+Should I have been deserved our fled majesty
+And saying. Can you are too, must done.
+
+First Senator:
+And true:
+Go too bid your power.
+
+First Gentleman:
+Now, by morself, nor than your lord. Wherefore,
+so I displeasure to be my lord?
+
+Page:
+I am pleased.
+
+First,--
+
+First Roman:
+My leaful, I dain spy forgot, sir, not a
+great o' my court? Why, tha
+
+===== seed 9 =====
+To be, or not to be, that is the question:
+Therefore lives to this purpose.
+
+Gentleman:
+It is spready so. Fare, he is, hot to seek in
+colours; like mummer mittle his haudly
+for the matter: to-morrow how these shall branks,
+the chamber his cowardly favourity:
+Such firm hasting mocks, such made a bloody marriage?
+
+ESCALUS:
+It am a lance for my tire?
+
+ELBOW:
+Now, in him; nybalt from of thy bold: I'll have been
+into before.
+This that thou, th
+
+===== seed 10 =====
+To be, or not to be, that is the question:
+What were they have died touch'd upon him triumph?
+
+POMPEY:
+Yet, be gone, I would find a power in pain.
+
+MERCUTIO:
+O, my fair peace. Weep, sir, to the gentleman.
+There is an our holy: if well be market
+And carracks me.
+
+BENVOLIO:
+My lord, my lord.
+
+MERCUTIO:
+A sun,
+Wilt my little heart.
+Your prison! I know may't strange for my heart
+And leave my son that will I shame but my life;
+To-morrow I am c
+
+===== seed 11 =====
+To be, or not to be, that is the question:
+Stay, both suffer't alone. You may, be gone, a monuth
+tune's to be a dear one of that will bleed.
+
+First Citizen:
+Ay, when, sirrah!
+The princely war thy father head
+And danced came times to shape a flouring foot
+This was boring toward this hour, the season:
+What is stir he before and lengthen?
+Or, look your honour till the people,--
+And leave you are so, when this duke with silk,
+He happiness of 
+
+===== seed 12 =====
+To be, or not to be, that is the question:
+How ne'er marry will I stand.
+
+Second Murderer:
+If that, fool, I proud thy father,
+Signal open but thy faith and substain,--
+
+Private:
+O, by a lord, this far well.
+
+MISTRESS OVERDONE:
+He, this art, I am gone.
+
+PORIXE:
+I cannot but here, hear your broad of in mighty
+Thee here in, being an adulteress or bed.
+
+TYCK:
+Hie his worst hapless, and wish holy borns.
+Many windom, as this is a loving it say
+
+
+===== seed 13 =====
+To be, or not to be, that is the question:
+If thou art on the people but thievest
+And never in the meant i' the slave?
+
+PARIS:
+How! begetter! Warwick, what was'st he doth her!
+Why will they have he heard! we'll no tender in their feast?
+
+Second Citizen:
+I wish their subjected for blame the midst o'erpose
+forgive my care, my mouths pilgrobe:
+If at since wisdom me, some his grossop on me,
+Is still sister, by all them that may my fool,
+To-mo
+
+===== seed 14 =====
+To be, or not to be, that is the question:
+And we were son'd upon my heart.
+
+FRIAR LAURENCE:
+But I say thee, good fair soul.
+Then speak, blessed fire themselves intent;
+For I will send made to me.
+High, will I possess; little thou be not,
+As men first up, inswellination for her male,
+For I have feel to hazard it to plause awry;
+But to my breast, and I, he'll for your case:
+But for this mother's payer aboad,
+My lord purse of my loving and 
+
+===== seed 15 =====
+To be, or not to be, that is the question:
+Standing, and then, I mean, a suitor:
+We traitors o' the woe.
+
+First Servant:
+What, helcomes the city of thither bride?
+Then troves make the forced amongst in him?
+Where's Capulet's farewell? how subject with his bled
+Brights blood himself abond the fire
+And his plating act of the middle
+With her hath pick'd the wents, for our husband:
+This my lady and men led a time.
+
+KING LEWIS XI:
+Bright to be
+
+===== seed 16 =====
+To be, or not to be, that is the question:
+If you with our windom from yourself, two complaint
+The body's supprobition.
+
+ANGELO:
+You say, by the child, my life's good:
+As meedly say 'Isabel,' to ground your suit!' true morn,
+Your common than advice, and again,--whom I may please you.
+
+ISABELLA:
+I'll tell you you, friends, for your wisdom?
+A daughter, friends no tender it wrong; if you
+I do meet told my measure my clouds wonship it.
+This s
+
+===== seed 17 =====
+To be, or not to be, that is the question:
+Noble caitle; which, I would not proud with me.
+
+LEONTES:
+By my gracious side little, talk the concluday.
+
+PERDITA:
+O this we still. Stand up my lord and shame
+That tribunes.
+
+Faotless:
+Thou hast
+And well, for the greatest precious silk: he
+since that ere to like me: he like and
+If those her dear with chance and so that do
+Betwixt help is too boy anister from five
+Until than heavy with this polte
+
+===== seed 18 =====
+To be, or not to be, that is the question: I stood
+wrong this.
+What's a writing-common! be thy sorrow is, for me
+share yours; for that's the wrongs of thee:
+And married my faith and with honour it!
+
+FLORIZEL:
+How so is no princely other achieves arrest.
+
+JOHN OF GAUNT:
+Who many hath but these mine words, more much:
+If it's now the fire, and if yet it more brings
+But for every men.
+
+GLOUCESTER:
+I'll be pardon of out of my breath
+And so lod
+
+===== seed 19 =====
+To be, or not to be, that is the question: who
+home is: the fitle, and thou has sworn too;
+That is well with your brood, and both art an up bride.
+
+CORIOLANUS:
+Go wit; I, sir.
+
+BRUTUS:
+Speak off?
+
+SICINIUS:
+Yet I may perforce should see you at once.
+
+First Senator:
+This, say, the soul is the look of marking at me:
+And, fearful or honour beheld's head to despire
+Be stupply therein twenty foolish or honour,
+Set on the parts of two help. If 
+
+===== seed 20 =====
+To be, or not to be, that is the question:
+Nay, for them, scraft.
+
+LADY ANNE:
+Off!
+
+CAPULET:
+So stipp'd up this buy as thou lovest.
+
+MARIANA:
+O, my lords; and, I pray need now.
+
+LEONTES:
+Withdrow, two speak!
+
+PAELINA:
+She would believe me
+In please you, sir; there, and thrust my masters,
+A princely of steems withal, because it in you;
+Your havour emplance beggars, and, the loving my depose.
+
+COMINIUS:
+You do, madam! I adventure undoubty i

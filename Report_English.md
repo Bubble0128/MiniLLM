@@ -12,7 +12,7 @@ The baseline has six Transformer blocks, six attention heads, an embedding dimen
 
 Character tokenization keeps the vocabulary small but requires the model to learn spelling. The causal mask prevents access to future characters; the context length limits the available history. Residual connections and normalization support optimization, while the number and width of blocks determine model capacity and computational cost.
 
-With width $d=384$, each head has width $d/6=64$. Each block uses $4d^2+4d$ parameters for the query, key, value, and output projections, $8d^2+5d$ for the two feed-forward layers, and $4d$ for its two layer normalizations. Including token and position embeddings and the final normalization, the total is $(65+256)d+6(12d^2+13d)+2d=10{,}770{,}816$. Weight tying avoids a second $65d$ parameter table for the output. The final model selected in Section 3.4 removes this tying, which adds $65d=24{,}960$ parameters for a total of 10,795,776.
+With width $d=384$, each head has width $d/6=64$. Each block uses $4d^2+4d$ parameters for the query, key, value, and output projections, $8d^2+5d$ for the two feed-forward layers, and $4d$ for its two layer normalizations. Including token and position embeddings and the final normalization, the total is $(65+256)d+6(12d^2+13d)+2d=10{,}770{,}816$. Weight tying avoids a second $65d$ parameter table for the output. The final model selected in Section 3.4 has four blocks, four heads and width $d=256$, and removes this tying. The same count gives $(65+256)d+4(12d^2+13d)+2d+65d=3{,}258{,}368$ parameters.
 
 ## 2. Experimental design and modifications
 
@@ -46,7 +46,7 @@ The baseline and the size comparison use the settings described above. The later
 | Residual branch scaling | `residual_scale` | Damp each block's update to the residual stream | 3.3 |
 | Untied output projection | `weight_tying` | Separate the input embedding from the output classifier | 3.3 |
 | Optimizer | `optimizer_name`, `momentum` | Compare AdamW with SGD and momentum | 3.3 |
-| Second training seed and continued training | `seed`, parent checkpoint | Measure run-to-run variation and check convergence | 3.4 |
+| Further training seeds and continued training | `seed`, parent checkpoint | Measure run-to-run variation and check convergence | 3.4 |
 | Sampling grid | temperature, top-k | Trade diversity against errors | 3.5 |
 | Word-level tokenizer | `tokenizer_type`, `word_data.py` | Remove the need to learn spelling | 3.6 |
 
@@ -141,38 +141,54 @@ The reference run A1 uses dropout 0.1, weight decay 0.1, the tied output project
 
 *Optimizer.* SGD with momentum at one tuned setting reached only 3.0460 in the same budget. A single setting does not show that AdamW is required, but it shows how much the adaptive step sizes help at this budget.
 
-### 3.4 Final model, seed variation and continued training
+### 3.4 Final model and seed variation
 
-The final model is C2: six layers, six heads, width 384, context 256, dropout 0.1, an untied output projection, AdamW with weight decay 0.1, and a peak learning rate of 0.0003. It has 10,795,776 parameters and trained in 383 s on the RTX 5080. Its best validation CE is 1.4753 at step 4,400, where the training CE is 1.1341. The baseline's best was 1.5701, so the validation CE fell by 0.0948 nats per character and the per-character perplexity fell from 4.81 to 4.37. At step 5,000 the validation CE is still 1.4762, whereas the baseline had risen to 4.0702 by then.
+The two changes that helped Medium, the untied output projection and weight decay 0.1, were applied to Small, keeping the settings of its best earlier run: peak learning rate 0.001, 100 warmup steps, a 10,000-step cosine schedule, dropout 0.1 and patience five. This configuration is called Small tuned, and C2 is called Medium tuned. Each was trained with three seeds.
+
+| Model | Parameters | Seed 42 | Seed 73 | Seed 2026 | Mean |
+|---|---:|---:|---:|---:|---:|
+| Small tuned | 3,258,368 | 1.4648 | 1.4762 | 1.4696 | 1.4702 |
+| Medium tuned (C2) | 10,795,776 | 1.4753 | 1.4791 | 1.4848 | 1.4797 |
+
+Small tuned is lower by 0.0095 on average, but the seeds of one model differ by up to 0.0114, so the two models cannot be ranked by CE. The final model is Small tuned, because it matches Medium tuned with about 30% of the parameters: four layers, four heads, width 256, context 256, dropout 0.1, an untied output projection, AdamW with weight decay 0.1, and a peak learning rate of 0.001. The seed-42 run is used for the samples and the notebook. Its best validation CE is 1.4648 at step 3,100, where the training CE is 1.1342, and early stopping ended the run at step 3,600. The baseline's best was 1.5701, so the mean validation CE of the final model is lower by 0.0999 nats per character, and the per-character perplexity falls from 4.81 to 4.35.
 
 ![Training and validation cross-entropy of the final model](figures/final_model_loss_curve.png)
 
-Repeating C2 with training seed 73 gave 1.4791, a difference of about 0.004 from seed 42. Differences of this size between configurations should therefore not be ranked. In particular, Small at learning rate 0.001 (1.4793 with 3,241,728 parameters) is indistinguishable from the final model on this evidence. Medium was kept because the ablations and samples were produced with it. Small reaches the same CE with about 30% of the parameters, and its 5,300-step run took 140 s.
+Single-change runs with seed 42 separate the two changes on Small.
 
-Continued training tested whether C2 had converged. Its best checkpoint was reloaded with a fresh AdamW state and trained for 1,000 more steps at batch size 16, with the rate warmed up to 0.0002 and decayed to 0.00002. The validation CE first rose to 1.5081 at step 300 and returned to 1.4752 at step 1,000, a change of 0.0001 from the start. A second continuation at rate 0.0001 never improved on its starting point and stopped after 500 steps. The model had converged for this configuration. The remaining gap between training CE (1.13) and validation CE (1.48) points to the amount of data, rather than to optimization, as the limit. The generated samples below use the continued checkpoint, whose CE of 1.4752 is practically the same as C2's.
+| Small configuration | Best validation CE |
+|---|---:|
+| Tied projection, weight decay 0.01 (Section 3.1) | 1.4793 |
+| Untied projection only | 1.4745 |
+| Weight decay 0.1 only | 1.4728 |
+| Both (Small tuned, seed 42) | 1.4648 |
+
+Untying the projection alone lowered the CE by 0.0049 and weight decay 0.1 alone by 0.0065. Both gains are of the same order as the variation between seeds, so each change helps a little and their effects cannot be separated cleanly.
+
+Medium tuned was also trained further to test convergence. Reloading its best checkpoint with a fresh AdamW state and training 1,000 more steps (batch size 16, rate warmed up to 0.0002) changed the validation CE from 1.4753 to 1.4752, and a second continuation at rate 0.0001 never improved on its starting point. Longer training therefore does not help. For both tuned models the gap between a training CE near 1.13 and a validation CE near 1.47 points to the amount of data, rather than to optimization or model size, as the limit.
 
 ### 3.5 Sampling: temperature and top-k
 
-Sampling parameters were compared on the baseline and the final model with identical inputs: the prompt “To be, or not to be, that is the question:”, 400 new characters, 20 sampling seeds per setting, top-k of 5 and 10, and temperatures 0.6, 0.8, 1.0 and 1.2. Every sample is kept in `generated_text/`. Three statistics summarize each setting: the share of generated words that never occur in the corpus (invented words), the share of adjacent word pairs that occur in the training text (seen pairs), and the ratio of distinct words to all words in a sample. Twenty 400-character excerpts of the validation text give reference values of 51.1% for seen pairs and 0.745 for the distinct-word ratio.
+Sampling parameters were compared on the baseline, the final model and Medium tuned with identical inputs: the prompt “To be, or not to be, that is the question:”, 400 new characters, 20 sampling seeds per setting, top-k of 5 and 10, and temperatures 0.6, 0.8, 1.0 and 1.2. Every sample is kept in `generated_text/`. Three statistics summarize each setting: the share of generated words that never occur in the corpus (invented words), the share of adjacent word pairs that occur in the training text (seen pairs), and the ratio of distinct words to all words in a sample. Twenty 400-character excerpts of the validation text give reference values of 51.1% for seen pairs and 0.745 for the distinct-word ratio.
 
-| Temperature | Top-k | Invented words, baseline | Invented words, final | Seen pairs, final | Distinct ratio, final |
-|---:|---:|---:|---:|---:|---:|
-| 0.6 | 5 | 2.6% | 0.4% | 80.4% | 0.617 |
-| 0.8 | 5 | 4.0% | 1.3% | 71.9% | 0.693 |
-| 1.0 | 5 | 6.2% | 1.8% | 70.4% | 0.713 |
-| 1.2 | 5 | 9.7% | 3.3% | 61.0% | 0.768 |
-| 0.6 | 10 | 3.4% | 1.3% | 76.6% | 0.657 |
-| 0.8 | 10 | 6.0% | 1.8% | 68.5% | 0.725 |
-| 1.0 | 10 | 9.5% | 4.6% | 56.7% | 0.790 |
-| 1.2 | 10 | 14.7% | 7.7% | 48.9% | 0.813 |
+| Temperature | Top-k | Invented words, baseline | Invented words, final | Invented words, Medium tuned | Seen pairs, final | Distinct ratio, final |
+|---:|---:|---:|---:|---:|---:|---:|
+| 0.6 | 5 | 2.6% | 1.0% | 1.2% | 80.3% | 0.621 |
+| 0.8 | 5 | 4.0% | 1.6% | 1.6% | 72.8% | 0.685 |
+| 1.0 | 5 | 6.2% | 2.3% | 2.6% | 66.1% | 0.717 |
+| 1.2 | 5 | 9.7% | 4.4% | 3.6% | 59.0% | 0.760 |
+| 0.6 | 10 | 3.4% | 1.3% | 0.8% | 76.9% | 0.661 |
+| 0.8 | 10 | 6.0% | 3.0% | 1.6% | 68.3% | 0.742 |
+| 1.0 | 10 | 9.5% | 4.4% | 4.7% | 58.0% | 0.766 |
+| 1.2 | 10 | 14.7% | 7.9% | 6.6% | 48.8% | 0.822 |
 
-The final model invents fewer words than the baseline at every setting, by a factor between about two and six. At temperature 0.8 and top-k 10 with seed 1, the baseline writes “Third George of Bustistands” and “thire of this bear-mellow” and labels a speaker “Second Watesman”. The final model writes “Suppose he is but all that may by himself / But to call him that were in this point wont” and then introduces “KING RICHARD III:”. Its words are real and its lines have the shape of verse, but the clause has no clear meaning. The lower validation CE therefore shows up mainly as better spelling.
+The final model invents fewer words than the baseline at every setting, by a factor of 1.9 to 2.7. Compared with Medium tuned it invents fewer words at 3 of the 8 settings, so the two tuned models are also similar in their samples. At temperature 0.8 and top-k 10, the baseline's continuation for seed 2 contains the invented words “serivity” and “stopherd”. The final model's continuation for seed 1 begins “Suppose of the sun that I will be my soul, / That invirced in the story and some comfort”. Its words are mostly real and its lines have the shape of verse, but the clauses have no clear meaning. The lower validation CE therefore shows up mainly as better spelling.
 
-Temperature divides the logits before the softmax, so a low temperature concentrates probability on the most likely characters and a high one flattens the distribution. At 0.6 the final model almost never misspells, but it repeats common phrases: 80% of its word pairs occur in the training text against 51% for real text, and its distinct-word ratio is below that of real text. At 1.2 its diversity exceeds real text and invented words reach 3.3% to 7.7%. Top-k removes all but the k most likely characters. Because a misspelling usually starts with an unlikely character, the smaller k cuts invented words at every temperature, for example from 4.6% to 1.8% at temperature 1.0, at the cost of some diversity. Temperature 0.8 with top-k 10 gives a distinct-word ratio of 0.725, close to real text, with 1.8% invented words, and is the setting used for the examples in this section.
+Temperature divides the logits before the softmax, so a low temperature concentrates probability on the most likely characters and a high one flattens the distribution. At 0.6 the final model rarely misspells, but it repeats common phrases: 80% of its word pairs occur in the training text against 51% for real text, and its distinct-word ratio is below that of real text. At 1.2 its diversity exceeds real text and invented words reach 4.4% to 7.9%. Top-k removes all but the k most likely characters. Because a misspelling usually starts with an unlikely character, the smaller k cuts invented words at every temperature, for example from 4.4% to 2.3% at temperature 1.0, at the cost of some diversity. Temperature 0.8 with top-k 10 gives a distinct-word ratio of 0.742 against 0.745 for real text, with 3.0% invented words, and is the setting used for the examples in this section.
 
 ### 3.6 Word-level tokenization
 
-A character model must learn spelling before anything else. As an alternative, the corpus was split into whole words, punctuation marks and whitespace runs. Words seen at least twice in the training split, together with all punctuation and whitespace tokens, form a vocabulary of 7,122 tokens; other words map to `<unk>`. The model keeps the final configuration (6/6/384, untied projection, dropout 0.1, weight decay 0.1, peak rate 0.0003) and has 16,215,552 parameters because of the larger embedding and output tables. Gradient accumulation over micro-batches of 8 keeps the effective batch at 64.
+A character model must learn spelling before anything else. As an alternative, the corpus was split into whole words, punctuation marks and whitespace runs. Words seen at least twice in the training split, together with all punctuation and whitespace tokens, form a vocabulary of 7,122 tokens; other words map to `<unk>`. The model uses the Medium tuned configuration (6/6/384, untied projection, dropout 0.1, weight decay 0.1, peak rate 0.0003) and has 16,215,552 parameters because of the larger embedding and output tables. Gradient accumulation over micro-batches of 8 keeps the effective batch at 64.
 
 Training stopped early at step 2,500 with the best validation CE of 2.7042 nats per token at step 2,000. By step 2,500 the training CE had fallen to 1.9080 while the validation CE had risen to 2.7336. The training split contains only 410,117 word-level tokens, so this model overfits sooner than the character model. Its CE cannot be ranked against the character CE: the unit is a token rather than a character, a 256-token context covers more text, and `<unk>` replaces 9.0% of validation words, so predicting `<unk>` is not predicting the word.
 
@@ -189,13 +205,13 @@ The sampling grid of Section 3.5 was applied to the word model.
 | 1.0 | 10 | 10.0% | 91.3% | 0.542 |
 | 1.2 | 10 | 7.6% | 89.2% | 0.568 |
 
-The word model cannot misspell, and its short exchanges read naturally, for example “My lord, I am not a subject born of York.” Two defects outweigh this. `<unk>` fills 8% to 16% of word positions and appears in at least 18 of the 20 samples at every setting, as in “And by the `<unk>`: I will not be a `<unk>` man.” The text is also far more repetitive than real text: about 90% of its word pairs occur in the training text and its distinct-word ratio is 0.40 to 0.57 against 0.745, with lines such as “For I am a king, I am a king”. With a 7,122-token vocabulary, top-k 5 or 10 keeps under 0.2% of the candidates, so sampling stays on the most frequent words. Unlike the character model, the word model gains diversity from a higher temperature without any spelling cost, and its `<unk>` share is lowest at temperature 1.2. Masking `<unk>` during sampling removes it from the output but leaves the repetition unchanged (distinct ratio 0.41 to 0.57). On this corpus the character model gives text whose statistics are closer to real English, so it remains the final model. A sub-word tokenizer, which keeps a closed vocabulary without `<unk>`, is the natural next step.
+The word model cannot misspell. Two defects outweigh this. `<unk>` fills 8% to 16% of word positions and appears in at least 18 of the 20 samples at every setting, as in “And I am too `<unk>` to my love.” The text is also far more repetitive than real text: 89% to 95% of its word pairs occur in the training text against 51%, and its distinct-word ratio is 0.40 to 0.57 against 0.745. With a 7,122-token vocabulary, top-k 5 or 10 keeps under 0.2% of the candidates, so sampling stays on the most frequent words. Unlike the character model, the word model gains diversity from a higher temperature without any spelling cost, and its `<unk>` share is lowest at temperature 1.2. Masking `<unk>` during sampling removes it from the output but leaves the repetition unchanged (distinct ratio 0.41 to 0.57). On this corpus the character model gives text whose statistics are closer to real English, so it remains the final model. A sub-word tokenizer, which keeps a closed vocabulary without `<unk>`, is the natural next step.
 
 ### 3.7 Resemblance to real English and limitations
 
 The final model's text resembles Shakespearean English in its surface form. Most words are real, common function words appear in plausible order, speaker labels and line breaks follow the layout of a play, and many lines have the length of a verse line. These are the patterns that next-character prediction over a 256-character window rewards, since each depends on the previous few characters or words.
 
-It does not resemble English above the level of a phrase. Clauses lose their grammar after a few words, speakers change without reason, and no topic is sustained, so the continuation never reads as a soliloquy. The corpus does not contain *Hamlet*, so the opening line is new to the model and it can only continue in the general style of the plays it saw. Three choices explain most of this. Character-level tokens make spelling something the model has to learn, which is why invented words appear and why they multiply at higher temperature. A context of 256 characters is fewer than 50 words, so nothing earlier can influence the text. And the training split holds about one million characters, which a ten-million-parameter model can memorize: regularization and tuning moved the validation CE from 1.57 to 1.48, but the gap to the training CE remains.
+It does not resemble English above the level of a phrase. Clauses lose their grammar after a few words, speakers change without reason, and no topic is sustained, so the continuation never reads as a soliloquy. The corpus does not contain *Hamlet*, so the opening line is new to the model and it can only continue in the general style of the plays it saw. Three choices explain most of this. Character-level tokens make spelling something the model has to learn, which is why invented words appear and why they multiply at higher temperature. A context of 256 characters is fewer than 50 words, so nothing earlier can influence the text. And the training split holds about one million characters, which even a three-million-parameter model can memorize: regularization and tuning moved the validation CE from 1.57 to 1.47, but the gap to the training CE remains.
 
 Validation CE was used to choose every setting, so it is not an independent estimate of generalization, and most configurations were trained with a single seed.
 

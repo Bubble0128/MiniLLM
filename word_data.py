@@ -65,13 +65,19 @@ class WordTokenizer:
 
 class WordData(CharacterData):
     """Reuse only the split-local window sampler from CharacterData."""
-    def __init__(self, path):
+    def __init__(self, path, extra_train_path=None):
         from pathlib import Path
         raw = Path(path).read_bytes()
         text = raw.decode('utf-8')
         self.sha256 = hashlib.sha256(raw).hexdigest()
         self.split_index = int(0.9 * len(text))
         train_text, val_text = text[:self.split_index], text[self.split_index:]
+        if extra_train_path:
+            # Improvement: more training text; the validation text is unchanged.
+            extra_raw = Path(extra_train_path).read_bytes()
+            train_text = extra_raw.decode('utf-8') + train_text
+            self.sha256 = hashlib.sha256(
+                (self.sha256 + hashlib.sha256(extra_raw).hexdigest()).encode()).hexdigest()
         self.tokenizer = WordTokenizer.fit(train_text)
         # Compatibility field: this contains vocabulary tokens, NOT characters.
         self.chars = self.tokenizer.vocabulary

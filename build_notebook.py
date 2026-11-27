@@ -103,6 +103,8 @@ markdown("""
 | tiny | 2 / 2 / 128 | 0.1 | 5 |
 | small | 4 / 4 / 256 | 0.1 | 5 |
 | medium | 6 / 6 / 384 | 0.1 | 5 |
+| medium_tuned | 6 / 6 / 384 | 0.1 | 0 |
+| final | 4 / 4 / 256 | 0.1 | 5 |
 
 三组使用 context 256、batch 64，最多 10000 步，AdamW、100 步 warmup 和 cosine decay。
 每 100 步验证一次，连续 5 次没有严格更低的验证 CE 就停止，生成使用 best.pt。
@@ -121,7 +123,7 @@ import json
 from train import experiment_config
 from generate import DEFAULT_PROMPT
 
-EXPERIMENT = "tiny" #@param ["tiny", "small", "medium"]
+EXPERIMENT = "tiny" #@param ["tiny", "small", "medium", "medium_tuned", "final"]
 RUN_TAG = "scale_d01_p5_10k_5080_v1" #@param {type:"string"}
 RESUME_IF_AVAILABLE = True #@param {type:"boolean"}
 PROMPT = DEFAULT_PROMPT  # Hamlet 独白首行，可改成另一段独白的首行
