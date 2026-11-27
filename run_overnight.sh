@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
-cd /home/chenrui/projects/MiniLLM
+cd "$(dirname "$0")"
 export MPLBACKEND=Agg
 export MPLCONFIGDIR=/tmp/minillm-mpl
 export PYTHONUNBUFFERED=1
-exec /home/chenrui/.venvs/minillm/bin/python -u run_overnight.py
+exec "${PYTHON:-python}" -u run_overnight.py

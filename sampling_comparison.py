@@ -1,13 +1,16 @@
-"""Multi-seed nucleus-sampling comparison: character champion vs word model.
+"""Multi-seed sampling comparison between models (report Sections 3.5 and 3.6).
 
-Why this exists: the first comparison used top_k=40 for both models, which keeps
-62% of a 65-character vocabulary but only 0.56% of a 7122-word vocabulary, and
-it had one seed per setting. Here both models are truncated by probability mass
-(top-p) instead of by count, and every setting is sampled with many seeds.
+For each model and sampling setting it generates one continuation of the Hamlet prompt
+per seed, then reports surface statistics against the corpus: invented words, word pairs
+seen in the training text, distinct-word ratio, and `<unk>` share for the word model.
 
-Read-only with respect to existing runs: it loads two checkpoints, samples on
-CPU, and writes only inside --out. It does not import or modify project code
-other than the frozen model.py / word_data.py snapshot of the word run.
+  --grid topk   top-k 5 and 10 at temperatures 0.6, 0.8, 1.0, 1.2 (used in the report)
+  --grid topp   nucleus sampling, which truncates by probability mass instead of by count
+  --char-ckpt / --char-name / --only   choose the character checkpoint and the variants to run
+  --device      cpu or cuda; every row has its own CPU generator, so seeds are reproducible
+
+It only reads checkpoints and writes inside --out. Model and tokenizer code is imported from
+the frozen source snapshot saved with the word-tokenizer run.
 """
 import argparse
 import csv
