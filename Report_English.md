@@ -50,6 +50,8 @@ The baseline and the size comparison use the settings described above. The later
 | Sampling grid | temperature, top-k | Trade diversity against errors | 3.5 |
 | Word-level tokenizer | `tokenizer_type`, `word_data.py` | Remove the need to learn spelling | 3.6 |
 
+The modifications draw on the course as follows. Dropout and weight decay follow the lectures on generalisation: sources of error, the bias-variance trade-off, regularisation in deep networks and the mathematics of dropout. Early stopping serves the same purpose of limiting overfitting. The learning-rate comparison and the comparison of AdamW with SGD and momentum follow the lectures on optimisation, which cover momentum and adaptive gradient methods. Residual scaling and depth relate to the lecture on residual networks, and the attention mechanism and the proof in Section 4 to the lecture on attention. Weight tying, context length, the word-level tokenizer and the sampling parameters come from the tutorial [1].
+
 The ablations in Section 3.3 share one protocol: the 6/6/384 model trained from random initialization for 5,000 steps with batch size 64, 150 warmup steps, cosine decay from 0.0003 to 0.00003, training seed 42, and no early stopping. Every run is scored on the same evaluation windows (context 256, batch 64, 20 batches), including the runs that train with a longer context or a smaller batch. The stages ran in sequence: regularization first, then context length, then architecture and optimizer changes relative to the chosen regularization, then a seed check and continued training of the best model. Earlier runs used a different warmup, schedule horizon and stopping rule, so comparisons across stages are indicative only.
 
 ## 3. Results and discussion
@@ -219,7 +221,7 @@ A follow-up experiment that retrains the tuned models with more Shakespeare text
 
 ## 4. Attention and positional encoding
 
-For unmasked attention, define
+The lecture on attention uses the scaled dot-product form of Vaswani et al. [2], $\mathrm{Attention}(Q,K,V)=\mathrm{softmax}(QK^\top/\sqrt{d_k})\,V$. In self-attention the queries, keys and values are linear maps of the same input $X$, which has one row per position. For unmasked self-attention, define
 
 $$
 A(X)=\mathrm{softmax}(S)V,\qquad
@@ -252,6 +254,8 @@ If $P$ swaps the positions, then $PX=X$, so $F(PX)=F(X)$. However, $PF(X)$ swaps
 
 The proof assumes unmasked attention. If attention instead adds a mask $M$ to the logits, permuting the input and the mask together preserves equivariance, because the new logits are $P(S+M)P^\top$. Keeping the mask fixed gives $PSP^\top+M$, so the same proof requires $PMP^\top=M$. A fixed causal mask allows position 2 to attend to position 1 while excluding the reverse edge. Swapping the two positions changes the permitted edges. For example, with two scalar tokens $(0,1)^\top$, $W_Q=W_K=0$ and $W_V=1$, causal attention averages each available prefix and returns $(0,1/2)^\top$. Feeding the swapped input returns $(1,1/2)^\top$, which differs from the swapped original output $(1/2,0)^\top$.
 
-## Reference
+## References
 
 [1] angelos-p. *Train Your Own LLM From Scratch*, Parts 1–5, revision `63069f99af8ce9a6ab6e261000f4f9f1daaa1ee9`. [Source repository](https://github.com/angelos-p/llm-from-scratch/tree/63069f99af8ce9a6ab6e261000f4f9f1daaa1ee9)
+
+[2] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser and I. Polosukhin. *Attention Is All You Need*. NeurIPS 2017.
