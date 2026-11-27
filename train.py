@@ -31,6 +31,7 @@ class TrainConfig:
     eval_seed: int = 12345
     # Improvement: stop after this many evaluations without a strictly lower CE.
     patience: int = 5
+    # Course ablation: AdamW (default) or SGD with momentum.
     optimizer_name: str = "adamw"
     momentum: float = 0.9
     # Keep evaluation windows identical when training B or T changes.
@@ -89,6 +90,31 @@ def experiment_config(name):
     if name == "small":
         return replace(model, n_layer=4, n_head=4, n_embd=256), training
     raise ValueError("Choose tiny, small, medium, baseline, dropout, medium_tuned, or final")
+
+
+def describe_run(model_config, train_config, continued=False):
+    """Folder name that shows tokenizer, architecture, main hyperparameters and seed."""
+    m, t = model_config, train_config
+    parts = ["word" if t.tokenizer_type == "word" else "char",
+             f"L{m.n_layer}-H{m.n_head}-D{m.n_embd}", f"ctx{m.block_size}", f"drop{m.dropout:g}",
+             f"lr{t.max_lr:g}", f"wd{t.weight_decay:g}", "tied" if m.weight_tying else "untied"]
+    if m.residual_scale != 1.0:
+        parts.append(f"resscale{m.residual_scale:g}")
+    if t.optimizer_name != "adamw":
+        parts.append(t.optimizer_name)
+    if t.batch_size != 64:
+        parts.append(f"batch{t.batch_size}")
+    parts.append(f"steps{t.max_steps}" + (f"-earlystop{t.patience}" if t.patience else ""))
+    parts.append(f"seed{t.seed}")
+    if continued:
+        parts.append("continued")
+    return "_".join(parts)
+
+
+def run_folder(model_config, train_config, continued=False):
+    """Results path relative to runs/: the first level names the training data."""
+    data = "extended_data" if train_config.extra_train_path else "original_data"
+    return f"{data}/{describe_run(model_config, train_config, continued)}"
 
 
 def get_device():

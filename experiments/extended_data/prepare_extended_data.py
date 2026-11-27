@@ -12,7 +12,7 @@ speech lines, blank line) and restricted to its 65-character vocabulary. Left ou
   * Hamlet, so the soliloquy used as the generation prompt stays unseen;
   * the sonnets and narrative poems, which are not dialogue.
 
-Usage: python experiments/prepare_extended_data.py          writes data/shakespeare_extra.txt
+Usage: python experiments/extended_data/prepare_extended_data.py          writes data/shakespeare_extra.txt
 """
 import hashlib
 import re
@@ -20,7 +20,7 @@ import sys
 from pathlib import Path
 from urllib.request import Request, urlopen
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT))  # core modules are in the repository root
 SOURCE = ROOT / "data/gutenberg/pg100.txt"
 SOURCE_SHA256 = "a023115c2d4e2ee12221bdd780fdf2ac5a864fe225948656f51f8be462c7fffb"

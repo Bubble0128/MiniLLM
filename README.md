@@ -9,7 +9,7 @@ The code follows [angelos-p/llm-from-scratch](https://github.com/angelos-p/llm-f
 |---|---|
 | [Report_English.md](Report_English.md) | Report: model structure, experiments, final model, sampling analysis, proof |
 | [MiniLLM_Submission.ipynb](MiniLLM_Submission.ipynb) | Notebook with outputs: configuration, loss curve, generated text, comparison table |
-| [generated_text/](generated_text/) | Generated continuations of the Hamlet soliloquy and their statistics |
+| [generated_text/](generated_text/) | Generated continuations of the Hamlet soliloquy, in folders named after training data, model and sampling setting |
 | [appendix_more_data/](appendix_more_data/More_Data_Experiment.md) | Appendix: the tuned models retrained with 28 more Shakespeare plays |
 
 ## Results
@@ -42,8 +42,8 @@ The final model is Small with an untied output projection and weight decay 0.1.
 
 | Path | Purpose |
 |---|---|
-| `experiments/` | One script per experiment in the report ([index](experiments/README.md)) |
-| `results/` | Summary table of the ablation runs |
+| `experiments/` | One script per experiment, grouped by training data: `original_data/`, `extended_data/` ([index](experiments/README.md)) |
+| `results/all_runs.csv` | Every training run: data, model, settings, seed and validation CE |
 | `figures/` | Plots used in the report |
 | `tests/` | Unit tests |
 

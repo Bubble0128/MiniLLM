@@ -13,7 +13,7 @@ import torch
 
 import sys as _sys
 from pathlib import Path as _Path
-_sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))  # core modules are in the repository root
+_sys.path.insert(0, str(_Path(__file__).resolve().parent.parent.parent))  # core modules are in the repository root
 from analysis import compare_runs, plot_history, plot_validation_comparison
 from data import download_shakespeare
 from generate import save_samples
@@ -34,7 +34,7 @@ def main():
     args = parser.parse_args()
     if not args.run_tag or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-' for c in args.run_tag):
         parser.error('run-tag must contain only letters, digits, underscores and hyphens')
-    root = Path(__file__).resolve().parent.parent
+    root = Path(__file__).resolve().parent.parent.parent
     runs = root / 'runs'
     comparison = runs / f'comparison_{args.run_tag}'
     comparison.mkdir(parents=True, exist_ok=True)

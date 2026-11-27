@@ -16,7 +16,7 @@ import torch
 
 import sys as _sys
 from pathlib import Path as _Path
-_sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))  # core modules are in the repository root
+_sys.path.insert(0, str(_Path(__file__).resolve().parent.parent.parent))  # core modules are in the repository root
 from data import download_shakespeare
 from generate import generate, load_model
 from model import GPTConfig

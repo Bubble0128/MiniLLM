@@ -20,7 +20,7 @@ import traceback
 
 import sys as _sys
 from pathlib import Path as _Path
-_sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))  # core modules are in the repository root
+_sys.path.insert(0, str(_Path(__file__).resolve().parent.parent.parent))  # core modules are in the repository root
 from data import download_shakespeare
 from model import GPTConfig
 from train import TrainConfig, train, write_json
@@ -181,8 +181,8 @@ def main(root):
     batch.mkdir()
     snapshot = batch / 'source'
     snapshot.mkdir()
-    for name in ('run_overnight.py', 'run_overnight.sh', 'model.py', 'train.py', 'data.py', 'generate.py'):
-        source = Path(__file__).resolve().parent if name.startswith('run_overnight') else root
+    for name in ('ablations_medium.py', 'ablations_medium.sh', 'model.py', 'train.py', 'data.py', 'generate.py'):
+        source = Path(__file__).resolve().parent if name.startswith('ablations_medium') else root
         shutil.copy2(source / name, snapshot / name)
     data = download_shakespeare(root / 'data/shakespeare.txt')
     state = dict(batch=str(batch), pid=__import__('os').getpid(), BEST_LR=best_lr,
@@ -221,7 +221,7 @@ def main(root):
         print(f'START {name}: {json.dumps(spec)}', flush=True)
         try:
             with (batch / f'{name}.log').open('x') as log:
-                result = subprocess.run([sys.executable, '-u', str(snapshot / 'run_overnight.py'),
+                result = subprocess.run([sys.executable, '-u', str(snapshot / 'ablations_medium.py'),
                                          '--worker', str(spec_path)], cwd=root, stdout=log,
                                         stderr=subprocess.STDOUT, check=False)
             if result.returncode:
@@ -283,7 +283,7 @@ def main(root):
     persist()
     try:
         with (batch / 'generation.log').open('x') as log:
-            subprocess.run([sys.executable, '-u', str(snapshot / 'run_overnight.py'),
+            subprocess.run([sys.executable, '-u', str(snapshot / 'ablations_medium.py'),
                             '--generate', str(winner_path / 'best.pt'),
                             '--output', str(batch / 'generation')], cwd=root,
                            stdout=log, stderr=subprocess.STDOUT, check=True)
@@ -297,7 +297,7 @@ def main(root):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parent.parent)
+    parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parent.parent.parent)
     parser.add_argument('--worker', type=Path)
     parser.add_argument('--generate', type=Path)
     parser.add_argument('--output', type=Path)

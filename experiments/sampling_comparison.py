@@ -9,8 +9,7 @@ seen in the training text, distinct-word ratio, and `<unk>` share for the word m
   --char-ckpt / --char-name / --only   choose the character checkpoint and the variants to run
   --device      cpu or cuda; every row has its own CPU generator, so seeds are reproducible
 
-It only reads checkpoints and writes inside --out. Model and tokenizer code is imported from
-the frozen source snapshot saved with the word-tokenizer run.
+It only reads checkpoints and writes inside --out.
 """
 import argparse
 import csv
@@ -34,8 +33,8 @@ GRIDS = {
     'topk': [dict(name=f'T{t:g}_k{k}', temperature=t, top_p=1.0, top_k=k)
              for k in (5, 10) for t in (0.6, 0.8, 1.0, 1.2)],
 }
-CHAR_CKPT = 'runs/overnight_20261127T013704_336480Z/D2_champion_finetune1000_batch16/best.pt'
-WORD_RUN = 'runs/word_tokenizer_20261127T034028Z'
+CHAR_CKPT = 'runs/original_data/char_L4-H4-D256_ctx256_drop0.1_lr0.001_wd0.1_untied_steps10000-earlystop5_seed42/best.pt'      # final model
+WORD_CKPT = 'runs/original_data/word_L6-H6-D384_ctx256_drop0.1_lr0.0003_wd0.1_untied_steps5000-earlystop5_seed42/best.pt'
 WORD_RE = re.compile(r"[A-Za-z]+(?:'[A-Za-z]+)*")
 LABEL_RE = re.compile(r"(?m)^([A-Z][A-Za-z ]+):$")
 
@@ -185,7 +184,7 @@ def main():
     args = parser.parse_args()
     SETTINGS = GRIDS[args.grid]
     root = args.root.resolve()
-    sys.path.insert(0, str(root / WORD_RUN / 'source'))
+    sys.path.insert(0, str(root))                  # core modules are in the repository root
     from word_data import WordTokenizer
     torch.set_num_threads(args.threads)
     started = time.time()
@@ -197,7 +196,7 @@ def main():
     seeds = list(range(1, args.seeds + 1))
 
     char_model, char_ckpt = load(root / args.char_ckpt)
-    word_path = root / (args.word_ckpt or WORD_RUN + '/word_model/best.pt')
+    word_path = root / (args.word_ckpt or WORD_CKPT)
     word_model, word_ckpt = load(word_path)
     char_model, word_model = char_model.to(args.device), word_model.to(args.device)
     assert char_ckpt.get('tokenizer_type', 'character') == 'character'
@@ -305,7 +304,6 @@ def main():
                               step=char_ckpt['step'], val_loss=char_ckpt['val_loss']),
             'word': dict(path=str(word_path), sha256=sha256(word_path),
                          step=word_ckpt['step'], val_loss=word_ckpt['val_loss'])},
-        source_snapshot=str(root / WORD_RUN / 'source'),
         script_sha256=sha256(__file__),
         notes=[
             'top_p keeps the smallest set of tokens whose probability mass reaches p; p=1.0 disables it.',

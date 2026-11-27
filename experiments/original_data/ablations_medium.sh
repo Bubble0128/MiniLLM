@@ -4,4 +4,4 @@ cd "$(dirname "$0")"
 export MPLBACKEND=Agg
 export MPLCONFIGDIR=/tmp/minillm-mpl
 export PYTHONUNBUFFERED=1
-exec "${PYTHON:-python}" -u run_overnight.py
+exec "${PYTHON:-python}" -u ablations_medium.py

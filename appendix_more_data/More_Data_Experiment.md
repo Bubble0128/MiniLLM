@@ -6,7 +6,7 @@
 
 This appendix is a follow-up to the report *Mini LLM: Shakespeare Text Generation*. The report and its notebook use the original Shakespeare file only. Here the same models are retrained with more Shakespeare text.
 
-Sections 3.3 and 3.4 of the report point to the amount of data as the limit, and the tutorial lists better data as the first idea to explore. To test this, more Shakespeare was added to the training split. The source is the Project Gutenberg edition of the complete works [1]. The nine plays already in the corpus were left out, so that no validation text enters training, and so was *Hamlet*, so that the prompt remains unseen. The sonnets and narrative poems were left out because they are not dialogue. The remaining 28 plays were converted to the layout and the 65-character vocabulary of the original file (`experiments/prepare_extended_data.py` in the repository): speaker labels with a colon, no stage directions or scene headings. As a check of the conversion, *Coriolanus* exists in both sources: after conversion its layout matches, and 52.6% of its lines are identical to lines of the original file, the rest differing by edition in punctuation, spelling and line breaks.
+Sections 3.3 and 3.4 of the report point to the amount of data as the limit, and the tutorial lists better data as the first idea to explore. To test this, more Shakespeare was added to the training split. The source is the Project Gutenberg edition of the complete works [1]. The nine plays already in the corpus were left out, so that no validation text enters training, and so was *Hamlet*, so that the prompt remains unseen. The sonnets and narrative poems were left out because they are not dialogue. The remaining 28 plays were converted to the layout and the 65-character vocabulary of the original file (`experiments/extended_data/prepare_extended_data.py` in the repository): speaker labels with a colon, no stage directions or scene headings. As a check of the conversion, *Coriolanus* exists in both sources: after conversion its layout matches, and 52.6% of its lines are identical to lines of the original file, the rest differing by edition in punctuation, spelling and line breaks.
 
 The extra text has 3,417,581 characters, so the training split grows from 1,003,854 to 4,421,435 characters (4.4 times). The validation split and the evaluation windows are unchanged, so the validation CE is directly comparable with the report. Small tuned was trained exactly as before. Medium tuned was given a 10,000-step schedule instead of 5,000 because of the larger text.
 
@@ -46,10 +46,10 @@ The final model and all results in the report use the original text only. The re
 | Path | Content |
 |---|---|
 | `more_data_comparison.png` | Validation curves with and without the extra text |
-| `generated_text/` | 20 samples per sampling setting for each model trained with the extra text, and the statistics quoted above |
+| `generated_text/extended_data/` | 20 samples per sampling setting for each model trained with the extra text, in folders named after the model and its training settings, with the statistics quoted above |
 | `results.csv` | Best validation CE, stop step and parameters of the eight runs |
-| `../experiments/prepare_extended_data.py` | Downloads the source and builds the extra text |
-| `../experiments/run_extended_data.py` | Trains a model with the extra text |
+| `../experiments/extended_data/prepare_extended_data.py` | Downloads the source and builds the extra text |
+| `../experiments/extended_data/train_with_extended_data.py` | Trains a model with the extra text |
 
 ## Reference
 

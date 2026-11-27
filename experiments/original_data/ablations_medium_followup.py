@@ -25,7 +25,7 @@ from dataclasses import asdict, replace
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 PYTHON = sys.executable
 DATA = ROOT / "data" / "shakespeare.txt"
 
