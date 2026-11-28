@@ -28,7 +28,51 @@ The sampling grid of Section 3.5 of the detailed experiment log was repeated for
 | 1.0 | 4.0% | 2.0% | 2.0% |
 | 1.2 | 7.2% | 4.3% | 4.4% |
 
-Both models trained on more text invent fewer words than the final model at all eight settings. All samples are in `generated_text/`. Their longest verbatim copies of training text average about 20 characters, the same as for real held-out text (20), so the improvement is not memorization. At temperature 0.8 and top-k 10 with seed 1, Medium with the extra text begins “Saw such as the cause that may be made and win the / ladder of all my friendship.” The words are real, but the sentence still has no clear meaning: more data improves spelling and local phrasing before it improves sense.
+Both models trained on more text invent fewer words than the final model at all eight settings. All samples are in `generated_text/`. Their longest verbatim copies of training text average about 20 characters, the same as for real held-out text (20), so the improvement is not memorization. Temperature 0.8 with top-k 10 is the setting used for the samples in the report. Complete continuations at this setting follow (seed 1; the first line is the prompt). Medium tuned with the extra text:
+
+```text
+To be, or not to be, that is the question:
+Saw such as the cause that may be made and win the
+ladder of all my friendship. Say, take them so: and thou for
+the sun that I can say would not fear, that when thou art but a
+great displeasure, but not to have a sword. I am a sooner, I would
+desire it, and I could have no other stuff it better than it
+is of my lord and saying.
+
+LEAR:
+So please your Majesty shall be more well; and you may be save
+```
+
+None of its 85 new words is invented. Small tuned with the extra text:
+
+```text
+To be, or not to be, that is the question:
+Saw you see the captain.
+
+SALISBURY:
+Shall we swear from this deed?
+
+LANCISTER:
+Say no, I say.
+
+GLOUCESTER:
+Now, you shall be believed.
+
+KING EDWARD IV:
+Good day, worm you with him: there is no married money than you are,
+At we our compassion.
+
+SILVIA:
+Yet was not so shall now he be chid bred.
+
+KING HENRY:
+Why did you so dearly? If you will, make your honours be the door.
+
+SILVIA:
+The mass of you
+```
+
+One of its 75 new words is invented (“LANCISTER”). Compared with the sample in the report, the words are real and whole sentences hold together locally, but the passage still has no clear meaning: more data improves spelling and local phrasing before it improves sense.
 
 The word-level tokenizer was also retrained on the larger text, on both architectures. Its vocabulary grows from 7,122 to 17,675 tokens and the share of validation words outside it falls from 9.0% to 4.2%.
 
