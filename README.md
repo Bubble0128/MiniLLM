@@ -60,4 +60,4 @@ In the notebook, `EXPERIMENT` selects `baseline`, `tiny`, `small`, `medium`, `me
 `RUN_TRAINING = True` trains that configuration; otherwise saved results are read from `runs/`.
 
 All reported runs were trained on an NVIDIA RTX 5080. Validation data were used for model selection, so the
-reported CE is not an independent test score. The code in this repository was written with AI assistance.
+reported CE is not an independent test score.
