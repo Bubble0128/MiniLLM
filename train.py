@@ -72,12 +72,12 @@ def experiment_config(name):
         return model, replace(training, max_steps=5000, patience=0)
     model = replace(model, dropout=0.1)
     if name == "final":
-        # Improvement (report Section 3.4): Small with an untied output projection and
+        # Improvement (report Section 2): Small with an untied output projection and
         # stronger weight decay; every other setting is the size-experiment default.
         return (replace(model, n_layer=4, n_head=4, n_embd=256, weight_tying=False),
                 replace(training, weight_decay=0.1))
     if name == "medium_tuned":
-        # Improvement (report Sections 3.2-3.3): untied output projection, lower peak
+        # Improvement (report Section 2): untied output projection, lower peak
         # learning rate, stronger weight decay, longer warmup, fixed 5,000-step budget.
         return (replace(model, weight_tying=False),
                 replace(training, max_steps=5000, max_lr=3e-4, min_lr=3e-4 / 10,

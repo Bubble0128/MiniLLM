@@ -7,7 +7,8 @@ The code follows [angelos-p/llm-from-scratch](https://github.com/angelos-p/llm-f
 
 | | |
 |---|---|
-| [Report_English.md](Report_English.md) | Report: model structure, experiments, final model, sampling analysis, proof |
+| [Report_English.md](Report_English.md) | Report: model structure, improvements, generated text, proof |
+| [Experiments_Detailed.md](Experiments_Detailed.md) | Detailed log of every experiment |
 | [MiniLLM_Submission.ipynb](MiniLLM_Submission.ipynb) | Notebook with outputs: configuration, loss curve, generated text, comparison table |
 | [generated_text/](generated_text/) | Generated continuations of the Hamlet soliloquy, in folders named after training data, model and sampling setting |
 | [appendix_more_data/](appendix_more_data/More_Data_Experiment.md) | Appendix: the tuned models retrained with 28 more Shakespeare plays |

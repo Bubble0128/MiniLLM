@@ -7,7 +7,7 @@ so the folder name states the data, the model and the settings. `results/all_run
 
 ## `original_data/`: the original Shakespeare file (1.0M training characters)
 
-| Script | Experiment | Report |
+| Script | Experiment | Detailed log |
 |---|---|---|
 | `size_and_learning_rate.py` | Tiny, Small and Medium models; learning-rate comparison | 3.1, 3.2 |
 | `ablations_medium.py`, `ablations_medium.sh` | Ablations on Medium: dropout, weight decay, context length, residual scaling, untied output projection, depth, optimizer, second seed, continued training | 3.3, 3.4 |
@@ -19,14 +19,14 @@ The three ablation drivers ran as timestamped batches; they are kept as the reco
 
 ## `extended_data/`: original file plus 28 more plays (4.4M training characters)
 
-| Script | Experiment | Report |
+| Script | Experiment | Detailed log |
 |---|---|---|
 | `prepare_extended_data.py` | Downloads the Project Gutenberg Complete Works and builds the extra training text | Appendix |
 | `train_with_extended_data.py` | Trains the tuned models and the word-level models with the extra text | Appendix |
 
 ## Either data set
 
-| Script | Purpose | Report |
+| Script | Purpose | Detailed log |
 |---|---|---|
 | `seed_check.py` | Repeats a named configuration with another training seed | 3.4 |
 | `sampling_comparison.py` | Temperature and top-k sampling with 20 seeds per setting; produces `generated_text/` | 3.5, 3.6, Appendix |
