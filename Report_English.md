@@ -15,7 +15,7 @@ Each character is mapped to a token embedding, to which a learned positional emb
 | Tokens | characters | characters | Small vocabulary, but spelling has to be learned. A word-level tokenizer was tried and gave worse text (Section 3) |
 | Context length | 256 | 256 | How much earlier text can influence a prediction, fewer than 50 words. A context of 512 gave a higher CE in the same number of steps |
 | Layers / heads / width | 6 / 6 / 384 | 4 / 4 / 256 | Capacity. The smaller model reaches the same CE with 30% of the parameters |
-| Parameters | 10,770,816 | 3,258,368 | |
+| Parameters | 10,770,816 | 3,258,368 | Number of trainable weights |
 | Output projection | tied to the embedding | untied | Whether one matrix is both input embedding and output classifier. Untying lowered the CE on both model sizes |
 | Dropout | 0 | 0.1 | Regularization. Without it the model memorizes the training text; 0.2 under-fits |
 | Weight decay | 0.01 | 0.1 | Regularization. A small further gain |
@@ -29,6 +29,8 @@ The causal mask lets a position attend only to earlier positions. Training can t
 **What was lacking.** The baseline memorizes the training text. Its validation CE is lowest at step 1,500 (1.5701); by step 5,000 the training CE has fallen to 0.15 while the validation CE has risen to 4.07.
 
 ![Training and validation cross-entropy of the baseline](figures/baseline_loss_curve.png)
+
+*Figure 1. The baseline: the validation CE turns upward after step 1,500 while the training CE keeps falling.*
 
 **Path to the final model.**
 
@@ -66,6 +68,8 @@ The causal mask lets a position attend only to earlier positions. Training can t
 The final model combines the kept values on Small: dropout 0.1, untied output projection and weight decay 0.1.
 
 ![Validation cross-entropy of the main models](figures/model_comparison.png)
+
+*Figure 2. Validation CE of the main models. The baseline overfits, Tiny under-fits, and the other four end within 0.035 of each other.*
 
 **Small against Medium.** The same two changes were applied to Medium, with its own best peak learning rate of 0.0003, and both models were trained with three seeds.
 
@@ -138,7 +142,7 @@ A word-level tokenizer was also tried. It cannot misspell, but 8% to 16% of its 
 
 ## 4. Attention and positional encoding
 
-The lecture on attention uses the scaled dot-product form of Vaswani et al. [2], $\mathrm{Attention}(Q,K,V)=\mathrm{softmax}(QK^\top/\sqrt{d_k})\,V$. In self-attention the queries, keys and values are linear maps of the same input $X$, which has one row per position. For unmasked self-attention, define
+The lecture on attention uses the scaled dot-product form of Vaswani et al. [2], $\mathrm{Attention}(Q,K,V)=\mathrm{softmax}(QK^\top/\sqrt{d_k})V$. In self-attention the queries, keys and values are linear maps of the same input $X$, which has one row per position. For unmasked self-attention, define
 
 $$
 A(X)=\mathrm{softmax}(S)V,\qquad
@@ -151,19 +155,19 @@ $$
 **Proof.** For input $PX$ the projections become $PQ$, $PK$, $PV$, so the score matrix becomes $PQ(PK)^\top/\sqrt{d_k}=PSP^\top$. The softmax acts on each row separately, and permuting the entries of a row does not change its normalizing sum, so
 
 $$
-\mathrm{softmax}(PSP^\top)=P\,\mathrm{softmax}(S)\,P^\top .
+\mathrm{softmax}(PSP^\top)=P\mathrm{softmax}(S)P^\top .
 $$
 
 Since $P^\top P=I$,
 
 $$
-A(PX)=P\,\mathrm{softmax}(S)\,P^\top PV=P\,\mathrm{softmax}(S)\,V=PA(X).
+A(PX)=P\mathrm{softmax}(S)P^\top PV=P\mathrm{softmax}(S)V=PA(X).
 $$
 
 **With a positional encoding the property fails.** Let $E$ be a fixed positional encoding and $F(X)=A(X+E)$. Take two positions, scalar embeddings, $W_Q=W_K=W_V=1$, $X=(0,0)^\top$ and $E=(0,1)^\top$. Then $X+E=(0,1)^\top$, the score matrix has rows $(0,0)$ and $(0,1)$, and
 
 $$
-F(X)=\begin{pmatrix}1/2\\ e/(1+e)\end{pmatrix}.
+F(X)=\bigl(1/2,  e/(1+e)\bigr)^\top .
 $$
 
 Let $P$ swap the two positions. Then $PX=X$, so $F(PX)=F(X)$, while $PF(X)$ has its two unequal entries exchanged. Hence $F(PX)\ne PF(X)$: once a fixed positional encoding is added, the input is no longer treated equivariantly, which is what allows the model to use word order.

@@ -223,7 +223,7 @@ A follow-up experiment that retrains the tuned models with more Shakespeare text
 
 ## 4. Attention and positional encoding
 
-The lecture on attention uses the scaled dot-product form of Vaswani et al. [2], $\mathrm{Attention}(Q,K,V)=\mathrm{softmax}(QK^\top/\sqrt{d_k})\,V$. In self-attention the queries, keys and values are linear maps of the same input $X$, which has one row per position. For unmasked self-attention, define
+The lecture on attention uses the scaled dot-product form of Vaswani et al. [2], $\mathrm{Attention}(Q,K,V)=\mathrm{softmax}(QK^\top/\sqrt{d_k})V$. In self-attention the queries, keys and values are linear maps of the same input $X$, which has one row per position. For unmasked self-attention, define
 
 $$
 A(X)=\mathrm{softmax}(S)V,\qquad
@@ -249,7 +249,7 @@ Thus unmasked self-attention is permutation equivariant.
 With fixed positional encoding $E$, define $F(X)=A(X+E)$. A counterexample shows that this property no longer holds generally. Take two positions, scalar embeddings, $W_Q=W_K=W_V=1$, $X=(0,0)^\top$, and $E=(0,1)^\top$. Direct calculation gives
 
 $$
-F(X)=\begin{pmatrix}1/2\\ e/(1+e)\end{pmatrix}.
+F(X)=\bigl(1/2, e/(1+e)\bigr)^\top .
 $$
 
 If $P$ swaps the positions, then $PX=X$, so $F(PX)=F(X)$. However, $PF(X)$ swaps two unequal entries. Consequently $F(PX)\ne PF(X)$. Fixed absolute positional encodings therefore remove the general equivariance guarantee.
