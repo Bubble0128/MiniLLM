@@ -10,16 +10,17 @@ The model is the character-level GPT of the *llm-from-scratch* tutorial [1], tra
 
 Each character is mapped to a token embedding, to which a learned positional embedding is added. The result passes through a stack of Transformer blocks. A block applies layer normalization, causal multi-head self-attention and a residual connection, then layer normalization, a feed-forward network of four times the width with GELU, and a second residual connection. A final layer normalization and a linear layer give a score for each of the 65 characters.
 
-| Choice | Baseline (tutorial) | Final model | What it controls |
+| Choice | Baseline (tutorial) | Final model | What it controls, and why the final value |
 |---|---|---|---|
-| Tokens | characters | characters | Small vocabulary, but spelling has to be learned |
-| Context length | 256 | 256 | How much earlier text can influence a prediction, fewer than 50 words |
-| Layers / heads / width | 6 / 6 / 384 | 4 / 4 / 256 | Capacity |
+| Tokens | characters | characters | Small vocabulary, but spelling has to be learned. A word-level tokenizer was tried and gave worse text (Section 3) |
+| Context length | 256 | 256 | How much earlier text can influence a prediction, fewer than 50 words. A context of 512 gave a higher CE in the same number of steps |
+| Layers / heads / width | 6 / 6 / 384 | 4 / 4 / 256 | Capacity. The smaller model reaches the same CE with 30% of the parameters |
 | Parameters | 10,770,816 | 3,258,368 | |
-| Output projection | tied to the embedding | untied | Whether one matrix serves as input embedding and output classifier |
-| Dropout | 0 | 0.1 | Regularization |
-| Weight decay | 0.01 | 0.1 | Regularization |
-| Checkpoint used | best validation CE | best validation CE, early stopping | When training ends |
+| Output projection | tied to the embedding | untied | Whether one matrix is both input embedding and output classifier. Untying lowered the CE on both model sizes |
+| Dropout | 0 | 0.1 | Regularization. Without it the model memorizes the training text; 0.2 under-fits |
+| Weight decay | 0.01 | 0.1 | Regularization. A small further gain |
+| Training length | 5,000 steps | early stopping | The validation CE rises after its best point, so training stops there; the best checkpoint is used |
+| Sampling | temperature 0.8, top-k 40 | temperature 0.8, top-k 10 | Variety against errors. This setting matches the variety of real text with few invented words (Section 3) |
 
 The causal mask lets a position attend only to earlier positions. Training can therefore score all 256 positions of a window at once with the true text as input, while generation must feed the model its own sampled characters. Both models use AdamW with a peak learning rate of 0.001, 100 warmup steps, cosine decay, gradient clipping at 1.0 and batch size 64. Every setting is a named field of `GPTConfig` or `TrainConfig`, and each modification is marked by a comment in the code.
 
@@ -54,17 +55,17 @@ The causal mask lets a position attend only to earlier positions. Training can t
 | Layers | Medium | **6**, 4 | **1.4996**, 1.5501 |
 | Optimizer | Medium | **AdamW**, SGD with momentum | **1.4996**, 3.0460 |
 
-*Regularization.* Dropout on the embeddings, attention weights and residual branches, together with stopping once the validation CE no longer improves, removes the divergence of the baseline. This follows the lectures on generalization: overfitting is the dominant source of error here. Dropout 0.2 was too strong for the step budget, and a weight decay of 0.1 gave a small further gain.
+*Regularization.* Dropout on the embeddings, attention weights and residual branches, together with stopping once the validation CE no longer improves, removes the divergence of the baseline. This follows the lectures on generalization: overfitting is the dominant source of error here. Dropout 0.2 was too strong for the step budget. Weight decay is the L2 penalty of regularized least squares applied to the network weights; raising it to 0.1 gave a small further gain.
 
-*Model size and learning rate.* With one million training characters, the model with 3.2 million parameters does at least as well as the one with 10.8 million, and the smallest model under-fits. The two larger models need different step sizes: Small is best at 0.001, while Medium is best at 0.0003 and fails to train at 0.003. The suitable step size depends on the model, as the lectures on optimization suggest.
+*Model size and learning rate.* With one million training characters, the model with 3.2 million parameters does at least as well as the one with 10.8 million, and the smallest model under-fits. In bias-variance terms the smallest model is too biased, while the largest has more variance than one million characters can constrain. The two larger models need different step sizes: Small is best at 0.001, while Medium is best at 0.0003 and fails to train at 0.003. The suitable step size depends on the model, as the lectures on optimization suggest.
 
-*Architecture.* The tutorial shares one 65 × width matrix between the token embedding and the output layer. Giving the output layer its own matrix costs 16,640 parameters on Small and lets the two roles differ: one describes a character as context, the other scores it as a prediction. It helped on both models. A longer context, damped residual branches and fewer layers were all worse.
+*Architecture.* The tutorial shares one 65 × width matrix between the token embedding and the output layer. Giving the output layer its own matrix costs 16,640 parameters on Small and lets the two roles differ: one describes a character as context, the other scores it as a prediction. It helped on both models. The residual connections of the lecture on residual networks are kept at full strength, since damping them slowed learning; a longer context and fewer layers were also worse.
 
-*Optimizer.* SGD with momentum, at one tuned setting, stayed far behind AdamW within the same number of steps, which shows how much the adaptive step sizes help here.
+*Optimizer.* The lectures on optimization introduce momentum and adaptive gradient methods. SGD with momentum, at one tuned setting, stayed far behind AdamW within the same number of steps, which shows how much the adaptive step sizes help here.
 
 The final model combines the kept values on Small: dropout 0.1, untied output projection and weight decay 0.1.
 
-![Training and validation cross-entropy of the final model](figures/final_model_loss_curve.png)
+![Validation cross-entropy of the main models](figures/model_comparison.png)
 
 **Small against Medium.** The same two changes were applied to Medium, with its own best peak learning rate of 0.0003, and both models were trained with three seeds.
 
@@ -73,7 +74,7 @@ The final model combines the kept values on Small: dropout 0.1, untied output pr
 | Small tuned (final model) | 4 / 4 / 256 | 3,258,368 | 1.4648 | 1.4762 | 1.4696 | 1.4702 |
 | Medium tuned | 6 / 6 / 384 | 10,795,776 | 1.4753 | 1.4791 | 1.4848 | 1.4797 |
 
-Small is lower by 0.0095 on average, but runs that differ only in the seed vary by up to 0.011, so the two models are equal within the noise. A model three times larger brings no benefit on this amount of data, and Small tuned was chosen as the final model because it reaches the same CE with 30% of the parameters. The gain over the baseline, 0.10 nats per character (per-character perplexity 4.81 to 4.35), is about nine times the seed variation. The remaining gap between training CE (1.13) and validation CE (1.47) points to the amount of data as the limit.
+Small is lower by 0.0095 on average, but runs that differ only in the seed vary by up to 0.011, so the two models are equal within the noise. A model three times larger brings no benefit on this amount of data, and Small tuned was chosen as the final model because it reaches the same CE with 30% of the parameters. The gain over the baseline, 0.10 nats per character (per-character perplexity 4.81 to 4.35), is about nine times the seed variation. The remaining gap between training CE (1.13) and validation CE (1.47) points to the amount of data as the limit. Within this data set further tuning brings no measurable gain: continuing the training of the tuned Medium model for 1,000 more steps changed its CE by 0.0001.
 
 ## 3. Generated text
 
@@ -103,7 +104,24 @@ His son: which shall you are you have been:
 Then holy we shall say you short wi
 ```
 
-Two of its 81 new words are invented (“invirced”, “shiles”). A speaker label appears in the correct form and the lines have the length of verse, but no clause carries a clear meaning. A baseline sample at the same setting contains more invented words, for example “serivity” and “stopherd”.
+Two of its 81 new words are invented (“invirced”, “shiles”). A speaker label appears in the correct form and the lines have the length of verse, but no clause carries a clear meaning. For comparison, the start of the baseline continuation at the same setting and seed:
+
+```text
+To be, or not to be, that is the question:
+Saw 'tis as the contrary and honour lights again,
+But that I may my crave.
+
+Servingman:
+I thine!
+
+Third George of Bustistands.
+
+Servant:
+When she do me, I was dead, say to the house
+thire of this bear-mellow.
+```
+
+The baseline invents three of its 74 new words (“Bustistands”, “thire”, and later “Watesman”), and its speeches break off after a few words. Single samples vary; the table gives the rates over 20 seeds.
 
 **Temperature and top-k.** Temperature divides the scores before the softmax. At 0.6 the model rarely misspells but repeats common phrases, and its vocabulary is less varied than real text. At 1.2 it is more varied than real text and 7.9% of its words are invented. Top-k keeps only the k most likely characters; because a misspelling usually begins with an unlikely character, lowering k from 10 to 5 cuts invented words from 4.4% to 2.3% at temperature 1.0. Temperature 0.8 with top-k 10 matches the variety of real text most closely.
 
